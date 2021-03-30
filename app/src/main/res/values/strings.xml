@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ProjectoCM-20_21-G25</string>
     <string name="text_contacts">Para entrar em contacto connosco, utilize os botões abaixo:</string>
+    <string name="btn_submmit_text">Submmit</string>
 </resources>
