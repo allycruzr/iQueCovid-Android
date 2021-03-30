@@ -3,6 +3,13 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="midnight_blue">#09004c</color>
+    <color name="prussian_blue">#00346c</color>
+    <color name="steel_blue">#5188b5</color>
+    <color name="blue_ryb">#0033FF</color>
+    <color name="indigo_dye">#143D71</color>
+    <color name="dodger_blue">#048CFC</color>
+    <color name="sky_blue">#7AC4E4</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
