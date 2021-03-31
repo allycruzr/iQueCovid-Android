@@ -16,7 +16,7 @@ class DashboardActivity : AppCompatActivity() {
 
         button_contacts.setOnClickListener {
             startActivity(Intent(this, ContactsActivity::class.java))
-            //finish()
+            finish()
         }
 
         button_testes.setOnClickListener {

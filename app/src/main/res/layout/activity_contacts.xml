@@ -4,12 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ContactsActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Para entrar em contacto!"/>
+        android:textSize="14sp"
+        android:padding="25dp"
+        android:text="@string/text_contacts"
+    />
+
+    <Button
+        android:id="@+id/button_contacts_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="25dp"
+        android:layout_marginHorizontal="80dp"
+        android:textSize="10sp"
+        android:drawableLeft="@android:drawable/ic_menu_call"
+        android:text="@string/button_contacts_tel_text"
+    />
+
+    <Button
+        android:id="@+id/button_contacts_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="25dp"
+        android:layout_marginHorizontal="80dp"
+        android:textSize="10sp"
+        android:drawableLeft="@android:drawable/ic_dialog_email"
+        android:text="@string/button_contacts_email_text"
+    />
+
+    <Button
+        android:id="@+id/button_contacts_website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="25dp"
+        android:layout_marginHorizontal="80dp"
+        android:textSize="10sp"
+        android:drawableLeft="@android:drawable/ic_dialog_info"
+        android:text="@string/button_contacts_website_text"
+        />
 
 </LinearLayout>
