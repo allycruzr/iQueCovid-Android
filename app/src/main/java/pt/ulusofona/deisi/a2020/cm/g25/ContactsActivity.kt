@@ -14,7 +14,7 @@ class ContactsActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        setTitle("");
+        setTitle(getResources().getString(R.string.activity_contacts_name))
         button_contacts_tel.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel:808242424")
@@ -22,14 +22,14 @@ class ContactsActivity : AppCompatActivity() {
         }
 
         button_contacts_email.setOnClickListener {
-            val intent = Intent(Intent.CATEGORY_APP_EMAIL)
-            intent.data = Uri.parse("email:atendimento@sns24.gov.pt")
+            val intent = Intent(Intent.ACTION_SENDTO)
+            intent.data = Uri.parse("mailto:atendimento@sns24.gov.pt")
             startActivity(intent)
         }
 
         button_contacts_website.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel:808242424")
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://www.sns24.gov.pt/")
             startActivity(intent)
         }
     }
