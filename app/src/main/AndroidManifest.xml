@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectoCM20_21G25">
-        <activity android:name=".ContactsActivity"/>
-        <activity android:name=".DashboardActivity"/>
+        <activity android:name=".TestFormActivity"></activity>
+        <activity android:name=".ContactsActivity" />
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

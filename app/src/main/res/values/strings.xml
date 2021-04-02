@@ -1,4 +1,5 @@
 <resources>
+
     <!-- Titulos de Activities -->
     <string name="app_name">Co-Info-Vid</string>
     <string name="activity_contacts_name">Contacts</string>
@@ -7,6 +8,7 @@
     <string name="activity_insert_test_form_name">Add Test</string>
     <string name="activity_edit_test_form_name">Edit Test</string>
     <string name="activity_test_detail_name">Test Details</string>
+
     <!-- Textos de botões -->
     <string name="text_contacts">Para entrar em contacto connosco, utilize os botões abaixo:</string>
     <string name="button_contacts_tel_text">808 24 24 24</string>

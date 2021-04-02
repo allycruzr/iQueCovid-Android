@@ -24,5 +24,10 @@ class DashboardActivity : AppCompatActivity() {
             //startActivity(Intent(this, ContactsActivity::class.java))
             finish()
         }
+
+        button_form.setOnClickListener {
+            startActivity(Intent(this, TestFormActivity::class.java))
+            finish()
+        }
     }
 }

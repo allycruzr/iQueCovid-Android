@@ -14,7 +14,9 @@ class ContactsActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+
         setTitle(getResources().getString(R.string.activity_contacts_name))
+
         button_contacts_tel.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel:808242424")

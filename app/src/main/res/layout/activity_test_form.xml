@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/form_edit_text_row"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:id="@+id/form_edit_text_label1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/black"
+        android:text="Select Date:"
+        android:textSize="25sp" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="01/Jan/2020"
+        android:textColor="@color/black"
+        style="?android:spinnerStyle"
+        />
+
+
+    <TextView
+        android:id="@+id/form_edit_text_error1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        android:visibility="visible"
+        tools:text="Error" />
+
+
+    <TextView
+        android:id="@+id/form_edit_text_label2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:text="Local"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/form_edit_text_field2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp" />
+
+
+    <TextView
+        android:id="@+id/form_edit_text_error2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        android:visibility="visible"
+        tools:text="Error" />
+
+    <TextView
+        android:id="@+id/form_edit_text_label3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:text="Observations"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/form_edit_text_field3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp" />
+
+
+    <TextView
+        android:id="@+id/form_edit_text_error3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        android:visibility="visible"
+        tools:text="Error" />
+
+
+
+    <TextView
+        android:id="@+id/form_radio_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="250dp"
+
+        android:text="Result"
+        android:textSize="14sp"
+        android:visibility="visible" />
+
+
+    <RadioGroup
+        android:id="@+id/form_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:checkedButton="@+id/radioButton2"
+        android:visibility="visible">
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/form_submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Submmit"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
