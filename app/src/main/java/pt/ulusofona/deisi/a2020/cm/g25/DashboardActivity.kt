@@ -17,17 +17,14 @@ class DashboardActivity : AppCompatActivity() {
 
         button_contacts.setOnClickListener {
             startActivity(Intent(this, ContactsActivity::class.java))
-            finish()
         }
 
         button_testes.setOnClickListener {
             startActivity(Intent(this, TestListActivity::class.java))
-            finish()
         }
 
         button_form.setOnClickListener {
             startActivity(Intent(this, TestFormActivity::class.java))
-            finish()
         }
     }
 }
