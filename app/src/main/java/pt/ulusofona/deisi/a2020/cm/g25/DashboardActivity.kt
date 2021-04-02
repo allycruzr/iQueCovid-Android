@@ -13,7 +13,6 @@ class DashboardActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        setTitle(getResources().getString(R.string.activity_dashboard_name))
 
 
         button_contacts.setOnClickListener {
