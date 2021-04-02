@@ -14,7 +14,6 @@ class DashboardActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-
         button_contacts.setOnClickListener {
             startActivity(Intent(this, ContactsActivity::class.java))
         }

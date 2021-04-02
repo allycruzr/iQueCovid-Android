@@ -49,9 +49,6 @@ class TestFormActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-
-        setTitle(getResources().getString(R.string.activity_insert_test_form_name))
-
     }
 
 
