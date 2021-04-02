@@ -15,6 +15,7 @@ class DashboardActivity : AppCompatActivity() {
         super.onStart()
         setTitle(getResources().getString(R.string.activity_dashboard_name))
 
+
         button_contacts.setOnClickListener {
             startActivity(Intent(this, ContactsActivity::class.java))
         }
