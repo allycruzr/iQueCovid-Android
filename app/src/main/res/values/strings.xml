@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Titulos de Activities -->
-    <string name="app_name">Co-Info-Vid</string>
+    <string name="app_name">iQueCovid</string>
     <string name="activity_contacts_name">Contacts</string>
     <string name="activity_dashboard_name">Dashboard</string>
     <string name="activity_list_tests_name">Test List</string>
@@ -14,11 +14,5 @@
     <string name="button_contacts_tel_text">808 24 24 24</string>
     <string name="button_contacts_email_text">atendimento@sns24.gov.pt</string>
     <string name="button_contacts_website_text">www.sns24.gov.pt</string>
-    <string name="observations">Observations</string>
-    <string name="title_activity_main">MainActivity</string>
-    <!--
-    This string is used for square devices and overridden by hello_world in
-    values-round/strings.xml for round devices.
-    -->
-    <string name="hello_world" translatable="false">Hello Square World!</string>
+    <string name="add_test">Adicionar Teste</string>
 </resources>

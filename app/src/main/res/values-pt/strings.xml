@@ -1,15 +1,18 @@
 <resources>
+
     <!-- Titulos de Activities -->
-    <string name="app_name">Co-Info-Vid</string>
+    <string name="app_name">iQueCovid</string>
     <string name="activity_contacts_name">Contactos</string>
     <string name="activity_dashboard_name">Dashboard</string>
     <string name="activity_list_tests_name">Lista de Testes</string>
     <string name="activity_insert_test_form_name">Adicionar Teste</string>
     <string name="activity_edit_test_form_name">Editar Teste</string>
     <string name="activity_test_detail_name">Detalhes do Teste</string>
+
     <!-- Textos de botões -->
     <string name="text_contacts">Para entrar em contacto connosco, utilize os botões abaixo:</string>
     <string name="button_contacts_tel_text">808 24 24 24</string>
     <string name="button_contacts_email_text">atendimento@sns24.gov.pt</string>
     <string name="button_contacts_website_text">www.sns24.gov.pt</string>
+    <string name="add_test">Adicionar Teste</string>
 </resources>
