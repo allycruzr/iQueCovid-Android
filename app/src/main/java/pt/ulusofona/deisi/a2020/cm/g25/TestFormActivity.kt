@@ -38,7 +38,7 @@ class TestFormActivity : AppCompatActivity() {
                 selectDate.set(Calendar.MONTH,i2)
                 selectDate.set(Calendar.DAY_OF_MONTH,i3)
                 val date = formatDate.format(selectDate.time)
-                Toast.makeText(this, "Date: "+date, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Selected date: "+date, Toast.LENGTH_SHORT).show()
                 btn_date_picker.text=date
 
 
