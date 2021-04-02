@@ -14,4 +14,11 @@
     <string name="button_contacts_tel_text">808 24 24 24</string>
     <string name="button_contacts_email_text">atendimento@sns24.gov.pt</string>
     <string name="button_contacts_website_text">www.sns24.gov.pt</string>
+    <string name="observations">Observations</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world" translatable="false">Hello Square World!</string>
 </resources>
