@@ -38,4 +38,103 @@
         android:onClick="openDatePicker"
     />
 
+    <TextView
+        android:id="@+id/form_result_text_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:text="Result"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/form_result_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:id="@+id/form_result_text_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        android:visibility="visible"
+        tools:text="Error" />
+
+    <TextView
+        android:id="@+id/form_local_text_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:text="Local"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/form_local_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:id="@+id/form_local_text_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        android:visibility="visible"
+        tools:text="Error" />
+
+    <TextView
+        android:id="@+id/form_obs_text_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:text="Observations"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/form_obs_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp" />
+
+    <TextView
+        android:id="@+id/form_obs_text_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        android:visibility="visible"
+        tools:text="Error" />
+
+    <Button
+        android:id="@+id/form_submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Submit"
+        android:textColor="@android:color/white" />
+
 </LinearLayout>
