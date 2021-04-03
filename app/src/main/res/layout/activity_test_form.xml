@@ -49,12 +49,34 @@
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="14sp" />
 
-    <EditText
-        android:id="@+id/form_result_text_field"
+   <RadioGroup
+       android:id="@+id/radioGroup_result"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:ems="10"
+       android:paddingLeft="10dp"
+       >
+
+       <RadioButton
+           android:id="@+id/waiting"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Waiting Result" />
+
+        <RadioButton
+        android:id="@+id/negative"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:paddingLeft="10dp" />
+        android:text="Negative" />
+
+       <RadioButton
+           android:id="@+id/positive"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Positive" />
+
+
+   </RadioGroup>
 
     <TextView
         android:id="@+id/form_result_text_error"
@@ -72,10 +94,10 @@
         android:id="@+id/form_local_text_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:paddingLeft="10dp"
         android:paddingRight="5dp"
-        android:text="Local"
+        android:text="Location"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="14sp" />
 
@@ -99,22 +121,15 @@
         tools:text="Error" />
 
     <TextView
-        android:id="@+id/form_obs_text_label"
+        android:id="@+id/form_foto_text_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:paddingLeft="10dp"
         android:paddingRight="5dp"
-        android:text="Observations"
+        android:text="Fotografia"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="14sp" />
-
-    <EditText
-        android:id="@+id/form_obs_text_field"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:paddingLeft="10dp" />
 
     <TextView
         android:id="@+id/form_obs_text_error"
