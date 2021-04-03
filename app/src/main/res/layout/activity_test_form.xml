@@ -10,18 +10,13 @@
 
     <TextView
         android:id="@+id/textView_get_date_label"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Date:"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="30dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:padding="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:text="Date"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="15sp" />
     />
 
     <Button
@@ -29,12 +24,9 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="01 Jan 2021"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textColor="@color/black"
         style="?android:spinnerStyle"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
         android:layout_gravity="center"
         android:onClick="openDatePicker"
     />
@@ -48,7 +40,7 @@
         android:paddingRight="5dp"
         android:text="Result"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="14sp" />
+        android:textSize="15sp" />
 
    <RadioGroup
        android:id="@+id/radioGroup_result"
@@ -87,7 +79,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="5dp"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="14sp"
+        android:textSize="15sp"
         android:visibility="visible"
         tools:text="Error" />
 
@@ -100,7 +92,7 @@
         android:paddingRight="5dp"
         android:text="Location"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="14sp" />
+        android:textSize="15sp" />
 
     <EditText
         android:id="@+id/form_local_text_field"
@@ -117,7 +109,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="5dp"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="14sp"
+        android:textSize="15sp"
         android:visibility="visible"
         tools:text="Error" />
 
@@ -130,7 +122,7 @@
         android:paddingRight="5dp"
         android:text="Fotografia"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="14sp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/form_obs_text_error"
@@ -140,7 +132,7 @@
         android:paddingLeft="20dp"
         android:paddingRight="5dp"
         android:textColor="@android:color/holo_red_dark"
-        android:textSize="14sp"
+        android:textSize="15sp"
         android:visibility="visible"
         tools:text="Error" />
 
