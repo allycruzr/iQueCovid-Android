@@ -2,9 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pt.ulusofona.deisi.a2020.cm.g25">
 
-    <uses-feature android:name="android.hardware.camera"
-        android:required="true" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectoCM20_21G25">
+        <activity android:name=".TestDetailActivity"/>
         <activity
             android:name=".TestListActivity"
             android:label="@string/activity_list_tests_name">
@@ -28,8 +26,7 @@
             android:name=".DashboardActivity"
             android:label="@string/activity_dashboard_name">
         </activity>
-        <activity
-            android:name=".SplashScreenActivity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

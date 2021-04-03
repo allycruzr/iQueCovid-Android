@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/activity_dashboard_name"/>
+    <item
+        android:id="@+id/test_list_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_test_list"
+        android:title="@string/activity_list_tests_name"/>
+    <item
+        android:id="@+id/extraPage"
+        android:enabled="true"
+        android:icon="@drawable/ic_extra"
+        android:title="@string/activity_extra_name"/>
+    <item
+        android:id="@+id/contacts_page"
+        android:enabled="true"
+        android:icon="@drawable/ic_contacts"
+        android:title="@string/activity_contacts_name"/>
+</menu>
