@@ -44,7 +44,15 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Add Test"
-            />
+        />
+
+        <Button
+            android:id="@+id/button_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Test Detail"
+        />
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
