@@ -20,6 +20,5 @@ class TestListActivity : AppCompatActivity() {
             startActivity(Intent(this, TestFormActivity::class.java))
             finish()
         }
-
     }
 }

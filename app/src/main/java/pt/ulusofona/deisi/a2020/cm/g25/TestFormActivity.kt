@@ -7,12 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_contacts.*
 import android.os.Build
+import android.view.MenuItem
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.ColorInt
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.ActionBar
 import kotlinx.android.synthetic.main.activity_test_form.*
 import java.text.SimpleDateFormat
 import java.time.DayOfWeek
@@ -28,6 +30,9 @@ class TestFormActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_form)
+
+        val actionBar: ActionBar? = supportActionBar                                                  // Botão Retroceder na TitleBar da activity
+        actionBar?.setDisplayHomeAsUpEnabled(true)
 
         btn_date_picker.setOnClickListener {
             val getDate = Calendar.getInstance()
@@ -49,6 +54,16 @@ class TestFormActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {                                     // Define o comportamento do botão Retroceder do TitleBar
+        when (item.getItemId()) {
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 

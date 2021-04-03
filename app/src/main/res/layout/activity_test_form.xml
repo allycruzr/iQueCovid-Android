@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".TestFormActivity">
+    tools:context=".TestFormActivity"
+    android:padding="50dp">
 
     <TextView
         android:id="@+id/textView_get_date_label"
