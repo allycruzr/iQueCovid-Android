@@ -9,24 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectoCM20_21G25">
-        <activity android:name=".TestDetailActivity"/>
+        <activity android:name=".views.TestDetailActivity"/>
         <activity
-            android:name=".TestListActivity"
+            android:name=".views.TestListActivity"
             android:label="@string/activity_list_tests_name">
         </activity>
         <activity
-            android:name=".TestFormActivity"
+            android:name=".views.TestFormActivity"
             android:label="@string/activity_insert_test_form_name">
         </activity>
         <activity
-            android:name=".ContactsActivity"
+            android:name=".views.ContactsActivity"
             android:label="@string/activity_contacts_name">
         </activity>
         <activity
-            android:name=".DashboardActivity"
+            android:name=".views.DashboardActivity"
             android:label="@string/activity_dashboard_name">
         </activity>
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".views.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

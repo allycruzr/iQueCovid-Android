@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="50dp"
-    tools:context=".TestDetailActivity">
+    tools:context=".views.TestDetailActivity">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -73,13 +73,12 @@
         android:text="Comprovativo:"
         android:textStyle="bold"
         android:textSize="24dp"
-        />
+    />
 
     <Button
         android:layout_marginTop="18dp"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:drawable="@drawable/ic_open_picture"
-        android:foreground="#FFFFFF"
     />
 </LinearLayout>

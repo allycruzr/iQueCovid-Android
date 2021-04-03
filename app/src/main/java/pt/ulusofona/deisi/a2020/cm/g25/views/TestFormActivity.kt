@@ -1,23 +1,17 @@
-package pt.ulusofona.deisi.a2020.cm.g25
+package pt.ulusofona.deisi.a2020.cm.g25.views
 
 import android.app.DatePickerDialog
-import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_contacts.*
 import android.os.Build
 import android.view.MenuItem
 import android.view.View
-import android.view.Window
-import android.view.WindowManager
 import android.widget.Toast
-import androidx.annotation.ColorInt
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
 import kotlinx.android.synthetic.main.activity_test_form.*
+import pt.ulusofona.deisi.a2020.cm.g25.R
 import java.text.SimpleDateFormat
-import java.time.DayOfWeek
 import java.util.*
 
 class TestFormActivity : AppCompatActivity() {

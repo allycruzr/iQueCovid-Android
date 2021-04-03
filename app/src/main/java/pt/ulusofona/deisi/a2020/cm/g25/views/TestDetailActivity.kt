@@ -1,7 +1,8 @@
-package pt.ulusofona.deisi.a2020.cm.g25
+package pt.ulusofona.deisi.a2020.cm.g25.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import pt.ulusofona.deisi.a2020.cm.g25.R
 
 class TestDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

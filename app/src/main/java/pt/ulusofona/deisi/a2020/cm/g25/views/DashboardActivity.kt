@@ -1,10 +1,11 @@
-package pt.ulusofona.deisi.a2020.cm.g25
+package pt.ulusofona.deisi.a2020.cm.g25.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_dashboard.*
+import pt.ulusofona.deisi.a2020.cm.g25.R
 
 class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

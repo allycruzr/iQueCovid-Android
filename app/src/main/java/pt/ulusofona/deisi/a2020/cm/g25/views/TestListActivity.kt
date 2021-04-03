@@ -1,11 +1,10 @@
-package pt.ulusofona.deisi.a2020.cm.g25
+package pt.ulusofona.deisi.a2020.cm.g25.views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_dashboard.*
+import pt.ulusofona.deisi.a2020.cm.g25.R
 
 class TestListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
