@@ -20,6 +20,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:src="@drawable/ic_add_test"
+
         android:contentDescription="@string/add_test"
         android:layout_margin="16dp" />
 
