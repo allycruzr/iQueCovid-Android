@@ -9,8 +9,6 @@ import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
-import androidx.lifecycle.MediatorLiveData
-import androidx.lifecycle.MutableLiveData
 import kotlinx.android.synthetic.main.activity_test_form.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import java.text.SimpleDateFormat
@@ -19,16 +17,10 @@ import java.util.*
 class TestFormActivity : AppCompatActivity() {
 
     var formatDate = SimpleDateFormat("dd MMM YYYY", Locale.UK)
-    private val emailLiveData = MutableLiveData<String>()
-    private val passwordLiveData = MutableLiveData<String>()
-    private val isValidLiveData = MediatorLiveData<Boolean>()
-
-
 
     // Data variable for saving form when submitting
     /*var data = mutableMapOf<String, Any>()
     var onValidationFunction = ::toastValid*/
-
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,8 +41,6 @@ class TestFormActivity : AppCompatActivity() {
                 val date = formatDate.format(selectDate.time)
                 Toast.makeText(this, "Selected date: "+date, Toast.LENGTH_SHORT).show()
                 btn_date_picker.text=date
-
-
             }, getDate.get(Calendar.YEAR), getDate.get(Calendar.MONTH), getDate.get(Calendar.DAY_OF_MONTH))
             datePicker.show()
         }
@@ -69,8 +59,12 @@ class TestFormActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-/*
-    private fun onSubmit(){
+
+    fun openDatePicker(view: View) {
+
+    }
+
+    /*private fun onSubmit(){
         updateData()
         if(isValid())
             onValidationFunction()
@@ -93,8 +87,4 @@ class TestFormActivity : AppCompatActivity() {
     private fun toastValid(){
         Toast.makeText(activity,"Valid",Toast.LENGTH_SHORT).show()
     }*/
-
-    fun openDatePicker(view: View) {
-
-    }
 }
