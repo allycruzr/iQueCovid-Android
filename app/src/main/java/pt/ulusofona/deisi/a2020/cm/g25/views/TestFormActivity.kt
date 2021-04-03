@@ -9,6 +9,8 @@ import android.view.View
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
+import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.MutableLiveData
 import kotlinx.android.synthetic.main.activity_test_form.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import java.text.SimpleDateFormat
@@ -17,7 +19,15 @@ import java.util.*
 class TestFormActivity : AppCompatActivity() {
 
     var formatDate = SimpleDateFormat("dd MMM YYYY", Locale.UK)
+    private val emailLiveData = MutableLiveData<String>()
+    private val passwordLiveData = MutableLiveData<String>()
+    private val isValidLiveData = MediatorLiveData<Boolean>()
 
+
+
+    // Data variable for saving form when submitting
+    /*var data = mutableMapOf<String, Any>()
+    var onValidationFunction = ::toastValid*/
 
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -59,8 +69,30 @@ class TestFormActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+/*
+    private fun onSubmit(){
+        updateData()
+        if(isValid())
+            onValidationFunction()
+    }
 
+    private fun isValid(): Boolean {
+        var valid = true
+        for (field in fields)
+            if (! field.isValid(container, data))
+                valid = false
+        return valid
+    }
 
+    private fun updateData()  {
+        data.clear()
+        for (field in fields)
+            data[field.name] = field.getInput(container)
+    }
+
+    private fun toastValid(){
+        Toast.makeText(activity,"Valid",Toast.LENGTH_SHORT).show()
+    }*/
 
     fun openDatePicker(view: View) {
 
