@@ -75,10 +75,13 @@
         android:textSize="24dp"
     />
 
-    <Button
+    <ImageButton
+        android:id="@+id/button_open_picture"
         android:layout_marginTop="18dp"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:drawable="@drawable/ic_open_picture"
+        android:src="@drawable/ic_open_picture"
+        android:drawableTint="@color/white"
+        android:background="@color/dodger_blue"
     />
 </LinearLayout>

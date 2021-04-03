@@ -41,5 +41,9 @@ class DashboardActivity : AppCompatActivity() {
         button_form.setOnClickListener {
             startActivity(Intent(this, TestFormActivity::class.java))
         }
+
+        button_detail.setOnClickListener {
+            startActivity(Intent(this, TestDetailActivity::class.java))
+        }
     }
 }
