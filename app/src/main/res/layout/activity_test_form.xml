@@ -17,7 +17,6 @@
         android:text="Date"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="15sp" />
-    />
 
     <Button
         android:id="@+id/btn_date_picker"

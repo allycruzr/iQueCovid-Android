@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25
+ package pt.ulusofona.deisi.a2020.cm.g25
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_dashboard.*
 
 class TestListActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_list)
@@ -21,4 +22,6 @@ class TestListActivity : AppCompatActivity() {
             finish()
         }
     }
+
+
 }
