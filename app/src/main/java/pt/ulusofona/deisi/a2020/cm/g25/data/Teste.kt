@@ -30,5 +30,3 @@ class Teste(date:String, local: String, resultado: String, ficheiro: String) {
         return super.hashCode()
     }
 }
-
-
