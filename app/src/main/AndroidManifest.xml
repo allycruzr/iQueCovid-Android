@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pt.ulusofona.deisi.a2020.cm.g25">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,26 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectoCM20_21G25">
+        <activity android:name=".views.ImageFullscreenActivity"></activity>
         <activity
             android:name=".views.TestDetailActivity"
-            android:label="@string/activity_test_detail_name">
-        </activity>
+            android:label="@string/activity_test_detail_name"></activity>
         <activity
             android:name=".views.TestListActivity"
-            android:label="@string/activity_list_tests_name">
-        </activity>
+            android:label="@string/activity_list_tests_name"></activity>
         <activity
             android:name=".views.TestFormActivity"
-            android:label="@string/activity_insert_test_form_name">
-        </activity>
+            android:label="@string/activity_insert_test_form_name"></activity>
         <activity
             android:name=".views.ContactsActivity"
-            android:label="@string/activity_contacts_name">
-        </activity>
+            android:label="@string/activity_contacts_name"></activity>
         <activity
             android:name=".views.DashboardActivity"
-            android:label="@string/activity_dashboard_name">
-        </activity>
+            android:label="@string/activity_dashboard_name"></activity>
         <activity android:name=".views.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,5 +33,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>

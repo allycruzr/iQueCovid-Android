@@ -20,13 +20,13 @@
 
     <Button
         android:id="@+id/btn_date_picker"
-        android:layout_width="250dp"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:text="01 Jan 2021"
         android:textSize="20sp"
         android:textColor="@color/black"
         style="?android:spinnerStyle"
-        android:layout_gravity="center"
+        android:textAlignment="textStart"
         android:onClick="openDatePicker"
     />
 
@@ -119,9 +119,16 @@
         android:layout_marginTop="20dp"
         android:paddingLeft="10dp"
         android:paddingRight="5dp"
-        android:text="Fotografia"
+        android:text="Fotografia (Optional)"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/form_foto_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:paddingLeft="10dp" />
 
     <TextView
         android:id="@+id/form_obs_text_error"

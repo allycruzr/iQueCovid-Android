@@ -48,6 +48,10 @@ class TestFormActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+
+        form_submit_button.setOnClickListener{
+
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {                                     // Define o comportamento do botão Retroceder do TitleBar

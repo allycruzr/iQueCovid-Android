@@ -11,9 +11,9 @@
     <string name="activity_extra_name">Extra</string>
 
     <!-- Textos de botões -->
-    <string name="text_contacts">Para entrar em contacto connosco, utilize os botões abaixo:</string>
+    <string name="text_contacts">Get in touch with us, by clicking the following buttons:</string>
     <string name="button_contacts_tel_text">808 24 24 24</string>
     <string name="button_contacts_email_text">atendimento@sns24.gov.pt</string>
     <string name="button_contacts_website_text">www.sns24.gov.pt</string>
-    <string name="add_test">Adicionar Teste</string>
+    <string name="add_test">Add Test</string>
 </resources>

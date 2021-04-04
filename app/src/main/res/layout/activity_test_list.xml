@@ -17,12 +17,13 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:fabCustomSize="70dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:src="@drawable/ic_add_test"
         android:backgroundTint="@color/dodger_blue"
         android:contentDescription="@string/add_test"
         app:tint="@color/white"
-        android:layout_margin="16dp" />
+        android:layout_margin="25dp" />
 
 </RelativeLayout>

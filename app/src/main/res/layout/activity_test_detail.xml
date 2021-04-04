@@ -65,6 +65,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:text="Negativo"
         android:textSize="16dp"
     />
@@ -78,12 +79,21 @@
         android:textSize="24dp"
     />
 
-    <ImageButton
-        android:id="@+id/button_open_picture"
+    <ImageView
+        android:id="@+id/pic_test"
         android:layout_marginTop="18dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_open_picture"
-        android:background="@drawable/roundcorner"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:src="@drawable/teste_covid"
+    />
+
+    <TextView
+        android:id="@+id/detail_file_name"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text="Negativo"
+        android:textSize="16dp"
     />
 </LinearLayout>

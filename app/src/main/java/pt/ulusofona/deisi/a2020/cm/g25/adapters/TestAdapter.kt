@@ -60,9 +60,9 @@ class TestAdapter(private val dataSet: ArrayList<Test>) :
         viewHolder.dateTextView.text = teste.date
         viewHolder.localTextView.text = teste.local
         if (teste.resultado == "Positivo") {
-            viewHolder.resultImageView.setImageResource(R.drawable.ic_test_negative)
-        } else if (teste.resultado == "Negativo") {
             viewHolder.resultImageView.setImageResource(R.drawable.ic_test_positive)
+        } else if (teste.resultado == "Negativo") {
+            viewHolder.resultImageView.setImageResource(R.drawable.ic_test_negative)
         } else {
             viewHolder.resultImageView.setImageResource(R.drawable.ic_test_unknown)
         }
