@@ -19,7 +19,16 @@ class DashboardActivity : AppCompatActivity() {
                     true
                 }
                 R.id.test_list_page -> {
-                    // Respond to navigation item 2 click
+                    startActivity(Intent(this, TestListActivity::class.java))
+                    true
+                }
+                R.id.extraPage -> {
+                    //startActivity(Intent(this, ExtraActivity::class.java))
+
+                    true
+                }
+                R.id.contacts_page -> {
+                    startActivity(Intent(this, ContactsActivity::class.java))
                     true
                 }
                 else -> false

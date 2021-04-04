@@ -23,8 +23,8 @@
         android:gravity="center"
         android:paddingHorizontal="25dp"
         android:layout_marginHorizontal="80dp"
-        android:textSize="10sp"
-        android:drawableLeft="@android:drawable/ic_menu_call"
+        android:textSize="14sp"
+        android:drawableLeft="@drawable/ic_call"
         android:text="@string/button_contacts_tel_text"
     />
 
@@ -36,7 +36,7 @@
         android:paddingHorizontal="25dp"
         android:layout_marginHorizontal="80dp"
         android:textSize="10sp"
-        android:drawableLeft="@android:drawable/ic_dialog_email"
+        android:drawableLeft="@drawable/ic_email"
         android:text="@string/button_contacts_email_text"
     />
 
@@ -47,8 +47,8 @@
         android:gravity="center"
         android:paddingHorizontal="25dp"
         android:layout_marginHorizontal="80dp"
-        android:textSize="10sp"
-        android:drawableLeft="@android:drawable/ic_dialog_info"
+        android:textSize="11sp"
+        android:drawableLeft="@drawable/ic_web"
         android:text="@string/button_contacts_website_text"
         />
 

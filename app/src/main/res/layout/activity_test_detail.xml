@@ -25,6 +25,7 @@
     />
 
     <TextView
+        android:id="@+id/detail_text_date"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,6 +43,7 @@
     />
 
     <TextView
+        android:id="@+id/detail_text_local"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -59,6 +61,7 @@
     />
 
     <TextView
+        android:id="@+id/detail_text_result"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -81,7 +84,6 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:src="@drawable/ic_open_picture"
-        android:drawableTint="@color/white"
-        android:background="@color/dodger_blue"
+        android:background="@drawable/roundcorner"
     />
 </LinearLayout>

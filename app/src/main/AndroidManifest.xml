@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectoCM20_21G25">
-        <activity android:name=".views.TestDetailActivity"/>
+        <activity
+            android:name=".views.TestDetailActivity"
+            android:label="@string/activity_test_detail_name">
+        </activity>
         <activity
             android:name=".views.TestListActivity"
             android:label="@string/activity_list_tests_name">

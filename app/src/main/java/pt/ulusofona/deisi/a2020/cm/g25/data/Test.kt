@@ -1,6 +1,6 @@
 package pt.ulusofona.deisi.a2020.cm.g25.data
 
-class Teste(date:String, local: String, resultado: String, ficheiro: String) {
+class Test(date:String, local: String, resultado: String, ficheiro: String) {
     var date: String = date
         get() = if(field == "") "N/A" else field        // getter (Se String vazia, devolve N/A)
         set(value) {                                    // setter
