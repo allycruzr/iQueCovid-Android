@@ -1,14 +1,21 @@
 package pt.ulusofona.deisi.a2020.cm.g25.views
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Environment.getExternalStorageDirectory
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_test_detail.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
+import java.io.File
+import java.io.FileOutputStream
 
+
+@Suppress("DEPRECATION")
 class TestDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +28,19 @@ class TestDetailActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
+        val bm = BitmapFactory.decodeResource(resources, R.drawable.teste_covid)
+        val extStorageDirectory = getExternalStorageDirectory().toString()
+
+
+        ///******************* Não está funcional!!!
+        val file1 = File(extStorageDirectory, "teste_covid.png")
+        val outStream = FileOutputStream(file1)
+        bm.compress(Bitmap.CompressFormat.PNG, 100, outStream)
+        outStream.flush()
+        outStream.close()
+        ///******************* Não está funcional!!!
+
+
         val date = intent.getStringExtra("DATE")
         val local = intent.getStringExtra("LOCAL")
         val result = intent.getStringExtra("RESULT")
@@ -32,9 +52,11 @@ class TestDetailActivity : AppCompatActivity() {
         //detail_text_file.text = date
 
         button_open_picture.setOnClickListener{
+            ///******************* Não está funcional!!!
             val intent = Intent(Intent.ACTION_VIEW)
-            intent.data = Uri.parse("file://" + "./drawable/teste_covid.png")
+            intent.data = Uri.parse("file://" + extStorageDirectory + "teste_covid.png")
             startActivity(intent)
+            ///******************* Não está funcional!!!
         }
     }
 
