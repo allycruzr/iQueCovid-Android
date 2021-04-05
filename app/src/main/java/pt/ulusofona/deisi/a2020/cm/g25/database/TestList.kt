@@ -1,7 +1,7 @@
 package pt.ulusofona.deisi.a2020.cm.g25.database
 
 import android.util.Log
-import pt.ulusofona.deisi.a2020.cm.g25.data.Test
+import pt.ulusofona.deisi.a2020.cm.g25.classes.Test
 
 object TestList {
     val testList: ArrayList<Test> = ArrayList<Test>()

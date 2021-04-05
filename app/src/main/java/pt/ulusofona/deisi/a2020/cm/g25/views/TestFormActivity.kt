@@ -12,7 +12,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
 import kotlinx.android.synthetic.main.activity_test_form.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
-import pt.ulusofona.deisi.a2020.cm.g25.data.Test
+import pt.ulusofona.deisi.a2020.cm.g25.classes.Test
 import pt.ulusofona.deisi.a2020.cm.g25.database.TestList
 import java.text.SimpleDateFormat
 import java.util.*

@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import pt.ulusofona.deisi.a2020.cm.g25.R
-import pt.ulusofona.deisi.a2020.cm.g25.data.Test
+import pt.ulusofona.deisi.a2020.cm.g25.classes.Test
 import pt.ulusofona.deisi.a2020.cm.g25.views.TestDetailActivity
 
 class TestAdapter(private val dataSet: ArrayList<Test>) :

@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.data
+package pt.ulusofona.deisi.a2020.cm.g25.classes
 
 class Test(date:String, local: String, resultado: String, ficheiro: String) {
     var date: String = date

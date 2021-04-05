@@ -7,7 +7,6 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_test_list.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.adapters.TestAdapter
-import pt.ulusofona.deisi.a2020.cm.g25.data.Test
 import pt.ulusofona.deisi.a2020.cm.g25.database.TestList
 
 class TestListActivity : AppCompatActivity() {
