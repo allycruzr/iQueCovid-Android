@@ -1,16 +1,19 @@
-package pt.ulusofona.deisi.a2020.cm.g25.views
+package pt.ulusofona.deisi.a2020.cm.g25
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_dashboard.*
-import pt.ulusofona.deisi.a2020.cm.g25.R
+import pt.ulusofona.deisi.a2020.cm.g25.views.ContactsActivity
+import pt.ulusofona.deisi.a2020.cm.g25.views.TestListActivity
 
-class DashboardActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+class DashboardFragment : Fragment() {
+    override fun onCreateView(inflater: LayoutInflater, container:ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dashboard)
 
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when(item.itemId) {
@@ -19,7 +22,7 @@ class DashboardActivity : AppCompatActivity() {
                     true
                 }
                 R.id.test_list_page -> {
-                    startActivity(Intent(this, TestListActivity::class.java))
+                    startActivity(Intent(activity, TestListActivity::class.java))
                     true
                 }
                 R.id.extraPage -> {
@@ -28,23 +31,24 @@ class DashboardActivity : AppCompatActivity() {
                     true
                 }
                 R.id.contacts_page -> {
-                    startActivity(Intent(this, ContactsActivity::class.java))
+                    startActivity(Intent(activity, ContactsActivity::class.java))
                     true
                 }
                 else -> false
             }
         }
+        return inflater.inflate(R.layout.fragment_dashboard, container, false)
     }
 
     override fun onStart() {
         super.onStart()
 
         button_contacts.setOnClickListener {
-            startActivity(Intent(this, ContactsActivity::class.java))
+            startActivity(Intent(activity, ContactsActivity::class.java))
         }
 
         button_testes.setOnClickListener {
-            startActivity(Intent(this, TestListActivity::class.java))
+            startActivity(Intent(activity, TestListActivity::class.java))
         }
     }
 }

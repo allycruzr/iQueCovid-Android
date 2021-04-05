@@ -10,7 +10,7 @@ object TestList {
     init {
         val test1: Test = Test("01-01-2021", "Hospital Santa Maria", "Positivo", "N/A")
         val test2: Test = Test("11-02-2021", "Hospital São José", "Negativo", "teste_covid.png")
-        val test3: Test = Test("03-03-2021", "Hospital Beatriz Ângelo", "N/A", "N/A")
+        val test3: Test = Test("03-03-2021", "Hospital Beatriz Ângelo", "A Aguardar Resultado", "N/A")
 
         testList.add(test1)
         testList.add(test2)

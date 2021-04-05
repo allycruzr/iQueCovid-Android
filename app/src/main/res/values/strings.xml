@@ -16,4 +16,11 @@
     <string name="button_contacts_email_text">atendimento@sns24.gov.pt</string>
     <string name="button_contacts_website_text">www.sns24.gov.pt</string>
     <string name="add_test">Add Test</string>
+    <!-- Testos da activity_test_detail -->
+    <string name="detail_text_date">Date:</string>
+    <string name="detail_text_local">Local:</string>
+    <string name="detail_text_result">Result:</string>
+    <string name="detail_text_comprovative">Comprovative:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

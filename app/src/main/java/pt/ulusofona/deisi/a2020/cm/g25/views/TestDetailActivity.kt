@@ -1,17 +1,14 @@
 package pt.ulusofona.deisi.a2020.cm.g25.views
 
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.os.Environment.getExternalStorageDirectory
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_test_detail.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
 
-
-@Suppress("DEPRECATION")
 class TestDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,9 +21,6 @@ class TestDetailActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        val bm = BitmapFactory.decodeResource(resources, R.drawable.teste_covid)
-        val extStorageDirectory = getExternalStorageDirectory().toString()
-
         val date = intent.getStringExtra("DATE")
         val local = intent.getStringExtra("LOCAL")
         val result = intent.getStringExtra("RESULT")
@@ -37,10 +31,11 @@ class TestDetailActivity : AppCompatActivity() {
         detail_text_result.text = result
         if (file=="N/A") {
             pic_test.setImageResource(R.drawable.no_image)
+            pic_test.layoutParams.height = 200 //LinearLayoutCompat.LayoutParams.WRAP_CONTENT        // Alterar para DP!!!
+            pic_test.layoutParams.width = 200 //LinearLayoutCompat.LayoutParams.WRAP_CONTENT         // Alterar para DP!!!
         } else {
-            val visible: Int = 0
             detail_file_name.text = file
-            detail_file_name.visibility = visible
+            detail_file_name.visibility = View.VISIBLE
             pic_test.setOnClickListener{
                 val fullScreenIntent = Intent(this, ImageFullscreenActivity::class.java)
                 startActivity(fullScreenIntent)

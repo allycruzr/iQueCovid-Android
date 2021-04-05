@@ -12,14 +12,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_test"
-        android:layout_gravity="center|left"
+        android:layout_gravity="center"
     />
 
     <TextView
         android:layout_marginTop="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data:"
+        android:text="@string/detail_text_date"
         android:textStyle="bold"
         android:textSize="24dp"
     />
@@ -37,7 +37,7 @@
         android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Local:"
+        android:text="@string/detail_text_local"
         android:textStyle="bold"
         android:textSize="24dp"
     />
@@ -55,7 +55,7 @@
         android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultado:"
+        android:text="@string/detail_text_result"
         android:textStyle="bold"
         android:textSize="24dp"
     />
@@ -74,7 +74,7 @@
         android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Comprovativo:"
+        android:text="@string/detail_text_comprovative"
         android:textStyle="bold"
         android:textSize="24dp"
     />
@@ -84,6 +84,7 @@
         android:layout_marginTop="18dp"
         android:layout_width="150dp"
         android:layout_height="200dp"
+
         android:src="@drawable/teste_covid"
     />
 
