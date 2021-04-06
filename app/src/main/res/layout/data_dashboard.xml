@@ -7,25 +7,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
-        >
+        android:paddingTop="15dp">
 
-        <ImageView
+        <!--ImageView
             android:layout_width="40dp"
             android:layout_height="50dp"
             android:gravity="center_vertical"
             android:src="@drawable/flag_portugal">
-        </ImageView>
+        </ImageView-->
 
         <TextView
             android:id="@+id/tabela_cases_header"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:padding="10dp"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:text="Casos Portugal">
+            android:text="Portugal Cases (last 24h)"
+            >
         </TextView>
     </LinearLayout>
 
@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="20dp">
+        android:paddingTop="15dp">
         <TableRow
             android:layout_weight="3"
             android:paddingStart="10dp"
@@ -49,7 +49,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="14sp"
-                android:text="Casos">
+                android:text="New Cases">
             </TextView>
 
             <TextView
@@ -62,7 +62,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="14sp"
-                android:text="Recuperados">
+                android:text="Recovered">
             </TextView>
 
             <TextView
@@ -74,7 +74,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="14sp"
-                android:text="Óbitos">
+                android:text="Death">
             </TextView>
 
         </TableRow>
@@ -91,7 +91,7 @@
                 android:gravity="center_vertical"
                 android:textStyle="bold"
                 android:textSize="28sp"
-                android:text="823 mil"
+                android:text="+1 250"
                 android:textColor="#FFAA00 ">
             </TextView>
 
@@ -104,7 +104,7 @@
                 android:gravity="center_vertical"
                 android:textStyle="bold"
                 android:textSize="28sp"
-                android:text="780 mil"
+                android:text="+1 200"
                 android:textColor="#00b51a">
             </TextView>
 
@@ -116,7 +116,7 @@
                 android:gravity="center_vertical"
                 android:textStyle="bold"
                 android:textSize="28sp"
-                android:text="16 879"
+                android:text="+ 25"
                 android:textColor="#e60000">
             </TextView>
 
@@ -127,7 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="25dp"
+        android:paddingTop="36dp"
         android:showDividers="middle"
         android:divider="@color/black">
 
@@ -143,7 +143,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="12sp"
-                android:text="Localização">
+                android:text="Region">
             </TextView>
 
             <TextView
@@ -157,7 +157,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="12sp"
-                android:text="Casos">
+                android:text="New Cases">
             </TextView>
 
             <TextView
@@ -171,7 +171,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="12sp"
-                android:text="Recuperados">
+                android:text="Recovered">
 
             </TextView>
 
@@ -185,7 +185,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="12sp"
-                android:text="Óbitos">
+                android:text="Death">
             </TextView>
         </TableRow>
 
@@ -217,7 +217,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="171 mil">
+                android:text="+ 10">
             </TextView>
 
             <TextView
@@ -245,7 +245,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="2431">
+                android:text="+ 10">
             </TextView>
 
         </TableRow>
@@ -277,7 +277,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="106 mil">
+                android:text="+ 10">
             </TextView>
 
             <TextView
@@ -305,7 +305,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="1751">
+                android:text="+ 10">
             </TextView>
 
         </TableRow>
@@ -337,7 +337,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="33 154">
+                android:text="+ 30">
             </TextView>
 
             <TextView
@@ -365,7 +365,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="657">
+                android:text="+ 30">
             </TextView>
 
         </TableRow>
@@ -397,7 +397,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="6950">
+                android:text="+ 6">
             </TextView>
 
             <TextView
@@ -425,7 +425,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="127">
+                android:text="0">
             </TextView>
 
         </TableRow>
@@ -456,7 +456,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="5714">
+                android:text="+ 5">
             </TextView>
 
             <TextView
@@ -484,7 +484,7 @@
                 android:paddingTop="10dp"
                 android:textStyle="bold"
                 android:textSize="16sp"
-                android:text="55">
+                android:text="+ 0">
             </TextView>
 
         </TableRow>

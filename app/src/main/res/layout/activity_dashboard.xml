@@ -9,52 +9,54 @@
     tools:context=".views.DashboardActivity">
 
     <LinearLayout
-        android:layout_weight="8"
-        android:orientation="vertical"
-        android:padding="50dp"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
+            android:layout_weight="8"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:padding="10dp"
-            android:text="Esta é a Activity do Dashboard"/>
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/button_contacts"
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/data_dashboard">
+            </include>
+
+
+           <LinearLayout
+
+               android:layout_height="wrap_content"
+               android:layout_width="wrap_content"
+               android:paddingTop="36dp"/>
+
+            <Button
+                android:id="@+id/button_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Contactos" />
+
+            <Button
+                android:id="@+id/button_testes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Listar Testes"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_weight="2"
+            android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Contactos"
-        />
-
-        <Button
-            android:id="@+id/button_testes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Listar Testes"
-        />
-
-        <include
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            layout="@layout/data_dashboard">
-        </include>
-
-
+            android:layout_height="0dp"
+            app:backgroundTint="@color/dodger_blue"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bottom_navigation_menu"/>
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_weight="2"
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:backgroundTint="@color/dodger_blue"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/bottom_navigation_menu"
-    />
 </LinearLayout>

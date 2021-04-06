@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,15 +15,14 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         app:navigationIcon="@drawable/abc_vector_test"
-        app:title="DetailFragment"
+        app:title="Test Details"
         android:id="@+id/toolbar"
+        app:titleTextColor="@color/white"
         android:layout_height="56dp"
         android:layout_width="match_parent" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
-
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:orientation="vertical"

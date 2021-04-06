@@ -12,7 +12,6 @@
         android:orientation="vertical"
         android:gravity="center">
 
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="400dp"
@@ -31,8 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:progress="70"
-            />
+            android:progress="70"/>
 
     </LinearLayout>
 

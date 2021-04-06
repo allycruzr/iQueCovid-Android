@@ -43,12 +43,10 @@ class TestDetailFragment : Fragment(){
                 visibility = View.VISIBLE
             }
             binding.picTest.setOnClickListener{
-               // TODO Após nav implem,entada navegar até o fragment full screen
+               // TODO Após nav implementada navegar até o fragment full screen
             }
         }
-
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

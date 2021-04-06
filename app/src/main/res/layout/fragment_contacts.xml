@@ -4,52 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="10"
     android:orientation="vertical"
     tools:context=".views.ContactsActivity">
 
-    <TextView
-        android:layout_width="match_parent"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="14sp"
-        android:padding="25dp"
-        android:text="@string/text_contacts"
-        />
+        android:layout_width="match_parent">
 
-    <Button
-        android:id="@+id/button_contacts_tel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingHorizontal="25dp"
-        android:layout_marginHorizontal="80dp"
-        android:textSize="14sp"
-        android:drawableLeft="@drawable/ic_call"
-        android:text="@string/button_contacts_tel_text"
-        />
+        <com.google.android.material.appbar.MaterialToolbar
+            app:navigationIcon="@drawable/abc_vector_test"
+            app:title="Test Details"
+            android:id="@+id/toolbar"
+            app:titleTextColor="@color/white"
+            android:layout_height="56dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"/>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <Button
-        android:id="@+id/button_contacts_email"
+    <LinearLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingHorizontal="25dp"
-        android:layout_marginHorizontal="80dp"
-        android:textSize="10sp"
-        android:drawableLeft="@drawable/ic_email"
-        android:text="@string/button_contacts_email_text"
-        />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button_contacts_website"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingHorizontal="25dp"
-        android:layout_marginHorizontal="80dp"
-        android:textSize="11sp"
-        android:drawableLeft="@drawable/ic_web"
-        android:text="@string/button_contacts_website_text"
-        />
+        <LinearLayout
+            android:layout_weight="8"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:padding="25dp"
+                android:text="@string/text_contacts"
+                />
+
+            <Button
+                android:id="@+id/button_contacts_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="25dp"
+                android:layout_marginHorizontal="80dp"
+                android:textSize="14sp"
+                android:drawableLeft="@drawable/ic_call"
+                android:text="@string/button_contacts_tel_text"
+                />
+
+            <Button
+                android:id="@+id/button_contacts_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="25dp"
+                android:layout_marginHorizontal="80dp"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/ic_email"
+                android:text="@string/button_contacts_email_text" />
+
+            <Button
+                android:id="@+id/button_contacts_website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="25dp"
+                android:layout_marginHorizontal="80dp"
+                android:textSize="11sp"
+                android:drawableLeft="@drawable/ic_web"
+                android:text="@string/button_contacts_website_text"
+                />
+
+        </LinearLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_weight="2"
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:backgroundTint="@color/dodger_blue"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bottom_navigation_menu"/>
+    </LinearLayout>
 
 </LinearLayout>

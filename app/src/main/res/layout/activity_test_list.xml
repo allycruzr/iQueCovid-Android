@@ -11,7 +11,7 @@
         android:id="@+id/test_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layoutManager="LinearLayoutManager"/>
+        app:layoutManager="LinearLayoutManager" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -25,5 +25,4 @@
         android:contentDescription="@string/add_test"
         app:tint="@color/white"
         android:layout_margin="25dp" />
-
 </RelativeLayout>

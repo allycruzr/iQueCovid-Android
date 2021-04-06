@@ -4,7 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.ImageFullscreenActivity">
+    tools:context=".views.ImageFullscreenActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            app:navigationIcon="@drawable/abc_vector_test"
+            app:title="Test Proof"
+            android:id="@+id/toolbar"
+            app:titleTextColor="@color/white"
+            android:layout_height="56dp"
+            android:layout_width="match_parent" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
         android:id="@+id/fullscreen_pic_test"
