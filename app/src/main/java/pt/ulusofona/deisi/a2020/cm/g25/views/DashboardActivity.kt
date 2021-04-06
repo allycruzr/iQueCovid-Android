@@ -14,20 +14,20 @@ class DashboardActivity : AppCompatActivity() {
 
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when(item.itemId) {
-                R.id.dashboard_page -> {
+                R.id.nav_dashboard -> {
                     // Respond to navigation item 1 click
                     true
                 }
-                R.id.test_list_page -> {
+                R.id.nav_test_list -> {
                     startActivity(Intent(this, TestListActivity::class.java))
                     true
                 }
-                R.id.extraPage -> {
+                R.id.nav_extraPage -> {
                     //startActivity(Intent(this, ExtraActivity::class.java))
 
                     true
                 }
-                R.id.contacts_page -> {
+                R.id.nav_contacts -> {
                     startActivity(Intent(this, ContactsActivity::class.java))
                     true
                 }

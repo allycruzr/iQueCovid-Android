@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import pt.ulusofona.deisi.a2020.cm.g25.MainActivity
 import pt.ulusofona.deisi.a2020.cm.g25.R
 
 class SplashScreenActivity : AppCompatActivity() {
