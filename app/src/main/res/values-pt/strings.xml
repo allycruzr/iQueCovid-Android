@@ -4,7 +4,7 @@
     <string name="app_name">iQueCovid</string>
     <string name="activity_contacts_name">Contactos</string>
     <string name="activity_dashboard_name">Dashboard</string>
-    <string name="activity_list_tests_name">Lista de Testes</string>
+    <string name="activity_list_tests_name">Testes</string>
     <string name="activity_insert_test_form_name">Adicionar Teste</string>
     <string name="activity_edit_test_form_name">Editar Teste</string>
     <string name="activity_test_detail_name">Detalhes do Teste</string>

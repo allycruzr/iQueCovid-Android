@@ -5,8 +5,10 @@
     android:orientation="vertical"
     android:weightSum="10"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".views.DashboardActivity">
+    android:layout_height="match_parent">
+    <!--
+    tools:context=".views.DashboardVaccination"
+    -->
 
     <LinearLayout
         android:layout_height="match_parent"
@@ -24,26 +26,6 @@
                 android:layout_height="wrap_content"
                 layout="@layout/data_dashboard">
             </include>
-
-           <LinearLayout
-
-               android:layout_height="wrap_content"
-               android:layout_width="wrap_content"
-               android:paddingTop="36dp"/>
-
-            <Button
-                android:id="@+id/button_contacts"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Contactos" />
-
-            <Button
-                android:id="@+id/button_testes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Listar Testes"/>
 
         </LinearLayout>
 
