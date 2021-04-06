@@ -38,6 +38,13 @@
             android:text="Listar Testes"
         />
 
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/data_dashboard">
+        </include>
+
+
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

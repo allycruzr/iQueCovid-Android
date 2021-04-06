@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/flag_portugal">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tabela_cases_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="Casos Portugal">
+        </TextView>
+    </LinearLayout>
+
+    <!-- Headers -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/dashboard_header_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="Casos">
+            </TextView>
+
+            <TextView
+
+                android:layout_weight="1"
+                android:id="@+id/dashboard_header_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="Recuperados">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/dashboard_header_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="Óbitos">
+            </TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/dashboard_data_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:text="823 mil"
+                android:textColor="#FFAA00 ">
+            </TextView>
+
+            <TextView
+
+                android:layout_weight="1"
+                android:id="@+id/dashboard_data_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:text="780 mil"
+                android:textColor="#00b51a">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/dashboard_data_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="28sp"
+                android:text="16 879"
+                android:textColor="#e60000">
+            </TextView>
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="25dp"
+        android:showDividers="middle"
+        android:divider="@color/black">
+
+        <TableRow
+            android:weightSum="6">
+
+            <TextView
+                android:layout_weight="3"
+                android:id="@+id/dashboard_header_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="Localização">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_header_location_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="Casos">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_header_location_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="Recuperados">
+
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:id="@+id/dashboard_header_location_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:text="Óbitos">
+            </TextView>
+        </TableRow>
+
+        <TableRow
+            android:weightSum="6"
+
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:id="@+id/dashboard_north"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="Norte">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_north_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="171 mil">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_north_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="-">
+
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:id="@+id/dashboard_north_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="2431">
+            </TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:weightSum="6"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/dashboard_lisbon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="Lisboa"
+                android:textSize="16sp"
+                android:textStyle="bold">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_lisbon_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="106 mil">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_lisbon_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="-">
+
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:id="@+id/dashboard_lisbon_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="1751">
+            </TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:weightSum="6"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:id="@+id/dashboard_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="Centro">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_center_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="33 154">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_center_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="-">
+
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:id="@+id/dashboard_center_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="657">
+            </TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:weightSum="6"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:id="@+id/dashboard_alentejo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="Alentejo">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_alentejo_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="6950">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_alentejo_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="-">
+
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:id="@+id/dashboard_alentejo_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="127">
+            </TextView>
+
+        </TableRow>
+
+        <TableRow
+            android:weightSum="6">
+
+            <TextView
+                android:layout_weight="3"
+                android:id="@+id/dashboard_faro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="Faro">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_faro_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="5714">
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:id="@+id/dashboard_faro_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="-">
+
+            </TextView>
+
+            <TextView
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:id="@+id/dashboard_faro_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="55">
+            </TextView>
+
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
