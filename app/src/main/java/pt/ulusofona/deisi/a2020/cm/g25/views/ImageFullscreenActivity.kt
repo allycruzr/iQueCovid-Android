@@ -7,7 +7,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.bogdwellers.pinchtozoom.ImageMatrixTouchHandler
 import kotlinx.android.synthetic.main.activity_image_fullscreen.*
-import kotlinx.android.synthetic.main.activity_test_detail.*
+// import kotlinx.android.synthetic.main.activity_test_detail.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
 
 
