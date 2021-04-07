@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.views
+package pt.ulusofona.deisi.a2020.cm.g25.fragments
 
 import android.app.Activity
 import android.content.Intent

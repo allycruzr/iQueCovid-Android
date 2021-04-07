@@ -8,7 +8,7 @@
     <string name="activity_insert_test_form_name">Add Test</string>
     <string name="activity_edit_test_form_name">Edit Test</string>
     <string name="activity_test_detail_name">Test Details</string>
-    <string name="activity_extra_name">Extra</string>
+    <string name="activity_vaccination_name">Vaccination</string>
 
     <!-- Textos de botões -->
     <string name="text_contacts">Get in touch with us, by clicking the following buttons:</string>
@@ -24,7 +24,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="submit">Submit</string>
-    <string name="portugal_cases_last_24h">Portugal Cases (last 24h)</string>
+    <string name="portugal_cases_last_24h">Portugal Cases - Last 24h</string>
     <string name="portugal_vaccination">Portugal Vaccination</string>
     <string name="portugal_flag"> portugalFlag </string>
 </resources>

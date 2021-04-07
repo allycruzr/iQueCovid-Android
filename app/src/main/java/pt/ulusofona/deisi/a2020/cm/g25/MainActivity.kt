@@ -27,14 +27,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 NavigationManager.goToDashBoardFragment(supportFragmentManager)
                 return true
             }
-            //R.id.nav_test_list -> {
-            //  NavigationManager.goToTestListFragment(supportFragmentManager)
-            //  return true
-            //}
-            //R.id.nav_extraPage -> {
-            //  NavigationManager.goToExtraPageFragment(supportFragmentManager)
-            //  return true
-            //}
+            R.id.nav_test_list -> {
+              NavigationManager.goToTestListFragment(supportFragmentManager)
+              return true
+            }
+            R.id.nav_extraPage -> {
+              NavigationManager.goToVaccinationFragment(supportFragmentManager)
+              return true
+            }
             R.id.nav_contacts -> {
                 NavigationManager.goToContactsFragment(supportFragmentManager)
                 return true
