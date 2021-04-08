@@ -2,6 +2,7 @@ package pt.ulusofona.deisi.a2020.cm.g25.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.transition.TransitionInflater
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -15,41 +16,10 @@ import pt.ulusofona.deisi.a2020.cm.g25.views.TestListActivity
 class DashboardFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container:ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreate(savedInstanceState)
-
-        BottomNavigationView.OnNavigationItemSelectedListener { item ->
-            when(item.itemId) {
-                R.id.nav_dashboard -> {
-                    // Respond to navigation item 1 click
-                    true
-                }
-                R.id.nav_test_list -> {
-                    startActivity(Intent(activity, TestListActivity::class.java))
-                    true
-                }
-                R.id.nav_extraPage -> {
-                    //startActivity(Intent(this, ExtraActivity::class.java))
-
-                    true
-                }
-                R.id.nav_contacts -> {
-                    startActivity(Intent(activity, ContactsActivity::class.java))
-                    true
-                }
-                else -> false
-            }
-        }
         return inflater.inflate(R.layout.fragment_dashboard, container, false)
     }
 
     override fun onStart() {
         super.onStart()
-
-        button_contacts.setOnClickListener {
-            startActivity(Intent(activity, ContactsActivity::class.java))
-        }
-
-        button_testes.setOnClickListener {
-            startActivity(Intent(activity, TestListActivity::class.java))
-        }
     }
 }

@@ -1,45 +1,57 @@
 package pt.ulusofona.deisi.a2020.cm.g25
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
-import pt.ulusofona.deisi.a2020.cm.g25.fragments.DashboardFragment
+import kotlinx.android.synthetic.main.activity_main.*
 import pt.ulusofona.deisi.a2020.cm.g25.navigation.NavigationManager
-import pt.ulusofona.deisi.a2020.cm.g25.views.ContactsFragment
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
-
+class MainActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         NavigationManager.goToDashBoardFragment(supportFragmentManager)
-        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_navigation)
-    }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            R.id.nav_dashboard -> {
-                NavigationManager.goToDashBoardFragment(supportFragmentManager)
-                return true
+        val botNavBAr: BottomNavigationView = findViewById(R.id.bottom_navigation_bar)
+
+
+        // var mainToolbar : androidx.appcompat.widget.Toolbar = findViewById(R.id.main_toolbar)
+
+        toolbar.title = getString(R.string.activity_dashboard_name)
+
+        //setSupportActionBar(mainToolbar)
+        supportActionBar?.setTitle(R.string.activity_dashboard_name)
+
+        botNavBAr.setOnNavigationItemSelectedListener {
+            when(it.itemId) {
+                R.id.nav_dashboard -> {
+                    NavigationManager.goToDashBoardFragment(supportFragmentManager)
+                    toolbar.title = getString(R.string.activity_dashboard_name)
+                    //botNavBAr.selectedItemId = R.id.nav_dashboard
+                    true
+                }
+                R.id.nav_test_list -> {
+                    NavigationManager.goToTestListFragment(supportFragmentManager)
+                    toolbar.title = getString(R.string.activity_list_tests_name)
+                    //botNavBAr.selectedItemId = R.id.nav_test_list
+                    true
+                }
+                R.id.nav_extraPage -> {
+                    NavigationManager.goToVaccinationFragment(supportFragmentManager)
+                    toolbar.title = getString(R.string.activity_vaccination_name)
+                    //botNavBAr.selectedItemId = R.id.nav_extraPage
+                    true
+                }
+                R.id.nav_contacts -> {
+                    NavigationManager.goToContactsFragment(supportFragmentManager)
+                    toolbar.title = getString(R.string.activity_contacts_name)
+                    //botNavBAr.selectedItemId = R.id.nav_contacts
+                    true
+                }
             }
-            R.id.nav_test_list -> {
-              NavigationManager.goToTestListFragment(supportFragmentManager)
-              return true
-            }
-            R.id.nav_extraPage -> {
-              NavigationManager.goToVaccinationFragment(supportFragmentManager)
-              return true
-            }
-            R.id.nav_contacts -> {
-                NavigationManager.goToContactsFragment(supportFragmentManager)
-                return true
-            }
+            false
         }
-        return false
     }
 }

@@ -104,6 +104,7 @@ class TestFormActivity : AppCompatActivity() {
                 return true
             }
         }
+
         return super.onOptionsItemSelected(item)
     }
 
