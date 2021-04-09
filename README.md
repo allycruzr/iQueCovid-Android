@@ -1,4 +1,4 @@
-# Projecto Computação Móvel 2020/2021 - iQueCovid
+# Projecto Computação Móvel 2020/2021
 ### Grupo 25
 ### Alunos:
 * Allyson Rodrigues (21900126)
@@ -10,5 +10,5 @@
  
 --------
 
-### Mapa de Navegação
+### Mapa de Navegação - iQueCovid
 ![image](https://user-images.githubusercontent.com/59263912/114240035-cbdb2d80-997e-11eb-86f4-fb8796b8a11f.png)
