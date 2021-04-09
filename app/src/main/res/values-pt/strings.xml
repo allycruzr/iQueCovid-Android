@@ -16,8 +16,24 @@
     <string name="button_contacts_website_text">www.sns24.gov.pt</string>
     <string name="add_test">Adicionar Teste</string>
     <!-- Testos da activity_test_detail -->
-    <string name="detail_text_date">Data:</string>
+    <string name="detail_text_date">Date:</string>
     <string name="detail_text_local">Local:</string>
-    <string name="detail_text_result">Resultado:</string>
-    <string name="detail_text_comprovative">Comprovativo:</string>
+    <string name="detail_text_result">Result:</string>
+    <string name="detail_text_comprovative">Proof:</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="submit">Submit</string>
+    <string name="portugal_cases_last_24h">Casos Portugal- Last 24h</string>
+    <string name="portugal_vaccination">Portugal Vaccination</string>
+    <string name="portugal_flag"> portugalFlag </string>
+    <string name="common_symptoms">Common Symptoms</string>
+    <string name="tiredness">Tiredness</string>
+    <string name="dry_cogh">Dry Cogh</string>
+    <string name="fever">Fever</string>
+    <string name="reported_symptoms">Reported COVID 19 symptoms</string>
+    <string name="aches_and_pains">Dores</string>
+    <string name="conjunctivitis">Conjuntivite</string>
+    <string name="headache">Dor de cabeça</string>
+    <string name="loss_of_taste_or_smell">Perda de paladar e olfato</string>
+    <string name="difficulty_breathing">Dificuldade Respiratória</string>
+    <string name="chest_pain_or_pressure">Dor e pressão no peito</string>
 </resources>

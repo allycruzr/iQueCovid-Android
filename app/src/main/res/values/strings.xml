@@ -31,14 +31,11 @@
     <string name="tiredness">Tiredness</string>
     <string name="dry_cogh">Dry Cogh</string>
     <string name="fever">Fever</string>
-    <string name="reported_symptoms">Reported symptoms</string>
-    <string name="most_common_symptoms">Most common symptoms</string>
-    <string name="less_common_symptoms">Less common symptoms:</string>
+    <string name="reported_symptoms">Reported COVID 19 symptoms</string>
     <string name="aches_and_pains">Aches and Pains</string>
     <string name="conjunctivitis">Conjunctivitis</string>
     <string name="headache">Headache</string>
     <string name="loss_of_taste_or_smell">Loss of taste or smell</string>
     <string name="difficulty_breathing">Difficulty breathing</string>
-    <string name="serious_symptoms">Serious symptoms:</string>
     <string name="chest_pain_or_pressure">Chest pain or pressure</string>
 </resources>
