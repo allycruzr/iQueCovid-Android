@@ -16,7 +16,6 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            app:navigationIcon="@drawable/abc_vector_test"
             app:title="Test Form"
             app:titleTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
