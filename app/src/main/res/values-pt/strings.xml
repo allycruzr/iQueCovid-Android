@@ -8,7 +8,6 @@
     <string name="activity_insert_test_form_name">Adicionar Teste</string>
     <string name="activity_edit_test_form_name">Editar Teste</string>
     <string name="activity_test_detail_name">Detalhes do Teste</string>
-    <string name="activity_vaccination_name">Vacinas</string>
 
     <!-- Textos de botões -->
     <string name="text_contacts">Para entrar em contacto connosco, utilize os botões abaixo:</string>

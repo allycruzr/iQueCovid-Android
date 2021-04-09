@@ -21,7 +21,11 @@ import pt.ulusofona.deisi.a2020.cm.g25.views.TestFormActivity
 
 class TestListFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         super.onCreate(savedInstanceState)
         ButterKnife.bind(this, fragment_fab)
         return inflater.inflate(R.layout.fragment_test_list, container, false)
@@ -35,12 +39,12 @@ class TestListFragment : Fragment() {
         test_recycler_view.adapter = TestAdapter(testes.testList)
 
         @OnClick(R.id.fragment_fab)
-        fun setOnClickListener(view: View){
+        fun setOnClickListener(view: View) {
             Log.i("TestListFragment", "$activity")
             startActivity(Intent(MainActivity(), TestFormActivity::class.java))
         }
 
-        fragment_fab.setOnClickListener{ view ->
+        fragment_fab.setOnClickListener { view ->
             Log.i("TestListFragment", "$activity")
             startActivity(Intent(activity, TestFormActivity::class.java))
         }

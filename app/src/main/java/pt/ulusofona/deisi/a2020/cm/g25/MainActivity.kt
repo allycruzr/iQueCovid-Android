@@ -6,7 +6,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import pt.ulusofona.deisi.a2020.cm.g25.navigation.NavigationManager
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(){
         supportActionBar?.setTitle(R.string.activity_dashboard_name)
 
         botNavBAr.setOnNavigationItemSelectedListener {
-            when(it.itemId) {
+            when (it.itemId) {
                 R.id.nav_dashboard -> {
                     NavigationManager.goToDashBoardFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.activity_dashboard_name)

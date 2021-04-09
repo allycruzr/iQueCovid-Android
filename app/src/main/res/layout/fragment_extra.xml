@@ -24,7 +24,7 @@
             <include
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                layout="@layout/data_dashboard">
+                layout="@layout/data_extra">
             </include>
 
         </LinearLayout>

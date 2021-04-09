@@ -2,11 +2,10 @@ package pt.ulusofona.deisi.a2020.cm.g25.navigation
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import pt.ulusofona.deisi.a2020.cm.g25.fragments.DashboardFragment
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.fragments.TestListFragment
-import pt.ulusofona.deisi.a2020.cm.g25.fragments.VaccinationFragment
+import pt.ulusofona.deisi.a2020.cm.g25.fragments.ExtraFragment
 import pt.ulusofona.deisi.a2020.cm.g25.views.ContactsFragment
 
 abstract class NavigationManager {
@@ -15,15 +14,15 @@ abstract class NavigationManager {
 
         val dashboardFragment = DashboardFragment()
         val testListFragment = TestListFragment()
-        val vaccinationFragment = VaccinationFragment()
+        val extraFragment = ExtraFragment()
         val contactsFragment = ContactsFragment()
 
-        private fun placeFragment(fm: FragmentManager, fragment: Fragment){
+        private fun placeFragment(fm: FragmentManager, fragment: Fragment) {
             val transition = fm.beginTransaction()
             transition
-                    .replace(R.id.content_main, fragment)
-                    .addToBackStack(null)
-                    .commit()
+                .replace(R.id.content_main, fragment)
+                .addToBackStack(null)
+                .commit()
         }
 
         fun goToDashBoardFragment(fm: FragmentManager) {
@@ -35,7 +34,7 @@ abstract class NavigationManager {
         }
 
         fun goToVaccinationFragment(fm: FragmentManager) {
-            placeFragment(fm, vaccinationFragment)
+            placeFragment(fm, extraFragment)
         }
 
         fun goToContactsFragment(fm: FragmentManager) {

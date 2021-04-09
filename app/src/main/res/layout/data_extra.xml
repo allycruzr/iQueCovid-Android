@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:layout_marginStart="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:text="@string/reported_symptoms"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Headers -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingTop="15dp">
+
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/dashboard_header_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="@string/fever"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dashboard_data_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="81%"
+                android:textColor="#FFAA00 "
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingEnd="10dp">
+
+
+            <TextView
+
+                android:id="@+id/dashboard_header_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="@string/dry_cogh"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/dashboard_data_recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="72%"
+                android:textColor="#FFAA00"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingEnd="10dp">
+
+
+            <TextView
+                android:id="@+id/dashboard_header_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="@string/tiredness"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dashboard_data_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="70%"
+                android:textColor="#FFAA00"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingEnd="10dp">
+
+
+            <TextView
+                android:id="@+id/aches_and_pains"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="@string/aches_and_pains"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="65%"
+                android:textColor="#FFAA00"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingEnd="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="Diarrhoea"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="51%"
+                android:textColor="#FFAA00"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingEnd="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="@string/conjunctivitis"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="47%"
+                android:textColor="#FFAA00"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="3"
+            android:layout_marginBottom="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="@string/headache"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="39%"
+                android:textColor="#FFAA00"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingEnd="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="@string/loss_of_taste_or_smell"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="22%"
+                android:textColor="#FFAA00"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingEnd="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="@string/difficulty_breathing"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="19%"
+                android:textColor="#FFAA00"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="3"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:paddingEnd="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="@string/chest_pain_or_pressure"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="12%"
+                android:textColor="#FFAA00"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
+

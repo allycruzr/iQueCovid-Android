@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:weightSum="10"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
     tools:context=".views.DashboardActivity">
 
     <LinearLayout
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_weight="8"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:orientation="vertical">
 
             <include
+                layout="@layout/data_dashboard"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"></include>
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                layout="@layout/data_dashboard">
-            </include>
-
-           <LinearLayout
-
-               android:layout_height="wrap_content"
-               android:layout_width="wrap_content"
-               android:paddingTop="36dp"/>
+                android:paddingTop="36dp" />
 
             <Button
                 android:id="@+id/button_contacts"
@@ -43,19 +42,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Listar Testes"/>
+                android:text="Listar Testes" />
 
         </LinearLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_weight="2"
             android:id="@+id/dashboard_bottom_navigation_bar"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_weight="2"
             app:backgroundTint="@color/dodger_blue"
             app:itemIconTint="@color/white"
             app:itemTextColor="@color/white"
-            app:menu="@menu/bottom_navigation_menu"/>
+            app:menu="@menu/bottom_navigation_menu" />
     </LinearLayout>
 
 </LinearLayout>

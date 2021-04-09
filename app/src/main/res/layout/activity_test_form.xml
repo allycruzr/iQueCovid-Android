@@ -9,16 +9,16 @@
     tools:context=".views.TestFormActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
             app:navigationIcon="@drawable/abc_vector_test"
             app:title="Test Proof"
-            android:id="@+id/toolbar"
-            app:titleTextColor="@color/white"
-            android:layout_height="56dp"
-            android:layout_width="match_parent" />
+            app:titleTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
@@ -39,15 +39,15 @@
 
         <Button
             android:id="@+id/btn_date_picker"
+            style="?android:spinnerStyle"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:text="01 Jan 2021"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            style="?android:spinnerStyle"
-            android:textAlignment="textStart"
             android:onClick="openDatePicker"
-        />
+            android:text="01 Jan 2021"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
         <TextView
             android:id="@+id/form_date_error"
             android:layout_width="match_parent"
@@ -70,34 +70,33 @@
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="15sp" />
 
-       <RadioGroup
-           android:id="@+id/radioGroup_result"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:ems="10"
-           android:paddingLeft="10dp"
-           >
-
-           <RadioButton
-               android:id="@+id/form_radio_waiting"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:text="Waiting Result" />
-
-            <RadioButton
-            android:id="@+id/form_radio_negative"
+        <RadioGroup
+            android:id="@+id/radioGroup_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Negative" />
+            android:ems="10"
+            android:paddingLeft="10dp">
 
-           <RadioButton
-               android:id="@+id/form_radio_positive"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:text="Positive" />
+            <RadioButton
+                android:id="@+id/form_radio_waiting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Waiting Result" />
+
+            <RadioButton
+                android:id="@+id/form_radio_negative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Negative" />
+
+            <RadioButton
+                android:id="@+id/form_radio_positive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Positive" />
 
 
-       </RadioGroup>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/form_result_text_error"

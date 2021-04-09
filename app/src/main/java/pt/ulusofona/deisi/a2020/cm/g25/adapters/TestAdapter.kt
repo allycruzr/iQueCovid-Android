@@ -13,7 +13,7 @@ import pt.ulusofona.deisi.a2020.cm.g25.classes.Test
 import pt.ulusofona.deisi.a2020.cm.g25.views.TestDetailActivity
 
 class TestAdapter(private val dataSet: ArrayList<Test>) :
-        RecyclerView.Adapter<TestAdapter.ViewHolder>() {
+    RecyclerView.Adapter<TestAdapter.ViewHolder>() {
 
     /**
      * Provide a reference to the type of views that you are using
@@ -38,7 +38,7 @@ class TestAdapter(private val dataSet: ArrayList<Test>) :
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         // Create a new view, which defines the UI of the list item
         val view = LayoutInflater.from(viewGroup.context)
-                .inflate(R.layout.item_test, viewGroup, false)
+            .inflate(R.layout.item_test, viewGroup, false)
 
         return ViewHolder(view)
     }
@@ -69,11 +69,12 @@ class TestAdapter(private val dataSet: ArrayList<Test>) :
 
         viewHolder.itemView.setOnClickListener {
             val intent = Intent(context, TestDetailActivity::class.java)
-            intent.apply{
+            intent.apply {
                 putExtra("DATE", DATE)
                 putExtra("LOCAL", LOCAL)
                 putExtra("RESULT", RESULT)
-                putExtra("FILE", FILE)}
+                putExtra("FILE", FILE)
+            }
             context.startActivity(intent)
         }
     }

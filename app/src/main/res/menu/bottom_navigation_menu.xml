@@ -4,20 +4,20 @@
         android:id="@+id/nav_dashboard"
         android:enabled="true"
         android:icon="@drawable/ic_dashboard"
-        android:title="@string/activity_dashboard_name"/>
+        android:title="@string/activity_dashboard_name" />
     <item
         android:id="@+id/nav_test_list"
         android:enabled="true"
         android:icon="@drawable/ic_test_list"
-        android:title="@string/activity_list_tests_name"/>
+        android:title="@string/activity_list_tests_name" />
     <item
         android:id="@+id/nav_extraPage"
         android:enabled="true"
         android:icon="@drawable/ic_vaccine"
-        android:title="@string/activity_vaccination_name"/>
+        android:title="@string/activity_vaccination_name" />
     <item
         android:id="@+id/nav_contacts"
         android:enabled="true"
         android:icon="@drawable/ic_contacts"
-        android:title="@string/activity_contacts_name"/>
+        android:title="@string/activity_contacts_name" />
 </menu>

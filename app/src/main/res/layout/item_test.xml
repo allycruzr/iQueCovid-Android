@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/item_test_style"
+    android:orientation="horizontal"
     android:padding="20dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,19 +28,17 @@
                 android:id="@+id/text_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:textStyle="bold"
                 android:text="01/Jan/2021"
-                />
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_local"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:textStyle="bold"
                 android:text="Hospital Santa Maria"
-                />
+                android:textSize="18dp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

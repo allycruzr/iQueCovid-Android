@@ -11,90 +11,80 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/icon_test"
         android:layout_gravity="center"
-        />
+        android:src="@drawable/icon_test" />
 
     <TextView
-        android:layout_marginTop="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="@string/detail_text_date"
-        android:textStyle="bold"
         android:textSize="24dp"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/detail_text_date"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="01/01/2021"
-        android:textSize="16dp"
-        />
+        android:textSize="16dp" />
 
     <TextView
-        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="@string/detail_text_local"
-        android:textStyle="bold"
         android:textSize="24dp"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/detail_text_local"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Hospital Santa Maria"
-        android:textSize="16dp"
-        />
+        android:textSize="16dp" />
 
     <TextView
-        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="@string/detail_text_result"
-        android:textStyle="bold"
         android:textSize="24dp"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/detail_text_result"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
 
         android:text="Negativo"
-        android:textSize="16dp"
-        />
+        android:textSize="16dp" />
 
     <TextView
-        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="@string/detail_text_comprovative"
-        android:textStyle="bold"
         android:textSize="24dp"
-        />
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/pic_test"
-        android:layout_marginTop="18dp"
         android:layout_width="150dp"
         android:layout_height="200dp"
+        android:layout_marginTop="18dp"
 
-        android:src="@drawable/teste_covid"
-        />
+        android:src="@drawable/teste_covid" />
 
     <TextView
         android:id="@+id/detail_file_name"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
+        android:layout_marginTop="10dp"
         android:text="Negativo"
         android:textSize="16dp"
-        />
+        android:visibility="invisible" />
 </LinearLayout>

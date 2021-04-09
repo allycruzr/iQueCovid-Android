@@ -10,7 +10,8 @@ object TestList {
     init {
         val test1: Test = Test("01-01-2021", "Hospital Santa Maria", "Positivo", "N/A")
         val test2: Test = Test("11-02-2021", "Hospital São José", "Negativo", "teste_covid.png")
-        val test3: Test = Test("03-03-2021", "Hospital Beatriz Ângelo", "A Aguardar Resultado", "N/A")
+        val test3: Test =
+            Test("03-03-2021", "Hospital Beatriz Ângelo", "A Aguardar Resultado", "N/A")
 
         testList.add(test1)
         testList.add(test2)
@@ -19,17 +20,17 @@ object TestList {
         Log.i("TestList", "Lista inicial criada")
     }
 
-    fun addTest(test: Test){
+    fun addTest(test: Test) {
         this.testList.add(test)
         Log.i("TestList", "Adicionado um novo teste à lista")
     }
 
-    fun removeTest(test: Test){
+    fun removeTest(test: Test) {
         this.testList.remove(test)
         Log.i("TestList", "Removido um novo teste à lista")
     }
 
-    fun getLength(): Int{
+    fun getLength(): Int {
         return this.testList.size
     }
 
