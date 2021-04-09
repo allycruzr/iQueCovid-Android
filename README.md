@@ -1,4 +1,4 @@
-# Projecto Computação Móvel 2020/2021
+# Projecto Computação Móvel 2020/2021 - iQueCovid
 ### Grupo 25
 ### Alunos:
 * Allyson Rodrigues (21900126)
