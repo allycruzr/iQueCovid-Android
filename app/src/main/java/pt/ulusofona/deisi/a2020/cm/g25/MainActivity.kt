@@ -1,5 +1,6 @@
 package pt.ulusofona.deisi.a2020.cm.g25
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_extraPage -> {
                     NavigationManager.goToVaccinationFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.symptoms)
+                    toolbar.setNavigationIcon(R.drawable.ic_warning)
                     //botNavBAr.selectedItemId = R.id.nav_extraPage
                     true
                 }

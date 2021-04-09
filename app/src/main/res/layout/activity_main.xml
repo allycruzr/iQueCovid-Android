@@ -17,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:orientation="vertical"
+            app:navigationIcon="@drawable/ic_checked"
             app:title="@string/app_name"
             app:titleTextColor="@color/white"/>
     </com.google.android.material.appbar.AppBarLayout>
