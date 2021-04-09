@@ -35,6 +35,7 @@
                 android:gravity="center"
                 android:paddingHorizontal="25dp"
                 android:text="@string/button_contacts_tel_text"
+                android:backgroundTint="@color/indigo_dye"
                 android:textSize="14sp" />
 
             <Button
@@ -46,6 +47,7 @@
                 android:gravity="center"
                 android:paddingHorizontal="25dp"
                 android:text="@string/button_contacts_email_text"
+                android:backgroundTint="@color/indigo_dye"
                 android:textSize="10sp"
                 tools:ignore="SmallSp" />
 
@@ -58,6 +60,7 @@
                 android:gravity="center"
                 android:paddingHorizontal="25dp"
                 android:text="@string/button_contacts_website_text"
+                android:backgroundTint="@color/indigo_dye"
                 android:textSize="11sp"
                 tools:ignore="SmallSp" />
 
