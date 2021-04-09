@@ -30,26 +30,26 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_dashboard -> {
                     NavigationManager.goToDashBoardFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.activity_dashboard_name)
-                    //botNavBAr.selectedItemId = R.id.nav_dashboard
+                    it.setChecked(true)
                     true
                 }
                 R.id.nav_test_list -> {
                     NavigationManager.goToTestListFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.activity_list_tests_name)
-                    //botNavBAr.selectedItemId = R.id.nav_test_list
+                    it.setChecked(true)
                     true
                 }
                 R.id.nav_extraPage -> {
                     NavigationManager.goToVaccinationFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.symptoms)
                     toolbar.setNavigationIcon(R.drawable.ic_warning)
-                    //botNavBAr.selectedItemId = R.id.nav_extraPage
+                    it.setChecked(true)
                     true
                 }
                 R.id.nav_contacts -> {
                     NavigationManager.goToContactsFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.activity_contacts_name)
-                    //botNavBAr.selectedItemId = R.id.nav_contacts
+                    it.setChecked(true)
                     true
                 }
             }
