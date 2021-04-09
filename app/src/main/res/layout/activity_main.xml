@@ -17,7 +17,6 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:orientation="vertical"
-            app:act="@drawable/abc_vector_test"
             app:title="@string/app_name"
             app:titleTextColor="@color/white"/>
     </com.google.android.material.appbar.AppBarLayout>
