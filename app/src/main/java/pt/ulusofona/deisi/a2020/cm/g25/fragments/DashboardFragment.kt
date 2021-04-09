@@ -1,17 +1,11 @@
 package pt.ulusofona.deisi.a2020.cm.g25.fragments
 
-import android.content.Intent
 import android.os.Bundle
-import android.transition.TransitionInflater
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_dashboard.*
+import androidx.fragment.app.Fragment
 import pt.ulusofona.deisi.a2020.cm.g25.R
-import pt.ulusofona.deisi.a2020.cm.g25.views.ContactsActivity
-import pt.ulusofona.deisi.a2020.cm.g25.views.TestListActivity
 
 class DashboardFragment : Fragment() {
     override fun onCreateView(

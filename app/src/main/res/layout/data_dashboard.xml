@@ -9,13 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="15dp">
+        android:paddingTop="15dp"
+        tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="50dp"
             android:contentDescription="@string/portugal_flag"
-            android:src="@drawable/flag_portugal"></ImageView>
+            android:src="@drawable/flag_portugal" />
 
         <TextView
             android:id="@+id/tabela_cases_header"
@@ -24,7 +25,7 @@
             android:padding="10dp"
             android:text="@string/portugal_cases_last_24h"
             android:textSize="20sp"
-            android:textStyle="bold"></TextView>
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -48,9 +49,9 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="New Cases"
+                android:text="@string/new_cases"
                 android:textSize="14sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
 
@@ -60,9 +61,9 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="Recovered"
+                android:text="@string/recovered"
                 android:textSize="14sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_header_deaths"
@@ -71,9 +72,9 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="Death"
+                android:text="@string/death"
                 android:textSize="14sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -91,7 +92,7 @@
                 android:text="+1 250"
                 android:textColor="#FFAA00 "
                 android:textSize="28sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
 
@@ -103,7 +104,7 @@
                 android:text="+1 200"
                 android:textColor="#00b51a"
                 android:textSize="28sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_data_deaths"
@@ -114,7 +115,7 @@
                 android:text="+ 25"
                 android:textColor="#e60000"
                 android:textSize="28sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
         </TableRow>
     </TableLayout>
@@ -136,9 +137,9 @@
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="Region"
+                android:text="@string/region"
                 android:textSize="12sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_header_location_cases"
@@ -149,9 +150,9 @@
                 android:paddingStart="10dp"
                 android:paddingTop="10dp"
                 android:paddingEnd="10dp"
-                android:text="New Cases"
+                android:text="@string/new_cases"
                 android:textSize="12sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_header_location_recovered"
@@ -162,7 +163,7 @@
                 android:paddingStart="10dp"
                 android:paddingTop="10dp"
                 android:paddingEnd="10dp"
-                android:text="Recovered"
+                android:text="@string/recovered"
                 android:textSize="12sp"
                 android:textStyle="bold">
 
@@ -176,9 +177,9 @@
                 android:gravity="center_vertical"
                 android:paddingStart="10dp"
                 android:paddingTop="10dp"
-                android:text="Death"
+                android:text="@string/death"
                 android:textSize="12sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -193,9 +194,9 @@
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="Norte"
+                android:text="@string/norte"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_north_cases"
@@ -208,7 +209,7 @@
                 android:paddingEnd="10dp"
                 android:text="+ 10"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_north_recovered"
@@ -235,7 +236,7 @@
                 android:paddingTop="10dp"
                 android:text="+ 10"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -250,9 +251,9 @@
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="Lisboa"
+                android:text="@string/lisboa"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_lisbon_cases"
@@ -265,7 +266,7 @@
                 android:paddingEnd="10dp"
                 android:text="+ 10"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_lisbon_recovered"
@@ -292,7 +293,7 @@
                 android:paddingTop="10dp"
                 android:text="+ 10"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -307,9 +308,9 @@
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="Centro"
+                android:text="@string/centro"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_center_cases"
@@ -322,7 +323,7 @@
                 android:paddingEnd="10dp"
                 android:text="+ 30"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_center_recovered"
@@ -349,7 +350,7 @@
                 android:paddingTop="10dp"
                 android:text="+ 30"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -364,9 +365,9 @@
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="Alentejo"
+                android:text="@string/alentejo"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_alentejo_cases"
@@ -379,7 +380,7 @@
                 android:paddingEnd="10dp"
                 android:text="+ 6"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_alentejo_recovered"
@@ -406,7 +407,7 @@
                 android:paddingTop="10dp"
                 android:text="0"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -419,9 +420,9 @@
                 android:layout_weight="3"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="Faro"
+                android:text="@string/faro"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_faro_cases"
@@ -434,7 +435,7 @@
                 android:paddingEnd="10dp"
                 android:text="+ 5"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/dashboard_faro_recovered"
@@ -461,7 +462,7 @@
                 android:paddingTop="10dp"
                 android:text="0"
                 android:textSize="16sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
         </TableRow>
 

@@ -1,16 +1,12 @@
 package pt.ulusofona.deisi.a2020.cm.g25.fragments
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import pt.ulusofona.deisi.a2020.cm.g25.R
-import pt.ulusofona.deisi.a2020.cm.g25.databinding.ActivityContactsBinding
 import pt.ulusofona.deisi.a2020.cm.g25.databinding.FragmentTestDetailBinding
-import java.io.File
 
 class TestDetailFragment : Fragment() {
 
@@ -20,7 +16,7 @@ class TestDetailFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding = FragmentTestDetailBinding.inflate(inflater)
 

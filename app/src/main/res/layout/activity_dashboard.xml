@@ -22,7 +22,7 @@
             <include
                 layout="@layout/data_dashboard"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></include>
+                android:layout_height="wrap_content" />
 
             <LinearLayout
 
@@ -35,14 +35,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Contactos" />
+                android:text="@string/contactos" />
 
             <Button
                 android:id="@+id/button_testes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Listar Testes" />
+                android:text="@string/listar_testes" />
 
         </LinearLayout>
 
