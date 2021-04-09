@@ -14,7 +14,7 @@
         android:id="@+id/nav_extraPage"
         android:enabled="true"
         android:icon="@drawable/ic_vaccine"
-        android:title="@string/activity_vaccination_name" />
+        android:title="@string/symptoms" />
     <item
         android:id="@+id/nav_contacts"
         android:enabled="true"

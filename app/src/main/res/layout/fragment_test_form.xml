@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="10"
-    tools:context=".views.TestFormActivity">
+    android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -18,168 +14,168 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             app:navigationIcon="@drawable/abc_vector_test"
-            app:title="DetailFragment"
+            app:title="Test Form"
             app:titleTextColor="@color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="8"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView_get_date_label"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="5dp"
-            android:text="Date"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="15sp" />
+            android:orientation="vertical"
+            android:padding="20dp">
 
-        <Button
-            android:id="@+id/btn_date_picker"
-            style="?android:spinnerStyle"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:onClick="openDatePicker"
-            android:text="01 Jan 2021"
-            android:textAlignment="textStart"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/form_date_error"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="15sp"
-            android:visibility="visible"
-            tools:text="Error" />
-
-        <TextView
-            android:id="@+id/form_result_text_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="5dp"
-            android:text="Result"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="15sp" />
-
-        <RadioGroup
-            android:id="@+id/radioGroup_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:paddingLeft="10dp">
-
-            <RadioButton
-                android:id="@+id/form_radio_waiting"
+            <TextView
+                android:id="@+id/textView_get_date_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Waiting Result" />
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:text="@string/date"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="15sp" />
 
-            <RadioButton
-                android:id="@+id/form_radio_negative"
+            <Button
+                style="?android:spinnerStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Negative" />
+                android:onClick="openDatePicker"
+                android:text="@string/_01_jan_2021"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
-            <RadioButton
-                android:id="@+id/form_radio_positive"
+            <TextView
+                android:id="@+id/form_date_error"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Positive" />
+                android:paddingStart="20dp"
+                android:paddingEnd="5dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="15sp"
+                android:visibility="visible"
+                tools:text="Error" />
 
+            <TextView
+                android:id="@+id/form_result_text_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/result"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="15sp" />
 
-        </RadioGroup>
+            <RadioGroup
+                android:id="@+id/radioGroup_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:paddingLeft="10dp">
 
-        <TextView
-            android:id="@+id/form_result_text_error"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="15sp"
-            android:visibility="visible"
-            tools:text="Error" />
+                <RadioButton
+                    android:id="@+id/form_radio_waiting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/waiting_result" />
 
-        <TextView
-            android:id="@+id/form_local_text_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="5dp"
-            android:text="Location"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="15sp" />
+                <RadioButton
+                    android:id="@+id/form_radio_negative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/negative" />
 
-        <EditText
-            android:id="@+id/form_local_text_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:paddingLeft="10dp" />
+                <RadioButton
+                    android:id="@+id/form_radio_positive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/positive" />
+            </RadioGroup>
 
-        <TextView
-            android:id="@+id/form_local_text_error"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="15sp"
-            android:visibility="visible"
-            tools:text="Error" />
+            <TextView
+                android:id="@+id/form_result_text_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="5dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="15sp"
+                android:visibility="visible"
+                tools:text="Error" />
 
-        <TextView
-            android:id="@+id/form_foto_text_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="5dp"
-            android:text="Fotografia (Optional)"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="15sp" />
+            <TextView
+                android:id="@+id/form_local_text_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/location"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="15sp" />
 
-        <EditText
-            android:id="@+id/form_foto_text_field"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:paddingLeft="10dp" />
+            <EditText
+                android:id="@+id/form_local_text_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:paddingLeft="10dp" />
 
-        <TextView
-            android:id="@+id/form_obs_text_error"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="5dp"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="15sp"
-            android:visibility="visible"
-            tools:text="Error" />
+            <TextView
+                android:id="@+id/form_local_text_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="5dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="15sp"
+                android:visibility="visible"
+                tools:text="Error" />
 
-        <Button
-            android:id="@+id/form_submit_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@android:color/holo_blue_dark"
-            android:text="@string/submit"
-            android:textColor="@android:color/white" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/form_foto_text_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:text="@string/proof"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="15sp" />
 
+            <EditText
+                android:id="@+id/form_foto_text_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/form_obs_text_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="5dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="15sp"
+                android:visibility="visible"
+                tools:text="Error" />
+
+            <Button
+                android:id="@+id/form_submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/holo_blue_dark"
+                android:text="@string/submit"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

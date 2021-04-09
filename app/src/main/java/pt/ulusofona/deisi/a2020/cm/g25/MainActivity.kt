@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_extraPage -> {
                     NavigationManager.goToVaccinationFragment(supportFragmentManager)
-                    toolbar.title = getString(R.string.activity_vaccination_name)
+                    toolbar.title = getString(R.string.symptoms)
                     //botNavBAr.selectedItemId = R.id.nav_extraPage
                     true
                 }

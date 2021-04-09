@@ -8,7 +8,6 @@
     <string name="activity_insert_test_form_name">Add Test</string>
     <string name="activity_edit_test_form_name">Edit Test</string>
     <string name="activity_test_detail_name">Test Details</string>
-    <string name="activity_vaccination_name">Vaccination</string>
 
     <!-- Textos de botões -->
     <string name="text_contacts">Get in touch with us, by clicking the following buttons:</string>
@@ -38,4 +37,13 @@
     <string name="loss_of_taste_or_smell">Loss of taste or smell</string>
     <string name="difficulty_breathing">Difficulty breathing</string>
     <string name="chest_pain_or_pressure">Chest pain or pressure</string>
+    <string name="symptoms">Symptoms</string>
+    <string name="waiting_result">Waiting Result</string>
+    <string name="location">Location</string>
+    <string name="positive">Positive</string>
+    <string name="negative">Negative</string>
+    <string name="result">Result</string>
+    <string name="_01_jan_2021">01 jan 2021</string>
+    <string name="date">Date</string>
+    <string name="proof">Proof</string>
 </resources>
