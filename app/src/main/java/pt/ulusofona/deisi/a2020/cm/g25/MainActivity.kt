@@ -1,6 +1,7 @@
 package pt.ulusofona.deisi.a2020.cm.g25
 
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         NavigationManager.goToDashBoardFragment(supportFragmentManager)
 
         val botNavBAr: BottomNavigationView = findViewById(R.id.bottom_navigation_bar)
-
 
         // var mainToolbar : androidx.appcompat.widget.Toolbar = findViewById(R.id.main_toolbar)
 
