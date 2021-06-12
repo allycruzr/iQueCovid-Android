@@ -2,8 +2,8 @@ package pt.ulusofona.deisi.a2020.cm.g25.ui.views
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_main.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.battery.Battery
 import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.location.FusedLocation
@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         val botNavBAr: BottomNavigationView = findViewById(R.id.bottom_navigation_bar)
 
         // var mainToolbar : androidx.appcompat.widget.Toolbar = findViewById(R.id.main_toolbar)
+
+        var toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
 
         toolbar.title = getString(R.string.activity_dashboard_name)
 
