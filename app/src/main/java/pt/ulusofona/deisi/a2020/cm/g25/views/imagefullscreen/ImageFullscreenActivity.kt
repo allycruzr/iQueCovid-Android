@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.views
+package pt.ulusofona.deisi.a2020.cm.g25.views.imagefullscreen
 
 import android.os.Bundle
 import android.view.MenuItem

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectoCM20_21G25">
         <activity android:name=".views.MainActivity" />
-        <activity android:name=".views.ImageFullscreenActivity" />
+        <activity android:name=".views.imagefullscreen.ImageFullscreenActivity" />
         <activity
             android:name=".views.testdetail.TestDetailActivity"
             android:label="@string/activity_test_detail_name" />

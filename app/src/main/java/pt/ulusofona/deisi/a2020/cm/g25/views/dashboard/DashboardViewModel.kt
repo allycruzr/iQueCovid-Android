@@ -11,6 +11,4 @@ class DashboardViewModel(application: Application) : AndroidViewModel(applicatio
     fun registerListener(OnLocationChangedListener: LocationSource.OnLocationChangedListener) {
         listener = OnLocationChangedListener
     }
-
-
 }
