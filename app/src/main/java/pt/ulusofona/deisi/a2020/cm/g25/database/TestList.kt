@@ -33,6 +33,4 @@ object TestList {
     fun getLength(): Int {
         return this.testList.size
     }
-
-
 }

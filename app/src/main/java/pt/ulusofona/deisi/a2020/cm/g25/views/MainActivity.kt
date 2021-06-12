@@ -1,11 +1,11 @@
-package pt.ulusofona.deisi.a2020.cm.g25
+package pt.ulusofona.deisi.a2020.cm.g25.views
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
+import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.navigation.NavigationManager
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
                     NavigationManager.goToTestListFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.activity_list_tests_name)
                     it.setChecked(true)
-                    true
+                     true
                 }
                 R.id.nav_extraPage -> {
                     NavigationManager.goToVaccinationFragment(supportFragmentManager)

@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.fragments
+package pt.ulusofona.deisi.a2020.cm.g25.views.extra
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,6 +21,5 @@ class ExtraFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-
     }
 }

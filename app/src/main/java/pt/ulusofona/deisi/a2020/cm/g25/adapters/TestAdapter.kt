@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.classes.Test
-import pt.ulusofona.deisi.a2020.cm.g25.views.TestDetailActivity
+import pt.ulusofona.deisi.a2020.cm.g25.views.testdetail.TestDetailActivity
 
 class TestAdapter(private val dataSet: ArrayList<Test>) :
     RecyclerView.Adapter<TestAdapter.ViewHolder>() {

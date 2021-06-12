@@ -1,16 +1,25 @@
-package pt.ulusofona.deisi.a2020.cm.g25.views
+package pt.ulusofona.deisi.a2020.cm.g25.views.contacts
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_contacts.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_contacts.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
 
-class ContactsActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+class ContactsFragment : Fragment() {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_contacts)
+
+
+        return inflater.inflate(R.layout.fragment_contacts, container, false)
     }
 
     override fun onStart() {

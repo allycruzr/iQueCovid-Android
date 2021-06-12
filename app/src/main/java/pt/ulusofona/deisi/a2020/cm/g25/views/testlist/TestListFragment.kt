@@ -1,7 +1,6 @@
-package pt.ulusofona.deisi.a2020.cm.g25.fragments
+package pt.ulusofona.deisi.a2020.cm.g25.views.testlist
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,14 +9,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import butterknife.ButterKnife
 import butterknife.OnClick
-import kotlinx.android.synthetic.main.activity_test_list.*
-import kotlinx.android.synthetic.main.activity_test_list.test_recycler_view
+//import kotlinx.android.synthetic.main.activity_test_list.test_recycler_view
 import kotlinx.android.synthetic.main.fragment_test_list.*
-import pt.ulusofona.deisi.a2020.cm.g25.MainActivity
+import pt.ulusofona.deisi.a2020.cm.g25.views.MainActivity
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.adapters.TestAdapter
 import pt.ulusofona.deisi.a2020.cm.g25.database.TestList
-import pt.ulusofona.deisi.a2020.cm.g25.views.TestFormActivity
+import pt.ulusofona.deisi.a2020.cm.g25.views.testform.TestFormActivity
 
 class TestListFragment : Fragment() {
 

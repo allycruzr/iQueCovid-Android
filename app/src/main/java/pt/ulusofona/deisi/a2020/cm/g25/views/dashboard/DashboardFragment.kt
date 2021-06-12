@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.fragments
+package pt.ulusofona.deisi.a2020.cm.g25.views.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
