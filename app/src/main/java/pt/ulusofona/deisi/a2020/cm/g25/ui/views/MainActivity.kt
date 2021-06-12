@@ -2,14 +2,18 @@ package pt.ulusofona.deisi.a2020.cm.g25.ui.views
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.battery.Battery
 import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.location.FusedLocation
+import pt.ulusofona.deisi.a2020.cm.g25.repository.Repository
 import pt.ulusofona.deisi.a2020.cm.g25.ui.NavigationManager
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +25,14 @@ class MainActivity : AppCompatActivity() {
         // var mainToolbar : androidx.appcompat.widget.Toolbar = findViewById(R.id.main_toolbar)
 
         var toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+
+        // TODO: Rui Moreira -> Continuar aqui! https://www.youtube.com/watch?v=sBCE_hOFnQU&t=269s
+        val repository = Repository()
+        //val viewModelFactory = MainViewModelFactory(repository)
+        //viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
+        viewModel.getCounties()
+        //viewModel.myResponse.observe(this, Observer)
+
 
         toolbar.title = getString(R.string.activity_dashboard_name)
 
