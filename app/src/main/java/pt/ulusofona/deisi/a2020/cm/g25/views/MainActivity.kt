@@ -6,12 +6,15 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
+import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.battery.Battery
+import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.location.Location
 import pt.ulusofona.deisi.a2020.cm.g25.navigation.NavigationManager
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
+        Location.start(this)
+        Battery.start(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         NavigationManager.goToDashBoardFragment(supportFragmentManager)
