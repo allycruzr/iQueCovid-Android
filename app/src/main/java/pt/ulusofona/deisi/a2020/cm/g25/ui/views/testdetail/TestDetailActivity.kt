@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.views.testdetail
+package pt.ulusofona.deisi.a2020.cm.g25.ui.views.testdetail
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_test_detail.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
-import pt.ulusofona.deisi.a2020.cm.g25.views.imagefullscreen.ImageFullscreenActivity
+import pt.ulusofona.deisi.a2020.cm.g25.ui.views.imagefullscreen.ImageFullscreenActivity
 
 class TestDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

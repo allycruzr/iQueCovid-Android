@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.views.testform
+package pt.ulusofona.deisi.a2020.cm.g25.ui.views.testform
 
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity

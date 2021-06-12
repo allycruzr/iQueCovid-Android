@@ -4,23 +4,28 @@
     package="pt.ulusofona.deisi.a2020.cm.g25">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".ui.utils.IQueCovidApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectoCM20_21G25">
-        <activity android:name=".views.MainActivity" />
-        <activity android:name=".views.imagefullscreen.ImageFullscreenActivity" />
+        <activity android:name="pt.ulusofona.deisi.a2020.cm.g25.ui.views.MainActivity" />
+        <activity android:name="pt.ulusofona.deisi.a2020.cm.g25.ui.views.imagefullscreen.ImageFullscreenActivity" />
         <activity
-            android:name=".views.testdetail.TestDetailActivity"
+            android:name="pt.ulusofona.deisi.a2020.cm.g25.ui.views.testdetail.TestDetailActivity"
             android:label="@string/activity_test_detail_name" />
         <activity
-            android:name=".views.testform.TestFormActivity"
+            android:name="pt.ulusofona.deisi.a2020.cm.g25.ui.views.testform.TestFormActivity"
             android:label="@string/activity_insert_test_form_name" />
-        <activity android:name=".views.splashscreen.SplashScreenActivity">
+        <activity android:name="pt.ulusofona.deisi.a2020.cm.g25.ui.views.splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,12 +1,12 @@
-package pt.ulusofona.deisi.a2020.cm.g25.navigation
+package pt.ulusofona.deisi.a2020.cm.g25.ui
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import pt.ulusofona.deisi.a2020.cm.g25.views.dashboard.DashboardFragment
+import pt.ulusofona.deisi.a2020.cm.g25.ui.views.dashboard.DashboardFragment
 import pt.ulusofona.deisi.a2020.cm.g25.R
-import pt.ulusofona.deisi.a2020.cm.g25.views.testlist.TestListFragment
-import pt.ulusofona.deisi.a2020.cm.g25.views.extra.ExtraFragment
-import pt.ulusofona.deisi.a2020.cm.g25.views.contacts.ContactsFragment
+import pt.ulusofona.deisi.a2020.cm.g25.ui.views.testlist.TestListFragment
+import pt.ulusofona.deisi.a2020.cm.g25.ui.views.extra.ExtraFragment
+import pt.ulusofona.deisi.a2020.cm.g25.ui.views.contacts.ContactsFragment
 
 abstract class NavigationManager {
 

@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.views.contacts
+package pt.ulusofona.deisi.a2020.cm.g25.ui.views.contacts
 
 import android.content.Intent
 import android.net.Uri

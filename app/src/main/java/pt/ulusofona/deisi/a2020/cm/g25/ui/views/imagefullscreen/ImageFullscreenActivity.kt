@@ -1,8 +1,7 @@
-package pt.ulusofona.deisi.a2020.cm.g25.views.imagefullscreen
+package pt.ulusofona.deisi.a2020.cm.g25.ui.views.imagefullscreen
 
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.ImageView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.bogdwellers.pinchtozoom.ImageMatrixTouchHandler

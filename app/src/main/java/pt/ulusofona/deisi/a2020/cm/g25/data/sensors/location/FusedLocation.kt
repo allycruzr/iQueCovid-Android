@@ -8,8 +8,8 @@ import android.util.Log
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.*
 
-class Location private constructor(val context: Context) : LocationCallback() {
-    private val TAG = Location::class.java.simpleName
+class FusedLocation private constructor(val context: Context) : LocationCallback() {
+    private val TAG = FusedLocation::class.java.simpleName
 
     // intervalo de tempo em que a localização é verificada, 20 segundos
     private val TIME_BETWEEN_UPDATES = 20 * 1000L
@@ -21,17 +21,22 @@ class Location private constructor(val context: Context) : LocationCallback() {
     private var client = FusedLocationProviderClient(context)
 
     init {
+        // Configurar a precião e os tempos entre as atualizações
         locationRequest = LocationRequest()
         locationRequest?.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
         locationRequest?.interval = TIME_BETWEEN_UPDATES
+        
+        // Instanciar o objeto que permite definir as configurações
         val locationSettingsRequest =
             LocationSettingsRequest.Builder().addLocationRequest(locationRequest!!).build()
+        
+        //Aplicarr as configuraçõeos ao serviço de localização
         LocationServices.getSettingsClient(context).checkLocationSettings(locationSettingsRequest)
     }
 
     companion object {
         private var listener: OnLocationChangedListener? = null
-        private var instance: Location? = null
+        private var instance: FusedLocation? = null
 
         fun registerListener(onLocationChangedListener: OnLocationChangedListener) {
             this.listener = onLocationChangedListener
@@ -45,8 +50,9 @@ class Location private constructor(val context: Context) : LocationCallback() {
             listener?.onLocationChangedListener(locationResult)
         }
 
+        // Só termos uma instância em execuçãoe
         fun start(context: Context) {
-            instance = if(instance==null) Location(context) else instance
+            instance = if(instance==null) FusedLocation(context) else instance
             instance?.startLocationUpdates()
         }
     }
