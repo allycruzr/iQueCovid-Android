@@ -10,7 +10,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="50dp"
-    tools:context=".ui.views.testdetail.TestDetailActivity">
+    tools:context=".ui.activities.testdetail.TestDetailActivity">
 
     <ImageView
         android:layout_width="wrap_content"
