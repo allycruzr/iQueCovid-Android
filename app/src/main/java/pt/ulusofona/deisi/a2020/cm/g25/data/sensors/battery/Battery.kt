@@ -35,10 +35,8 @@ class Battery private constructor(private val context: Context) : Runnable {
 
     private fun getBatteryCurrentNow(): Double {
         val manager = context.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
-        // val value = manager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
         val value:Int = manager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
         return if (value !=0 && value != Int.MIN_VALUE) value.toDouble() / 1000000 else 0.0
     }
-
 
 }

@@ -66,7 +66,6 @@ class FusedLocation private constructor(val context: Context) : LocationCallback
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-
             return
         }
         client.requestLocationUpdates(locationRequest, this, Looper.myLooper())
