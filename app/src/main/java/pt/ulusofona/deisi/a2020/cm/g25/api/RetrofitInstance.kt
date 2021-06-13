@@ -1,6 +1,6 @@
 package pt.ulusofona.deisi.a2020.cm.g25.api
 
-import pt.ulusofona.deisi.a2020.cm.g25.util.Constants.Companion.BASE_URL
+import pt.ulusofona.deisi.a2020.cm.g25.ui.utils.Constants.Companion.BASE_URL
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

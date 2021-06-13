@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.util
+package pt.ulusofona.deisi.a2020.cm.g25.ui.utils
 
 class Constants {
 
