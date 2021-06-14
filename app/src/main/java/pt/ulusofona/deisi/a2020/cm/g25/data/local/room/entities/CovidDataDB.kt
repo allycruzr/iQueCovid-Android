@@ -2,10 +2,10 @@ package pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
+import pt.ulusofona.deisi.a2020.cm.g25.domain.classes.CovidData
 
 @Entity
-data class CovidData(
+data class CovidDataDB(
     var data: String, var data_dados: String, var confirmados: Int, var confirmados_norte: Int,
     var confirmados_centro: Int, var confirmados_lvt: Int, var confirmados_alentejo: Int,
     var confirmados_algarve: Int, var confirmados_scores: Int, var confirmados_madeira: Int,
@@ -21,5 +21,17 @@ data class CovidData(
     ) {
 
     @PrimaryKey
-    var uuid: String = UUID.randomUUID().toString()
+    var uuid: String = "001"
+
+    fun toData(): CovidData {
+        return CovidData(data, data_dados, confirmados, confirmados_norte, confirmados_centro,
+            confirmados_lvt, confirmados_alentejo, confirmados_algarve, confirmados_scores,
+            confirmados_madeira, confirmados_novos, recuperados, obitos, sintomas_tosse,
+            sintomas_febre, sintomas_dificuldade_respiratoria, sintomas_cefaleia,
+            sintomas_dores_musculares, sintomas_fraqueza_generalizada, obitos_norte, obitos_centro,
+            obitos_lvt, obitos_alentejo, obitos_algarve, obitos_acores, obitos_madeira,
+            recuperados_norte, recuperados_centro, recuperados_lvt, recuperados_alentejo,
+            recuperados_algarve, recuperados_acores, recuperados_madeira, recuperados_estrangeiro,
+            ativos)
+    }
 }

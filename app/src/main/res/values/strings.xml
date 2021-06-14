@@ -21,7 +21,6 @@
     <string name="detail_text_local">Local:</string>
     <string name="detail_text_result">Result:</string>
     <string name="detail_text_comprovative">Proof:</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="portugal_cases_last_24h">Portugal Cases - Last 24h</string>
