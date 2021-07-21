@@ -64,7 +64,7 @@ class DashboardFragment : Fragment() {
         dashboard_alentejo_deaths.text = dataSource.deathsAlentejoToday().toString()
         dashboard_faro_deaths.text = dataSource.deathsAlgarveToday().toString()
         dashboard_azores_deaths.text = dataSource.deathsAzoresToday().toString()
-        dashboard_madeira_deaths.text = dataSource.recoveredMadeiraToday().toString()
+        dashboard_madeira_deaths.text = dataSource.deathsMadeiraToday().toString()
 
         title_data_updated_at.text = title_data_updated_at.text.toString() + " " + dataSource.dateOfData()
     }

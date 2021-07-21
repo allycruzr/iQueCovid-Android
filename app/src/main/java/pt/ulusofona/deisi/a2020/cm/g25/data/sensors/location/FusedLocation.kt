@@ -50,7 +50,7 @@ class FusedLocation private constructor(val context: Context) : LocationCallback
             listener?.onLocationChangedListener(locationResult)
         }
 
-        // Só termos uma instância em execuçãoe
+        // Só termos uma instância em execução
         fun start(context: Context) {
             instance = if(instance==null) FusedLocation(context) else instance
             instance?.startLocationUpdates()

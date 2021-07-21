@@ -8,6 +8,7 @@ import android.util.Log
 import java.sql.BatchUpdateException
 
 
+@Suppress("DEPRECATION")
 class Battery private constructor(private val context: Context) : Runnable {
     private val TAG = Battery::class.java.simpleName
     private val TIME_BETWEEN_UPDATES = 20 * 1000L

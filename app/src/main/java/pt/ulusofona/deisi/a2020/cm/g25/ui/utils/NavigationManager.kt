@@ -16,6 +16,7 @@ abstract class NavigationManager {
         val testListFragment = TestListFragment()
         val extraFragment = ExtraFragment()
         val contactsFragment = ContactsFragment()
+        // TODO: SettingsFragment -> val settingsFragment = SettingsFragment()
 
         private fun placeFragment(fm: FragmentManager, fragment: Fragment) {
             val transition = fm.beginTransaction()
@@ -40,5 +41,10 @@ abstract class NavigationManager {
         fun goToContactsFragment(fm: FragmentManager) {
             placeFragment(fm, contactsFragment)
         }
+
+//      TODO: SettingsFragment
+//        fun goToSettingsFragment(fm: FragmentManager) {
+//            placeFragment(fm, settingsFragment)
+//        }
     }
 }

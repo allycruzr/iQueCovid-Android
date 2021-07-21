@@ -11,6 +11,7 @@
     <string name="activity_insert_test_form_name">Adicionar Teste</string>
     <string name="activity_edit_test_form_name">Editar Teste</string>
     <string name="activity_test_detail_name">Detalhes do Teste</string>
+    <string name="settings_title">Definições</string>
 
     <!-- Dialog Message SplashScreen -->
     <string name="error_dialog_connection">Erro de Conexão</string>

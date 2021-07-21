@@ -3,16 +3,19 @@ package pt.ulusofona.deisi.a2020.cm.g25.ui.viewmodels
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.AppDatabase
+import pt.ulusofona.deisi.a2020.cm.g25.domain.interfaces.MainInterface
 import pt.ulusofona.deisi.a2020.cm.g25.domain.logic.MainLogic
 
-const val ENDPOINT = "https://covid19-api.vost.pt/"
-
 class MainViewModel(application: Application): AndroidViewModel(application) {
+    private var listener: MainInterface? = null
 
+    private val mainLogic = MainLogic()
 
-    private val storage = AppDatabase.getInstance(application).appDao()
-    //private val repo = DataRepository(storage)
-    private val logic: MainLogic = MainLogic()
+    fun registerListener(listener: MainInterface) {
+        this.listener = listener
+    }
 
-
+    fun checkDangerZone(adminArea:String){
+        listener?.checkDangerZoneValue(mainLogic.checkDangerZone(adminArea))
+    }
 }

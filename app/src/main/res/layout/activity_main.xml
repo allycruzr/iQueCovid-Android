@@ -18,8 +18,10 @@
             android:layout_height="56dp"
             android:orientation="vertical"
             app:navigationIcon="@drawable/ic_checked"
+            app:menu="@menu/top_app_bar"
             app:title="@string/app_name"
             app:titleTextColor="@color/white"/>
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
