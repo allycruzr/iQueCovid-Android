@@ -1,6 +1,8 @@
 package pt.ulusofona.deisi.a2020.cm.g25.ui.viewmodels.dashboard
 
 import android.app.Application
+import android.content.Context
+import android.view.View
 import androidx.lifecycle.AndroidViewModel
 import com.google.android.gms.maps.LocationSource
 
@@ -10,5 +12,9 @@ class DashboardViewModel(application: Application) : AndroidViewModel(applicatio
 
     fun registerListener(OnLocationChangedListener: LocationSource.OnLocationChangedListener) {
         listener = OnLocationChangedListener
+    }
+
+    fun loadData(){
+
     }
 }

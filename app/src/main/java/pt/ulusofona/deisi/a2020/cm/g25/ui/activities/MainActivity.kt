@@ -1,14 +1,17 @@
 package pt.ulusofona.deisi.a2020.cm.g25.ui.activities
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import pt.ulusofona.deisi.a2020.cm.g25.R
+import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.battery.OnBatteryCurrentListener
 import pt.ulusofona.deisi.a2020.cm.g25.ui.utils.NavigationManager
 import pt.ulusofona.deisi.a2020.cm.g25.ui.viewmodels.MainViewModel
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnBatteryCurrentListener {
 
     private lateinit var viewModel: MainViewModel
 
@@ -55,6 +58,14 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             false
+        }
+    }
+
+    override fun onCurrentChanged(current: Double) {
+        if (current <= 20){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            val toast = Toast.makeText(this, getText(R.string.toast_battery), Toast.LENGTH_LONG)
+            toast.show()
         }
     }
 }

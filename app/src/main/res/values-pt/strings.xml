@@ -1,5 +1,8 @@
 <resources>
 
+    <!-- Toasts -->
+    <string name="toast_battery">Dark Mode activado devido a bateria fraca!</string>
+
     <!-- Titulos de Activities -->
     <string name="app_name">iQueCovid</string>
     <string name="activity_contacts_name">Contactos</string>
@@ -8,6 +11,13 @@
     <string name="activity_insert_test_form_name">Adicionar Teste</string>
     <string name="activity_edit_test_form_name">Editar Teste</string>
     <string name="activity_test_detail_name">Detalhes do Teste</string>
+
+    <!-- Dialog Message SplashScreen -->
+    <string name="error_dialog_connection">Erro de Conexão</string>
+    <string name="error_dialog_timeout">Erro de Timeout</string>
+    <string name="error_dialog_description">Verifique a sua conexão à Internet</string>
+    <string name="error_action_cancel">Cancelar</string>
+    <string name="error_action_retry">Tentar Novamente</string>
 
     <!-- Textos de botões -->
     <string name="text_contacts">Para entrar em contacto connosco, utilize os botões abaixo:</string>
