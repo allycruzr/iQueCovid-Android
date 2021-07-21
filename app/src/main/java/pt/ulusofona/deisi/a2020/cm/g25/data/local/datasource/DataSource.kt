@@ -36,6 +36,10 @@ class DataSource {
         _dataLast48hours = data
     }
 
+    fun dateOfData(): String {
+        return _dataLast24hours.date.toString()
+    }
+
     /** Dashboard Info **/
 
     /** Header **/
@@ -75,6 +79,14 @@ class DataSource {
         return dataLast24hours.confirmedAlgarve!! - dataLast48hours.confirmedAlgarve!!
     }
 
+    fun confirmedAzoresToday(): Int {
+        return dataLast24hours.confirmedAzores!! - dataLast48hours.confirmedAzores!!
+    }
+
+    fun confirmedMadeiraToday(): Int {
+        return dataLast24hours.confirmedMadeira!! - dataLast48hours.confirmedMadeira!!
+    }
+
     /** Recovered **/
 
     fun recoveredNorthToday(): Int {
@@ -97,6 +109,14 @@ class DataSource {
         return dataLast24hours.recoveredAlgarve!! - dataLast48hours.recoveredAlgarve!!
     }
 
+    fun recoveredAzoresToday(): Int {
+        return dataLast24hours.recoveredAzores!! - dataLast48hours.recoveredAzores!!
+    }
+
+    fun recoveredMadeiraToday(): Int {
+        return dataLast24hours.recoveredMadeira!! - dataLast48hours.recoveredMadeira!!
+    }
+
     /** Deaths **/
 
     fun deathsNorthToday(): Int {
@@ -117,6 +137,14 @@ class DataSource {
 
     fun deathsAlgarveToday(): Int {
         return dataLast24hours.deathsAlgarve!! - dataLast48hours.deathsAlgarve!!
+    }
+
+    fun deathsAzoresToday(): Int {
+        return dataLast24hours.deathsAzores!! - dataLast48hours.deathsAzores!!
+    }
+
+    fun deathsMadeiraToday(): Int {
+        return dataLast24hours.deathsAzores!! - dataLast48hours.deathsAzores!!
     }
 
     /** End of Table **/

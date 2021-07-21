@@ -45,6 +45,12 @@ class CovidData() {
     @SerializedName("confirmados_arsalgarve")
     var confirmedAlgarve: Int = 0
 
+    @SerializedName("confirmados_acores")
+    var confirmedAzores: Int = 0
+
+    @SerializedName("confirmados_madeira")
+    var confirmedMadeira: Int = 0
+
     /** Óbitos por Zonas **/
 
     @SerializedName("obitos_arsnorte")
@@ -62,6 +68,12 @@ class CovidData() {
     @SerializedName("obitos_arsalgarve")
     var deathsAlgarve: Int = 0
 
+    @SerializedName("obitos_acores")
+    var deathsAzores: Int = 0
+
+    @SerializedName("obitos_madeira")
+    var deathsMadeira: Int = 0
+
     /** Recuperados por Zonas **/
 
     @SerializedName("recuperados_arsnorte")
@@ -78,4 +90,10 @@ class CovidData() {
 
     @SerializedName("recuperados_arsalgarve")
     var recoveredAlgarve: Int = 0
+
+    @SerializedName("recuperados_acores")
+    var recoveredAzores: Int = 0
+
+    @SerializedName("recuperados_madeira")
+    var recoveredMadeira: Int = 0
 }

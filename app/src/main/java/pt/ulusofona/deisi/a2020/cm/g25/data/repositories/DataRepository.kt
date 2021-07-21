@@ -9,8 +9,6 @@ import pt.ulusofona.deisi.a2020.cm.g25.domain.interfaces.SplashScreenLogicCallba
 @Suppress("DEPRECATION")
 class DataRepository(val remoteData: RemoteData) {
 
-    private lateinit var splashScreenLogicCallbackInterface: SplashScreenLogicCallbackInterface
-
     fun networkAvailable(): Boolean {
         val connectivityManager =
             remoteData.application.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -26,11 +24,11 @@ class DataRepository(val remoteData: RemoteData) {
         }
     }
 
-    fun getCounties(splashScreenLogicReturnInterface: SplashScreenLogicCallbackInterface) {
+    fun getCounties(splashScreenLogicCallbackInterface: SplashScreenLogicCallbackInterface) {
         if (networkAvailable()) {
-            remoteData.getCountiesWeb(splashScreenLogicReturnInterface)
+            remoteData.getCountiesWeb(splashScreenLogicCallbackInterface)
         } else {
-            splashScreenLogicReturnInterface.getCountiesReturn()
+            splashScreenLogicCallbackInterface.getCountiesReturn()
         }
 
     }
@@ -42,49 +40,4 @@ class DataRepository(val remoteData: RemoteData) {
             remoteData.getEntryFromDateDB(splashScreenLogicCallbackInterface)
         }
     }
-
-
-    /** For tests **/
-
-//    private fun notifyOnDataLoaded(){
-//        listener?.onDataRepositoryLoad(data)
-//    }
-//
-//    fun registerListener(listener: OnDataRepositoryLoad){
-//        this.listener = listener
-//        getCovidData()
-//        listener?.onDataRepositoryLoad(data)
-//    }
-//
-//    fun unregisterListener(){
-//        listener = null
-//    }
-//
-//    fun getCovidData(){
-//        CoroutineScope(Dispatchers.IO).launch {
-//            var loadable = false
-//            try{
-//                data_io = RemoteData.getCovidData()
-//                loadable = true
-//                if(data_io.confirmados == 0){
-//                    val obj = local.getLatest("1").toCovidData()
-//                    if(obj != null) {
-//                        data_io.confirmados = obj.confirmados
-//                        data_io.confirmados_alentejo = obj.confirmados_alentejo
-//                        data_io.confirmados_algarve = obj.confirmados_algarve
-//                        data_io.confirmados_centro = obj.confirmados_centro
-//                        data_io.confirmados_lvt = obj.confirmados_lvt
-//                        data_io.confirmados_madeira = obj.confirmados_madeira
-//                        data_io.confirmados_norte = obj.confirmados_norte
-//                        data_io.confirmados_novos = obj.confirmados_novos
-//                        data_io.confirmados_scores = obj.confirmados_scores
-//                    }
-//                }
-//            } catch (e:Exception){
-//
-//            }
-//        }
-//    }
-
-
 }

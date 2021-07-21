@@ -38,7 +38,7 @@
     <string name="tiredness">Cansaço</string>
     <string name="dry_cogh">Tosse Seca</string>
     <string name="fever">Febre</string>
-    <string name="reported_symptoms">Reported COVID 19 symptoms</string>
+    <string name="reported_symptoms">Sintomas Reportados - COVID 19</string>
     <string name="aches_and_pains">Dores</string>
     <string name="conjunctivitis">Conjuntivite</string>
     <string name="headache">Dor de cabeça</string>
@@ -65,7 +65,10 @@
     <string name="centro">Centro</string>
     <string name="alentejo">Alentejo</string>
     <string name="faro">Faro</string>
+    <string name="azores">Açores</string>
+    <string name="madeira">Madeira</string>
     <string name="contactos">Contactos</string>
     <string name="diarrhoea">Diarréia</string>
+    <string name="title_data_updated_at">Dados Provenientes de COVID-19 REST API Portugal do dia</string>
 
 </resources>
