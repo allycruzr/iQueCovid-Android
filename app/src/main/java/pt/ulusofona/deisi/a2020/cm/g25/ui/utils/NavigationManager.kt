@@ -46,5 +46,10 @@ abstract class NavigationManager {
 //        fun goToSettingsFragment(fm: FragmentManager) {
 //            placeFragment(fm, settingsFragment)
 //        }
+
+//      TODO: Counties List Fragment
+//        fun goToCountiesFragment(fm: FragmentManager) {
+//            placeFragment(fm, countiesFragment)
+//        }
     }
 }

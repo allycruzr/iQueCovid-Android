@@ -75,4 +75,5 @@
     <string name="contactos">Contact</string>
     <string name="diarrhoea">Diarrhoea</string>
     <string name="title_data_updated_at">Data from COVID-19 REST API Portugal at </string>
+    <string name="dark_mode_off">Dark Mode OFF</string>
 </resources>
