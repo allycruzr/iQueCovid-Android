@@ -14,8 +14,6 @@ import pt.ulusofona.deisi.a2020.cm.g25.ui.viewmodels.splashscreen.SplashScreenVi
 
 class SplashScreenActivity : AppCompatActivity(), SplashScreenDataFetcherInterface {
 
-    private var TIME_OUT: Long = 5000 // Para o loader da 1a parte
-
     private lateinit var viewModel: SplashScreenViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,9 +24,7 @@ class SplashScreenActivity : AppCompatActivity(), SplashScreenDataFetcherInterfa
         } catch (e: NullPointerException) {}
 
         setContentView(R.layout.activity_splashscreen)
-
         viewModel = ViewModelProviders.of(this).get(SplashScreenViewModel::class.java)
-        //loadSplashScreen()
     }
 
     override fun onStart() {
@@ -37,15 +33,15 @@ class SplashScreenActivity : AppCompatActivity(), SplashScreenDataFetcherInterfa
         viewModel.loadData()
     }
 
-    private fun loadSplashScreen(){
-
-        Handler(Looper.getMainLooper()).postDelayed({
-            // You can declare your desire activity here to open after finishing splash screen. Like MainActivity
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }, TIME_OUT)
-    }
+//    private fun loadSplashScreen(){
+//
+//        Handler(Looper.getMainLooper()).postDelayed({
+//            // You can declare your desire activity here to open after finishing splash screen. Like MainActivity
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }, TIME_OUT)
+//    }
 
     private fun showErrorDialog(error: String) {
         var dialogTitle = ""

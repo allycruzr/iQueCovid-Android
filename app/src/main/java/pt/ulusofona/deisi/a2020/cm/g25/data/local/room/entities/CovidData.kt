@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "coviddata")
-class CovidData() {
+class CovidData {
 
     @PrimaryKey
     var uuid:String =""

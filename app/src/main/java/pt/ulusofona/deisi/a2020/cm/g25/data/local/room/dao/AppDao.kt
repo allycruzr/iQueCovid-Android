@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.County
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.CovidData
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.Symptoms
 
 @Dao
 interface AppDao {
@@ -33,4 +34,18 @@ interface AppDao {
 
     @Query("DELETE FROM County")
     suspend fun deleteAllCounties()
+
+    /** Dados Relacionados aos Sintomas -> Symptoms **/
+
+    @Insert
+    suspend fun insertSymptoms(data: Symptoms)
+
+    @Query("SELECT * FROM symptoms")
+    suspend fun getAllSymptoms(): List<Symptoms>
+
+    @Query("DELETE FROM symptoms")
+    suspend fun deleteAllSymptoms()
+
+    @Query("SELECT * FROM symptoms WHERE uuid = :uuid")
+    suspend fun getSymptomsById(uuid: String): Symptoms
 }

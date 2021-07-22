@@ -36,14 +36,14 @@ class SplashScreenViewModel(app: Application): AndroidViewModel(app) {
 
             override fun returnConnectionError() {
                 CoroutineScope(Dispatchers.Main).launch {
-                    splashScreenCallbackInterface.returnConnectionError()
+                    splashScreenDataFetcherInterface.onConnectionError()
                 }
 
             }
 
             override fun returnTimeOutError() {
                 CoroutineScope(Dispatchers.Main).launch {
-                    splashScreenCallbackInterface.returnTimeOutError()
+                    splashScreenDataFetcherInterface.onTimeoutError()
                 }
             }
 
