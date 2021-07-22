@@ -5,6 +5,8 @@ import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -94,6 +96,19 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
             false
         }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        super.onCreateOptionsMenu(menu);
+        menuInflater.inflate(R.menu.top_app_bar, menu);
+        return true;
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        //switch (item.getItemId()) {
+        // TODO click menu item
+        //}
+        return false
+    }
+
 
     override fun onStart() {
         super.onStart()
