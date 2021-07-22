@@ -7,6 +7,7 @@ import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.testlist.TestListFragment
 import pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.extra.ExtraFragment
 import pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.contacts.ContactsFragment
+import pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.settings.SettingsFragment
 
 abstract class NavigationManager {
 
@@ -16,7 +17,7 @@ abstract class NavigationManager {
         val testListFragment = TestListFragment()
         val extraFragment = ExtraFragment()
         val contactsFragment = ContactsFragment()
-        // TODO: SettingsFragment -> val settingsFragment = SettingsFragment()
+        val settingsFragment = SettingsFragment()
 
         private fun placeFragment(fm: FragmentManager, fragment: Fragment) {
             val transition = fm.beginTransaction()
@@ -42,10 +43,10 @@ abstract class NavigationManager {
             placeFragment(fm, contactsFragment)
         }
 
-//      TODO: SettingsFragment
-//        fun goToSettingsFragment(fm: FragmentManager) {
-//            placeFragment(fm, settingsFragment)
-//        }
+
+        fun goToSettingsFragment(fm: FragmentManager) {
+            placeFragment(fm, settingsFragment)
+        }
 
 //      TODO: Counties List Fragment
 //        fun goToCountiesFragment(fm: FragmentManager) {

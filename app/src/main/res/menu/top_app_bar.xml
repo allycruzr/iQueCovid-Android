@@ -4,6 +4,7 @@
     <item
         android:id="@+id/settings_item"
         android:enabled="true"
+
         android:title="@string/settings_title"
         android:visible="true" />
 </menu>

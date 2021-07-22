@@ -35,37 +35,37 @@ class DashboardFragment : Fragment() {
     }
 
     fun loadDashboardData(){
-        dashboard_data_cases.text = "+" + abs(dataSource.confirmedToday()).toString()
-        dashboard_data_recovered.text = "+" + abs(dataSource.recoveredToday()).toString()
-        dashboard_data_deaths.text = "+" + abs(dataSource.deathsToday()).toString()
+        dashboard_data_cases.text = "+ " + abs(dataSource.confirmedToday()).toString()
+        dashboard_data_recovered.text = "+ " + abs(dataSource.recoveredToday()).toString()
+        dashboard_data_deaths.text = "+ " + abs(dataSource.deathsToday()).toString()
 
         /** Active Cases **/
-        dashboard_north_cases.text = dataSource.confirmedNorthToday().toString()
-        dashboard_lisbon_cases.text = dataSource.confirmedLVTToday().toString()
-        dashboard_center_cases.text = dataSource.confirmedCenterToday().toString()
-        dashboard_alentejo_cases.text = dataSource.confirmedAlentejoToday().toString()
-        dashboard_faro_cases.text = dataSource.confirmedAlgarveToday().toString()
-        dashboard_azores_cases.text = dataSource.confirmedAzoresToday().toString()
-        dashboard_madeira_cases.text = dataSource.confirmedMadeiraToday().toString()
+        dashboard_north_cases.text = "+ " + dataSource.confirmedNorthToday().toString()
+        dashboard_lisbon_cases.text = "+ " + dataSource.confirmedLVTToday().toString()
+        dashboard_center_cases.text = "+ " + dataSource.confirmedCenterToday().toString()
+        dashboard_alentejo_cases.text = "+ " + dataSource.confirmedAlentejoToday().toString()
+        dashboard_faro_cases.text = "+ " + dataSource.confirmedAlgarveToday().toString()
+        dashboard_azores_cases.text = "+ " + dataSource.confirmedAzoresToday().toString()
+        dashboard_madeira_cases.text = "+ " + dataSource.confirmedMadeiraToday().toString()
 
         /** Recovered Cases **/
-        dashboard_north_recovered.text = dataSource.recoveredNorthToday().toString()
-        dashboard_lisbon_recovered.text = dataSource.recoveredLVTToday().toString()
-        dashboard_center_recovered.text = dataSource.recoveredCenterToday().toString()
-        dashboard_alentejo_recovered.text = dataSource.recoveredAlentejoToday().toString()
-        dashboard_faro_recovered.text = dataSource.recoveredAlgarveToday().toString()
-        dashboard_azores_recovered.text = dataSource.recoveredAzoresToday().toString()
-        dashboard_madeira_recovered.text = dataSource.recoveredMadeiraToday().toString()
+        dashboard_north_recovered.text = "+ " + dataSource.recoveredNorthToday().toString()
+        dashboard_lisbon_recovered.text = "+ " + dataSource.recoveredLVTToday().toString()
+        dashboard_center_recovered.text = "+ " + dataSource.recoveredCenterToday().toString()
+        dashboard_alentejo_recovered.text = "+ " + dataSource.recoveredAlentejoToday().toString()
+        dashboard_faro_recovered.text = "+ " + dataSource.recoveredAlgarveToday().toString()
+        dashboard_azores_recovered.text = "+ " + dataSource.recoveredAzoresToday().toString()
+        dashboard_madeira_recovered.text = "+ " + dataSource.recoveredMadeiraToday().toString()
 
         /** Deaths **/
-        dashboard_north_deaths.text = dataSource.deathsNorthToday().toString()
-        dashboard_lisbon_deaths.text = dataSource.deathsLVTToday().toString()
-        dashboard_center_deaths.text = dataSource.deathsCenterToday().toString()
-        dashboard_alentejo_deaths.text = dataSource.deathsAlentejoToday().toString()
-        dashboard_faro_deaths.text = dataSource.deathsAlgarveToday().toString()
-        dashboard_azores_deaths.text = dataSource.deathsAzoresToday().toString()
-        dashboard_madeira_deaths.text = dataSource.deathsMadeiraToday().toString()
+        dashboard_north_deaths.text = "+ " + dataSource.deathsNorthToday().toString()
+        dashboard_lisbon_deaths.text = "+ " + dataSource.deathsLVTToday().toString()
+        dashboard_center_deaths.text = "+ " + dataSource.deathsCenterToday().toString()
+        dashboard_alentejo_deaths.text = "+ " + dataSource.deathsAlentejoToday().toString()
+        dashboard_faro_deaths.text = "+ " + dataSource.deathsAlgarveToday().toString()
+        dashboard_azores_deaths.text = "+ " + dataSource.deathsAzoresToday().toString()
+        dashboard_madeira_deaths.text = "+ " + dataSource.deathsMadeiraToday().toString()
 
-        title_data_updated_at.text = title_data_updated_at.text.toString() + " " + dataSource.dateOfData()
+        title_data_updated_at.text = getString(R.string.title_data_updated_at) + " " + dataSource.dateOfData()
     }
 }

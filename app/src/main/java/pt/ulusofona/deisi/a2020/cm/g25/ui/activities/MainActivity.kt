@@ -1,40 +1,36 @@
 package pt.ulusofona.deisi.a2020.cm.g25.ui.activities
 
+import pt.ulusofona.deisi.a2020.cm.g25.ui.utils.Constants.Companion.REQUEST_CODE
 import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
+import android.os.BatteryManager
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.gms.location.LocationResult
-import com.google.android.gms.maps.LocationSource
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
+import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.battery.Battery
 import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.battery.OnBatteryCurrentListener
 import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.location.FusedLocation
 import pt.ulusofona.deisi.a2020.cm.g25.data.sensors.location.OnLocationChangedListener
 import pt.ulusofona.deisi.a2020.cm.g25.domain.interfaces.MainInterface
-//import pt.ulusofona.deisi.a2020.cm.g25.ui.utils.Constants.Companion.REQUEST_CODE
 import pt.ulusofona.deisi.a2020.cm.g25.ui.utils.NavigationManager
 import pt.ulusofona.deisi.a2020.cm.g25.ui.viewmodels.MainViewModel
 import java.util.*
 
-const val REQUEST_CODE = 100
-
 class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListener, OnLocationChangedListener {
 
     private lateinit var viewModel: MainViewModel
-
-    //private lateinit var toolbar: MaterialToolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +44,7 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
         setSupportActionBar(toolbar)
 
         toolbar.title = getString(R.string.activity_dashboard_name)
+        toolbar.inflateMenu(R.menu.top_app_bar)
 
         //supportActionBar?.setTitle(R.string.activity_dashboard_name)
 
@@ -59,8 +56,8 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
         )
 
         toolbar.setOnMenuItemClickListener {
-            NavigationManager.goToDashBoardFragment(supportFragmentManager)
-            toolbar.title = getString(R.string.activity_dashboard_name)
+            NavigationManager.goToSettingsFragment(supportFragmentManager)
+            toolbar.title = getString(R.string.settings_title)
             it.setChecked(true)
             true
         }
@@ -100,15 +97,8 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         super.onCreateOptionsMenu(menu);
         menuInflater.inflate(R.menu.top_app_bar, menu);
-        return true;
+        return true
     }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        //switch (item.getItemId()) {
-        // TODO click menu item
-        //}
-        return false
-    }
-
 
     override fun onStart() {
         super.onStart()

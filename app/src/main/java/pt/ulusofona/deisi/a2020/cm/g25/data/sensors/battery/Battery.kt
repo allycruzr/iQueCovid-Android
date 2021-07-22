@@ -7,7 +7,6 @@ import android.os.Handler
 import android.util.Log
 import java.sql.BatchUpdateException
 
-
 @Suppress("DEPRECATION")
 class Battery private constructor(private val context: Context) : Runnable {
     private val TAG = Battery::class.java.simpleName

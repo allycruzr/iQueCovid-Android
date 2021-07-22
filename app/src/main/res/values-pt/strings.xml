@@ -70,6 +70,6 @@
     <string name="madeira">Madeira</string>
     <string name="contactos">Contactos</string>
     <string name="diarrhoea">Diarréia</string>
-    <string name="title_data_updated_at">Dados Provenientes de COVID-19 REST API Portugal do dia</string>
+    <string name="title_data_updated_at">Dados Provenientes de COVID-19 REST API Portugal, actualizados a</string>
 
 </resources>
