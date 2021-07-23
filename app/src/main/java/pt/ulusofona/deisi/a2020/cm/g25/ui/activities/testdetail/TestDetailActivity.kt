@@ -1,16 +1,18 @@
 package pt.ulusofona.deisi.a2020.cm.g25.ui.activities.testdetail
 
-import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_test_detail.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
-import pt.ulusofona.deisi.a2020.cm.g25.ui.activities.imagefullscreen.ImageFullscreenActivity
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.datasource.DataSource
 
 class TestDetailActivity : AppCompatActivity() {
+
+    val dataSource = DataSource.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_detail)
@@ -25,22 +27,32 @@ class TestDetailActivity : AppCompatActivity() {
         val date = intent.getStringExtra("DATE")
         val local = intent.getStringExtra("LOCAL")
         val result = intent.getStringExtra("RESULT")
-        val file = intent.getStringExtra("FILE")
+        val file = intent.getByteArrayExtra("FILE")
+
+        var options = BitmapFactory.Options()
+
+        var bitmap = BitmapFactory.decodeByteArray(file, 0, file!!.size, options)
 
         detail_text_date.text = date
         detail_text_local.text = local
         detail_text_result.text = result
-        if (file=="N/A") {
+        if (bitmap == null) {
             pic_test.setImageResource(R.drawable.no_image)
             pic_test.layoutParams.height = 200 //LinearLayoutCompat.LayoutParams.WRAP_CONTENT        // Alterar para DP!!!
             pic_test.layoutParams.width = 200 //LinearLayoutCompat.LayoutParams.WRAP_CONTENT         // Alterar para DP!!!
         } else {
-            detail_file_name.text = file
-            detail_file_name.visibility = View.VISIBLE
-            pic_test.setOnClickListener{
-                val fullScreenIntent = Intent(this, ImageFullscreenActivity::class.java)
-                startActivity(fullScreenIntent)
-            }
+            pic_test.setImageBitmap(bitmap)
+//            var fullscreenPic = findViewById<ImageView>(R.id.fullscreen_pic_test)
+//            fullscreenPic.setImageBitmap(bitmap)
+//            detail_file_name.text = file
+//            detail_file_name.visibility = View.VISIBLE
+//            pic_test.setOnClickListener{
+//                val fullScreenIntent = Intent(this, ImageFullscreenActivity::class.java)
+//                intent.apply {
+//                    putExtra("FILE", file)
+//                }
+//                startActivity(fullScreenIntent)
+//            }
         }
     }
 

@@ -3,6 +3,7 @@ package pt.ulusofona.deisi.a2020.cm.g25.data.local.datasource
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.County
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.CovidData
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.Symptoms
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.TestResult
 import kotlin.math.roundToInt
 
 class DataSource {
@@ -12,6 +13,7 @@ class DataSource {
     private var _symptoms = Symptoms()
 
     private var counties = ArrayList<County>()
+    private var tests = ArrayList<TestResult>()
 
     val dataLast24hours
     get() = _dataLast24hours
@@ -164,6 +166,13 @@ class DataSource {
     }
     fun getAllCounties(): ArrayList<County> {
         return counties
+    }
+
+    fun addTests(response: ArrayList<TestResult>) {
+        tests = response
+    }
+    fun getAllTests(): ArrayList<TestResult>? {
+        return tests
     }
 
     fun getCoughPercentage () : Int {

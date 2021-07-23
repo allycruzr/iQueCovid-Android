@@ -6,12 +6,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.datasource.DataSource
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.dao.AppDao
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.TestResult
 import pt.ulusofona.deisi.a2020.cm.g25.data.remote.services.DataService
 import pt.ulusofona.deisi.a2020.cm.g25.domain.interfaces.SplashScreenLogicCallbackInterface
+import pt.ulusofona.deisi.a2020.cm.g25.domain.interfaces.TestListLogicCallbackInterface
 import retrofit2.Retrofit
 import java.net.ConnectException
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 class RemoteData(val storage: AppDao, val retrofit: Retrofit, val application: Application) {
 
@@ -86,8 +89,6 @@ class RemoteData(val storage: AppDao, val retrofit: Retrofit, val application: A
         }
     }
 
-
-
     fun getCountiesWeb(splashScreenLogicCallbackInterface: SplashScreenLogicCallbackInterface) {
         val service = retrofit.create(DataService::class.java)
 
@@ -115,5 +116,15 @@ class RemoteData(val storage: AppDao, val retrofit: Retrofit, val application: A
         calendar.add(Calendar.DATE, -1)
         val previousDate: String = sdf.format(calendar.time)
         return previousDate
+    }
+
+    fun getTestListDB(testListLogicCallbackInterface: TestListLogicCallbackInterface) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val response = storage.getAllTests()
+
+            val dataSource = DataSource.getInstance()
+            dataSource.addTests(response as ArrayList<TestResult>)
+            testListLogicCallbackInterface.testsListReturn(response)
+        }
     }
 }

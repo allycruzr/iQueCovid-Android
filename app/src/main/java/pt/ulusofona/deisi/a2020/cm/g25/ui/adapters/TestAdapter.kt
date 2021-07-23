@@ -9,10 +9,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import pt.ulusofona.deisi.a2020.cm.g25.R
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.TestResult
 import pt.ulusofona.deisi.a2020.cm.g25.domain.classes.Test
 import pt.ulusofona.deisi.a2020.cm.g25.ui.activities.testdetail.TestDetailActivity
 
-class TestAdapter(private val dataSet: ArrayList<Test>) :
+class TestAdapter(private val dataSet: ArrayList<TestResult>) :
     RecyclerView.Adapter<TestAdapter.ViewHolder>() {
 
     /**
@@ -54,6 +55,7 @@ class TestAdapter(private val dataSet: ArrayList<Test>) :
 
         val teste = getItem(position)!!
 
+        var UUID = teste.uuid
         var DATE = teste.date
         var LOCAL = teste.local
         var RESULT = teste.resultado
@@ -72,6 +74,7 @@ class TestAdapter(private val dataSet: ArrayList<Test>) :
         viewHolder.itemView.setOnClickListener {
             val intent = Intent(context, TestDetailActivity::class.java)
             intent.apply {
+                putExtra("UUID", UUID)
                 putExtra("DATE", DATE)
                 putExtra("LOCAL", LOCAL)
                 putExtra("RESULT", RESULT)
@@ -81,7 +84,7 @@ class TestAdapter(private val dataSet: ArrayList<Test>) :
         }
     }
 
-    private fun getItem(position: Int): Test {
+    private fun getItem(position: Int): TestResult {
         return dataSet[position]
     }
 

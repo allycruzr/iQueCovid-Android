@@ -1,5 +1,6 @@
 package pt.ulusofona.deisi.a2020.cm.g25.ui.activities.imagefullscreen
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBar
@@ -18,7 +19,6 @@ class ImageFullscreenActivity : AppCompatActivity() {
         val actionBar: ActionBar? = supportActionBar                                                  // Botão Retroceder na TitleBar da activity
         actionBar?.setDisplayHomeAsUpEnabled(true)
 
-        fullscreen_pic_test.setOnTouchListener(ImageMatrixTouchHandler(fullscreen_pic_test.getContext()))
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {                                     // Define o comportamento do botão Retroceder do TitleBar

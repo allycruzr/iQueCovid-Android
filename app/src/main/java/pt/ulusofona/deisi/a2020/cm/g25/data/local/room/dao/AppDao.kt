@@ -53,7 +53,7 @@ interface AppDao {
     /** Dados Relacionados aos Testes -> TestRecord **/
 
     @Insert
-    suspend fun insertTest(testRecord: TestResult)
+    suspend fun insertTest(testResult: TestResult)
 
     @Query("SELECT * FROM testresult")
     suspend fun getAllTests():List<TestResult>
