@@ -8,8 +8,9 @@ import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.dao.AppDao
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.County
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.CovidData
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.Symptoms
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.TestResult
 
-@Database (entities = arrayOf(CovidData::class, County::class, Symptoms::class), version = 1)
+@Database (entities = arrayOf(CovidData::class, County::class, Symptoms::class, TestResult::class), version = 1)
 abstract class AppDatabase: RoomDatabase() {
     abstract fun appDao(): AppDao
 

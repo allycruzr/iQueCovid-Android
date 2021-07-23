@@ -14,9 +14,10 @@ class Battery private constructor(private val context: Context) : Runnable {
     companion object {
         private var instance: Battery? = null
         private val handler = Handler()
-        var currentListener: OnBatteryCurrentListener? = null
+        var listener: OnBatteryCurrentListener? = null
 
-        fun start(context: Context) {
+        fun start(context: Context, onBatteryPercentageListener: OnBatteryCurrentListener) {
+            listener = onBatteryPercentageListener
             instance = if (instance == null) Battery(context) else instance
             instance?.start()
 
@@ -31,6 +32,7 @@ class Battery private constructor(private val context: Context) : Runnable {
         val current = getBatteryCurrentNow()
         Log.i(TAG,current.toString())
         handler.postDelayed(this, TIME_BETWEEN_UPDATES)
+        listener?.onCurrentChanged(current)
     }
 
     private fun getBatteryCurrentNow(): Double {

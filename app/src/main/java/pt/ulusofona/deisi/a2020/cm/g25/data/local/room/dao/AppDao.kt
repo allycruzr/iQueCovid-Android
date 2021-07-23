@@ -6,6 +6,7 @@ import androidx.room.Query
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.County
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.CovidData
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.Symptoms
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.TestResult
 
 @Dao
 interface AppDao {
@@ -48,4 +49,15 @@ interface AppDao {
 
     @Query("SELECT * FROM symptoms WHERE uuid = :uuid")
     suspend fun getSymptomsById(uuid: String): Symptoms
+
+    /** Dados Relacionados aos Testes -> TestRecord **/
+
+    @Insert
+    suspend fun insertTest(testRecord: TestResult)
+
+    @Query("SELECT * FROM testresult")
+    suspend fun getAllTests():List<TestResult>
+
+    @Query("SELECT * FROM testresult WHERE uuid = :uuid")
+    suspend fun getTestById(uuid:String): TestResult
 }

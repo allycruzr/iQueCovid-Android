@@ -69,7 +69,7 @@ class RemoteData(val storage: AppDao, val retrofit: Retrofit, val application: A
 
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val date: String = "16-08-2020"
+                val date = "16-08-2020" /** Ultima data em que actualizaram os dados **/
                 val response = service.getEntrySymptomsFromDate(date)
                 splashScreenLogicCallbackInterface.getEntrySymptomsReturn(response, storage)
             } catch (e: ConnectException) {

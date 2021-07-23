@@ -5,10 +5,8 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
-import android.os.BatteryManager
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -34,11 +32,16 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
 
     private lateinit var botNavBAr: BottomNavigationView
 
+    private var msgWasShowed = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         NavigationManager.goToDashBoardFragment(supportFragmentManager)
+
+        Battery.start(this, this)
+        FusedLocation.start(this)
 
         botNavBAr = findViewById(R.id.bottom_navigation_bar)
 
@@ -72,32 +75,27 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
                     NavigationManager.goToDashBoardFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.activity_dashboard_name)
                     it.setChecked(true)
-                    true
                 }
                 R.id.nav_test_list -> {
                     NavigationManager.goToTestListFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.activity_list_tests_name)
                     it.setChecked(true)
-                     true
                 }
                 R.id.nav_counties -> {
                     NavigationManager.goToCountiesFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.activity_counties_name)
                     it.setChecked(true)
-                    true
                 }
                 R.id.nav_extraPage -> {
                     NavigationManager.goToVaccinationFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.symptoms)
                     //toolbar.setNavigationIcon(R.drawable.ic_warning)
                     it.setChecked(true)
-                    true
                 }
                 R.id.nav_contacts -> {
                     NavigationManager.goToContactsFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.activity_contacts_name)
                     it.setChecked(true)
-                    true
                 }
             }
             false
@@ -105,8 +103,8 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        super.onCreateOptionsMenu(menu);
-        menuInflater.inflate(R.menu.top_app_bar, menu);
+        super.onCreateOptionsMenu(menu)
+        menuInflater.inflate(R.menu.top_app_bar, menu)
         return true
     }
 
@@ -116,10 +114,13 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
     }
 
     override fun onCurrentChanged(current: Double) {
-        if (current <= 20){
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            val toast = Toast.makeText(this, getText(R.string.toast_battery), Toast.LENGTH_LONG)
-            toast.show()
+        if (!msgWasShowed){
+            if (current <= 20){
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                val toast = Toast.makeText(this, getText(R.string.toast_battery), Toast.LENGTH_LONG)
+                toast.show()
+                msgWasShowed = true
+            }
         }
     }
 
