@@ -13,11 +13,7 @@ import kotlinx.android.synthetic.main.fragment_test_list.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.datasource.DataSource
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.County
-import pt.ulusofona.deisi.a2020.cm.g25.data.static_db.TestList
-import pt.ulusofona.deisi.a2020.cm.g25.ui.activities.MainActivity
-import pt.ulusofona.deisi.a2020.cm.g25.ui.activities.testform.TestFormActivity
 import pt.ulusofona.deisi.a2020.cm.g25.ui.adapters.CountiesAdapter
-import pt.ulusofona.deisi.a2020.cm.g25.ui.adapters.TestAdapter
 
 class CountiesFragment : Fragment() {
 

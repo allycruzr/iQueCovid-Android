@@ -1,5 +1,7 @@
 package pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.testlist
 
+import android.app.Application
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -13,11 +15,16 @@ import butterknife.OnClick
 import kotlinx.android.synthetic.main.fragment_test_list.*
 import pt.ulusofona.deisi.a2020.cm.g25.ui.activities.MainActivity
 import pt.ulusofona.deisi.a2020.cm.g25.R
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.AppDatabase
 import pt.ulusofona.deisi.a2020.cm.g25.ui.adapters.TestAdapter
 import pt.ulusofona.deisi.a2020.cm.g25.data.static_db.TestList
 import pt.ulusofona.deisi.a2020.cm.g25.ui.activities.testform.TestFormActivity
 
+
 class TestListFragment : Fragment() {
+
+
+    //private val storage = AppDatabase.getInstance(app).appDao()
 
     override fun onCreateView(
         inflater: LayoutInflater,

@@ -33,6 +33,7 @@
     <string name="detail_text_result">Resultado:</string>
     <string name="detail_text_comprovative">Comprovativo:</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="take_photo">Tirar Foto</string>
     <string name="submit">Submeter</string>
     <string name="portugal_cases_last_24h">Casos Portugal- Últimas 24h</string>
     <string name="portugal_flag"> portugalFlag </string>

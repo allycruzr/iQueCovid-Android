@@ -60,6 +60,7 @@
     <string name="proof">Proof</string>
     <string name="photo_optional">Photo (Optional)</string>
     <string name="submit">Submit</string>
+    <string name="take_photo">Take Photo</string>
     <string name="listar_testes">Test List</string>
     <string name="hospital_santa_maria" translatable="false">Hospital Santa Maria</string>
     <string name="new_cases">New Cases</string>

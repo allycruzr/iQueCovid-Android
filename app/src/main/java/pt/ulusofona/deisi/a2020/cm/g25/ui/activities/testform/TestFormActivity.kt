@@ -1,33 +1,53 @@
 package pt.ulusofona.deisi.a2020.cm.g25.ui.activities.testform
 
+import android.Manifest
 import android.app.DatePickerDialog
+import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Build
+import android.provider.MediaStore
 import android.view.MenuItem
 import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBar
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_test_form.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import pt.ulusofona.deisi.a2020.cm.g25.R
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.AppDatabase
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.TestResult
 import pt.ulusofona.deisi.a2020.cm.g25.domain.classes.Test
 import pt.ulusofona.deisi.a2020.cm.g25.data.static_db.TestList
+import pt.ulusofona.deisi.a2020.cm.g25.ui.utils.Constants
+import pt.ulusofona.deisi.a2020.cm.g25.ui.utils.Constants.Companion.REQUEST_IMAGE_CAPTURE
+import java.io.ByteArrayOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
 class TestFormActivity : AppCompatActivity() {
 
+    var bitmap: Bitmap? = null
     var datePicked: Boolean = false
 
     var formatDate = SimpleDateFormat("dd MMM yyyy", Locale.UK)
+
+    var photo: Bitmap? = null
+
+    val storage = AppDatabase.getInstance(this).appDao()
 
     // Data variable for saving form when submitting
     /*var data = mutableMapOf<String, Any>()
     var onValidationFunction = ::toastValid*/
 
-    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_form)
@@ -38,6 +58,8 @@ class TestFormActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+
+
 
         btn_date_picker.setOnClickListener {
             val getDate = Calendar.getInstance()
@@ -55,6 +77,14 @@ class TestFormActivity : AppCompatActivity() {
             datePicker.show()
         }
 
+        form_take_photo_button.setOnClickListener{
+            onRequestedPermissions(
+                this.baseContext!!, arrayOf(
+                    Manifest.permission.CAMERA
+                )
+            )
+        }
+
         form_submit_button.setOnClickListener{
             if (form_local_text_field.text.length != 0 && radioGroup_result.checkedRadioButtonId != -1 && datePicked){
                 var radioButton: RadioButton
@@ -65,12 +95,16 @@ class TestFormActivity : AppCompatActivity() {
                 val local: String = form_local_text_field.text.toString()
                 val result: String = radioButton.text.toString()
                 var file: String = ""
-                if (form_foto_text_field.text != null) {
-                    file = form_foto_text_field.text.toString()
-                }
+//                if (form_foto_text_field.text != null) {
+//                    file = form_foto_text_field.text.toString()
+//                }
 
                 val teste: Test = Test(date, local, result, file)
+                val testResult = TestResult(date, local, result,convertFromBitMap(this.photo))
+
                 TestList.addTest(teste)
+                insertTestResult(testResult)
+
                 val toast = Toast.makeText(this, "Teste Submetido com Sucesso!", Toast.LENGTH_SHORT)
                 toast.show()
                 this.finish()
@@ -110,5 +144,60 @@ class TestFormActivity : AppCompatActivity() {
 
     fun openDatePicker(view: View) {
 
+    }
+
+//    fun requestCameraPermission() {
+//        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), )
+//    }
+
+    private fun takePhoto() {
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivityForResult(intent, REQUEST_IMAGE_CAPTURE)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == AppCompatActivity.RESULT_OK) {
+            if (requestCode == REQUEST_IMAGE_CAPTURE) {
+
+                bitmap = data?.extras?.get("data") as Bitmap
+                setTestImage(bitmap!!)
+
+            }
+        }
+    }
+
+    fun setTestImage(bitmap: Bitmap) {
+        photo = bitmap
+    }
+
+    fun onRequestedPermissions(context: Context, permissions: Array<String>) {
+        var permissionsGiven = 0
+        permissions.forEach {
+            if (ContextCompat.checkSelfPermission(
+                    context,
+                    it
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                requestPermissions(permissions, Constants.REQUEST_CODE)
+            } else {
+                permissionsGiven++
+            }
+        }
+        if (permissionsGiven == permissions.size) {
+            takePhoto()
+        }
+    }
+
+    fun convertFromBitMap(bitmap: Bitmap?):   ByteArray {
+        val outputStream = ByteArrayOutputStream()
+        bitmap?.compress(Bitmap.CompressFormat.PNG, 50, outputStream)
+        return  outputStream.toByteArray()
+    }
+
+    fun insertTestResult(testResult: TestResult) {
+        CoroutineScope(Dispatchers.IO).launch {
+            storage.insertTest(testResult)
+        }
     }
 }

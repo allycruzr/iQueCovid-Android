@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
         onRequestedPermissions(
             this.baseContext!!, arrayOf(
                 android.Manifest.permission.ACCESS_COARSE_LOCATION,
-                android.Manifest.permission.ACCESS_FINE_LOCATION
+                android.Manifest.permission.ACCESS_FINE_LOCATION,
             )
         )
 
@@ -89,7 +89,6 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
                 R.id.nav_extraPage -> {
                     NavigationManager.goToVaccinationFragment(supportFragmentManager)
                     toolbar.title = getString(R.string.symptoms)
-                    //toolbar.setNavigationIcon(R.drawable.ic_warning)
                     it.setChecked(true)
                 }
                 R.id.nav_contacts -> {
