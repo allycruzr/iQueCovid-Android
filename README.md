@@ -5,8 +5,8 @@
 * Rui Moreira (21600035)
 ### Link Youtube:
 * https://youtu.be/yuEHFvspq0Y
-### Nota:
-* 15 Valores
+### Nota Autoavaliativa:
+* 15 
  
 --------
 
