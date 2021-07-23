@@ -10,7 +10,6 @@
         android:orientation="horizontal"
         android:paddingTop="15dp">
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -21,7 +20,6 @@
 
     </LinearLayout>
 
-    <!-- Headers -->
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,18 +33,18 @@
             android:paddingEnd="10dp">
 
             <TextView
-                android:id="@+id/dashboard_header_cases"
+                android:id="@+id/extra_dry_cogh_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="@string/fever"
+                android:text="@string/dry_cogh"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/dashboard_data_cases"
+                android:id="@+id/extra_dry_cogh_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -64,28 +62,25 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp">
 
-
             <TextView
-
-                android:id="@+id/dashboard_header_recovered"
+                android:id="@+id/extra_fever_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="@string/dry_cogh"
+                android:text="@string/fever"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-
-                android:id="@+id/dashboard_data_recovered"
+                android:id="@+id/extra_fever_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="72%"
-                android:textColor="#FFAA00"
+                android:text="81%"
+                android:textColor="#FFAA00 "
                 android:textSize="23sp"
                 android:textStyle="bold" />
 
@@ -97,124 +92,8 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp">
 
-
             <TextView
-                android:id="@+id/dashboard_header_deaths"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center_vertical"
-                android:paddingTop="10dp"
-                android:text="@string/tiredness"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/dashboard_data_deaths"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="70%"
-                android:textColor="#FFAA00"
-                android:textSize="23sp"
-                android:textStyle="bold" />
-        </TableRow>
-
-
-        <TableRow
-            android:layout_marginBottom="5dp"
-            android:layout_weight="3"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp">
-
-
-            <TextView
-                android:id="@+id/aches_and_pains"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center_vertical"
-                android:paddingTop="10dp"
-                android:text="@string/aches_and_pains"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="65%"
-                android:textColor="#FFAA00"
-                android:textSize="23sp"
-                android:textStyle="bold" />
-        </TableRow>
-
-        <TableRow
-            android:layout_marginBottom="5dp"
-            android:layout_weight="3"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center_vertical"
-                android:paddingTop="10dp"
-                android:text="@string/diarrhoea"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="51%"
-                android:textColor="#FFAA00"
-                android:textSize="23sp"
-                android:textStyle="bold" />
-        </TableRow>
-
-        <TableRow
-            android:layout_marginBottom="5dp"
-            android:layout_weight="3"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center_vertical"
-                android:paddingTop="10dp"
-                android:text="@string/conjunctivitis"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="47%"
-                android:textColor="#FFAA00"
-                android:textSize="23sp"
-                android:textStyle="bold" />
-        </TableRow>
-
-        <TableRow
-            android:layout_marginBottom="5dp"
-            android:layout_weight="3"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp">
-
-
-            <TextView
+                android:id="@+id/extra_headache_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -225,12 +104,13 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/extra_headache_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="39%"
-                android:textColor="#FFAA00"
+                android:text="81%"
+                android:textColor="#FFAA00 "
                 android:textSize="23sp"
                 android:textStyle="bold" />
         </TableRow>
@@ -241,80 +121,81 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp">
 
-
             <TextView
+                android:id="@+id/extra_muscle_ache_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="@string/loss_of_taste_or_smell"
+                android:text="@string/muscle_ache"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/extra_muscle_ache_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="22%"
-                android:textColor="#FFAA00"
+                android:text="81%"
+                android:textColor="#FFAA00 "
                 android:textSize="23sp"
                 android:textStyle="bold" />
         </TableRow>
-
         <TableRow
             android:layout_marginBottom="5dp"
             android:layout_weight="3"
             android:paddingStart="10dp"
             android:paddingEnd="10dp">
 
-
             <TextView
+                android:id="@+id/extra_general_weakness_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="@string/difficulty_breathing"
+                android:text="@string/general_weakness"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/extra_general_weakness_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="19%"
-                android:textColor="#FFAA00"
+                android:text="81%"
+                android:textColor="#FFAA00 "
                 android:textSize="23sp"
                 android:textStyle="bold" />
         </TableRow>
-
         <TableRow
             android:layout_marginBottom="5dp"
             android:layout_weight="3"
             android:paddingStart="10dp"
             android:paddingEnd="10dp">
 
-
             <TextView
+                android:id="@+id/extra_shortBreath_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:gravity="center_vertical"
                 android:paddingTop="10dp"
-                android:text="@string/chest_pain_or_pressure"
+                android:text="@string/shortBreath"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/extra_shortBreath_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="12%"
-                android:textColor="#FFAA00"
+                android:text="81%"
+                android:textColor="#FFAA00 "
                 android:textSize="23sp"
                 android:textStyle="bold" />
         </TableRow>

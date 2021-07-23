@@ -3,6 +3,7 @@ package pt.ulusofona.deisi.a2020.cm.g25.data.local.datasource
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.County
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.CovidData
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.Symptoms
+import kotlin.math.roundToInt
 
 class DataSource {
 
@@ -164,4 +165,48 @@ class DataSource {
     fun getAllCounties(): ArrayList<County> {
         return counties
     }
+
+    fun getCoughPercentage () : Int {
+        if (symptoms.cough != null){
+            return symptoms.cough!!.times(100).roundToInt()
+        }
+        return 0
+    }
+
+    fun getFeverPercentage () : Int {
+        if (symptoms.fever != null){
+            return symptoms.fever!!.times(100).roundToInt()
+        }
+        return 0
+    }
+
+    fun getShortBreathPercentage () : Int {
+        if (symptoms.shortBreath != null){
+            return symptoms.shortBreath!!.roundToInt()
+        }
+        return 0
+    }
+
+    fun getHeadAchePercentage () : Int {
+        if (symptoms.headAche != null){
+            return symptoms.headAche!!.times(100).roundToInt()
+        }
+        return 0
+    }
+
+    fun getMuscleAchesPercentage () : Int {
+        if (symptoms.muscleAches != null){
+            return symptoms.muscleAches!!.times(100).roundToInt()
+        }
+        return 0
+    }
+
+    fun getGeneralWeaknessPercentage () : Int {
+        if (symptoms.generalWeakness != null){
+            return symptoms.generalWeakness!!.times(100).roundToInt()
+        }
+        return 0
+    }
+
+
 }

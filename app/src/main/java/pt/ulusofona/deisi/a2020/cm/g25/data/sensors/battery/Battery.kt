@@ -1,6 +1,5 @@
 package pt.ulusofona.deisi.a2020.cm.g25.data.sensors.battery
 
-
 import android.content.Context
 import android.os.BatteryManager
 import android.os.Handler
@@ -15,8 +14,10 @@ class Battery private constructor(private val context: Context) : Runnable {
     companion object {
         private var instance: Battery? = null
         private val handler = Handler()
+        var currentListener: OnBatteryCurrentListener? = null
 
-        fun start(context: Context) {
+        fun start(context: Context, onBatteryCurrentListener: OnBatteryCurrentListener) {
+            currentListener = onBatteryCurrentListener
             instance = if (instance == null) Battery(context) else instance
             instance?.start()
 
