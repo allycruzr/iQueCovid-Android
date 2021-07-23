@@ -16,8 +16,7 @@ class Battery private constructor(private val context: Context) : Runnable {
         private val handler = Handler()
         var currentListener: OnBatteryCurrentListener? = null
 
-        fun start(context: Context, onBatteryCurrentListener: OnBatteryCurrentListener) {
-            currentListener = onBatteryCurrentListener
+        fun start(context: Context) {
             instance = if (instance == null) Battery(context) else instance
             instance?.start()
 
