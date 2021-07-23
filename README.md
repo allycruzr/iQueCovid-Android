@@ -12,7 +12,8 @@
 
 ## Mapa de Navegação - iQueCovid
 
-![image](https://user-images.githubusercontent.com/59263912/114240035-cbdb2d80-997e-11eb-86f4-fb8796b8a11f.png)
+![image](https://user-images.githubusercontent.com/59263912/126844719-597b74ee-0481-4578-97ba-6c68bf697684.png)
+
 
 --------
 
