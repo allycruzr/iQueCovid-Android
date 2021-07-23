@@ -15,7 +15,7 @@ import pt.ulusofona.deisi.a2020.cm.g25.data.local.datasource.DataSource
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.County
 import pt.ulusofona.deisi.a2020.cm.g25.ui.adapters.CountiesAdapter
 
-class CountiesFragment : Fragment() {
+class CountiesFragment : Fragment() { // TODO: Criar a pesquisa dos counties
 
     val dataSource = DataSource.getInstance()
 

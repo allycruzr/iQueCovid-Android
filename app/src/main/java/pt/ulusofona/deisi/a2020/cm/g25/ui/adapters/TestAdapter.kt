@@ -19,6 +19,8 @@ class TestAdapter(private val dataSet: ArrayList<Test>) :
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder).
      */
+
+    // TODO: corrigir este menino para receber os dados certos, principalmente a foto
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val resultImageView: ImageView
         val dateTextView: TextView

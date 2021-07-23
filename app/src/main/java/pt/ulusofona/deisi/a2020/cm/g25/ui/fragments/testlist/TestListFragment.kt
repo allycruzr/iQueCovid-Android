@@ -23,7 +23,7 @@ import pt.ulusofona.deisi.a2020.cm.g25.ui.activities.testform.TestFormActivity
 
 class TestListFragment : Fragment() {
 
-
+    // TODO: preparar storage ou datasource para ir buscar dados a listar neste fragmento
     //private val storage = AppDatabase.getInstance(app).appDao()
 
     override fun onCreateView(
@@ -41,6 +41,7 @@ class TestListFragment : Fragment() {
 
         val testes: TestList = TestList
 
+        // TODO: corrigir o testlist
         test_recycler_view.adapter = TestAdapter(testes.testList)
 
         @OnClick(R.id.fragment_fab)
