@@ -11,6 +11,11 @@
         android:icon="@drawable/ic_test_list"
         android:title="@string/activity_list_tests_name" />
     <item
+        android:id="@+id/nav_counties"
+        android:enabled="true"
+        android:icon="@drawable/ic_counties"
+        android:title="@string/activity_counties_name" />
+    <item
         android:id="@+id/nav_extraPage"
         android:enabled="true"
         android:icon="@drawable/ic_vaccine"

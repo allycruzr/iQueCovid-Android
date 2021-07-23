@@ -2,11 +2,13 @@ package pt.ulusofona.deisi.a2020.cm.g25.data.local.datasource
 
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.County
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.CovidData
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.Symptoms
 
 class DataSource {
 
     private var _dataLast24hours = CovidData()
     private var _dataLast48hours = CovidData()
+    private var _symptoms = Symptoms()
 
     private var counties = ArrayList<County>()
 
@@ -15,6 +17,9 @@ class DataSource {
 
     val dataLast48hours
     get() = _dataLast48hours
+
+    val symptoms
+    get() = _symptoms
 
     companion object {
         private var instance: DataSource? = null
@@ -34,6 +39,10 @@ class DataSource {
     }
     fun addLast48H(data: CovidData) {
         _dataLast48hours = data
+    }
+
+    fun addSymptoms(symptoms: Symptoms) {
+        _symptoms = symptoms
     }
 
     fun dateOfData(): String {

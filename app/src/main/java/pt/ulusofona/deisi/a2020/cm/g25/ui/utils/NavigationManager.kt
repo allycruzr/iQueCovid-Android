@@ -4,9 +4,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.dashboard.DashboardFragment
 import pt.ulusofona.deisi.a2020.cm.g25.R
+import pt.ulusofona.deisi.a2020.cm.g25.ui.adapters.CountiesAdapter
 import pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.testlist.TestListFragment
 import pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.extra.ExtraFragment
 import pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.contacts.ContactsFragment
+import pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.counties.CountiesFragment
 import pt.ulusofona.deisi.a2020.cm.g25.ui.fragments.settings.SettingsFragment
 
 abstract class NavigationManager {
@@ -15,6 +17,7 @@ abstract class NavigationManager {
 
         val dashboardFragment = DashboardFragment()
         val testListFragment = TestListFragment()
+        val countiesFragment = CountiesFragment()
         val extraFragment = ExtraFragment()
         val contactsFragment = ContactsFragment()
         val settingsFragment = SettingsFragment()
@@ -35,6 +38,10 @@ abstract class NavigationManager {
             placeFragment(fm, testListFragment)
         }
 
+        fun goToCountiesFragment(fm: FragmentManager) {
+            placeFragment(fm, countiesFragment)
+        }
+
         fun goToVaccinationFragment(fm: FragmentManager) {
             placeFragment(fm, extraFragment)
         }
@@ -47,10 +54,5 @@ abstract class NavigationManager {
         fun goToSettingsFragment(fm: FragmentManager) {
             placeFragment(fm, settingsFragment)
         }
-
-//      TODO: Counties List Fragment
-//        fun goToCountiesFragment(fm: FragmentManager) {
-//            placeFragment(fm, countiesFragment)
-//        }
     }
 }

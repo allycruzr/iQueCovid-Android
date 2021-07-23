@@ -7,6 +7,7 @@ import kotlinx.coroutines.launch
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.datasource.DataSource
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.dao.AppDao
 import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.CovidData
+import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.Symptoms
 import pt.ulusofona.deisi.a2020.cm.g25.data.repositories.DataRepository
 import pt.ulusofona.deisi.a2020.cm.g25.domain.interfaces.SplashScreenCallbackInterface
 import pt.ulusofona.deisi.a2020.cm.g25.domain.interfaces.SplashScreenLogicCallbackInterface
@@ -24,6 +25,12 @@ class SplashScreenLogic(val repository: DataRepository) {
         createInterface(splashScreenReturnInterface)
         repository.getEntryFromDate(splashScreenLogicCallbackInterface)
     }
+
+    fun getEntrySymptoms(splashScreenReturnInterface: SplashScreenCallbackInterface) {
+        createInterface(splashScreenReturnInterface)
+        repository.getEntrySymptomsFromDate(splashScreenLogicCallbackInterface)
+    }
+
     fun getCounties(splashScreenReturnInterface: SplashScreenCallbackInterface) {
         createInterface(splashScreenReturnInterface)
         repository.getCounties(splashScreenLogicCallbackInterface)
@@ -84,10 +91,43 @@ class SplashScreenLogic(val repository: DataRepository) {
                 splashScreenCallbackInterface.loadGetEntryCompleted()
             }
 
+            override fun getEntrySymptomsReturn(
+                response: LinkedTreeMap<String, LinkedTreeMap<String, String?>>,
+                storage: AppDao
+            ) {
+                val dataSource = DataSource.getInstance()
+                for(key in response.keys){
+                    when (key){
+                        "data" -> dataSource.symptoms.dateOfData = cleanDataFromMap(response[key]?.values!!).toString()
+                        "data_dados" -> dataSource.symptoms.dateOfData = cleanDataFromMap(response[key]?.values!!).toString()
+                        "sintomas_tosse" -> dataSource.symptoms.cough = cleanDataFromMap(response[key]?.values!!).toString().toFloat()
+                        "sintomas_febre" -> dataSource.symptoms.fever =cleanDataFromMap(response[key]?.values!!).toString().toFloat()
+                        "sintomas_dificuldade_respiratoria" -> dataSource.symptoms.shortBreath =cleanDataFromMap(response[key]?.values!!).toString().toFloat()
+                        "sintomas_cefaleia" -> dataSource.symptoms.headAche =cleanDataFromMap(response[key]?.values!!).toString().toFloat()
+                        "sintomas_dores_musculares" -> dataSource.symptoms.muscleAches = cleanDataFromMap(response[key]?.values!!).toString().toFloat()
+                        "sintomas_fraqueza_generalizada" -> dataSource.symptoms.generalWeakness =cleanDataFromMap(response[key]?.values!!).toString().toFloat()
+                    }
+                }
+                CoroutineScope(Dispatchers.IO).launch {
+                    dataSource.symptoms.uuid="1"
+                    storage.deleteAllSymptoms()
+                    storage.insertSymptoms(dataSource.symptoms)
+                }
+
+
+                splashScreenCallbackInterface.loadGetEntrySymptomsCompleted()
+            }
+
             override fun last48HReturnDB(last48H: CovidData) {
                 val dataSource = DataSource.getInstance()
                 dataSource.addLast48H(last48H)
                 splashScreenCallbackInterface.loadGetEntryCompleted()
+            }
+
+            override fun symptomsReturnDB(symptoms: Symptoms) {
+                val dataSource = DataSource.getInstance()
+                dataSource.addSymptoms(symptoms)
+                splashScreenCallbackInterface.loadGetEntrySymptomsCompleted()
             }
 
             override fun returnConnectionError()  {

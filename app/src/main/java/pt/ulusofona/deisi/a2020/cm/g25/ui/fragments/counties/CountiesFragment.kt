@@ -16,6 +16,7 @@ import pt.ulusofona.deisi.a2020.cm.g25.data.local.room.entities.County
 import pt.ulusofona.deisi.a2020.cm.g25.data.static_db.TestList
 import pt.ulusofona.deisi.a2020.cm.g25.ui.activities.MainActivity
 import pt.ulusofona.deisi.a2020.cm.g25.ui.activities.testform.TestFormActivity
+import pt.ulusofona.deisi.a2020.cm.g25.ui.adapters.CountiesAdapter
 import pt.ulusofona.deisi.a2020.cm.g25.ui.adapters.TestAdapter
 
 class CountiesFragment : Fragment() {
@@ -37,18 +38,7 @@ class CountiesFragment : Fragment() {
 
         val counties: ArrayList<County> = dataSource.getAllCounties()
 
-        //test_recycler_view.adapter = CountiesAdapter(counties)
-
-        @OnClick(R.id.fragment_fab)
-        fun setOnClickListener(view: View) {
-            Log.i("CountiesFragment", "$activity")
-            startActivity(Intent(MainActivity(), TestFormActivity::class.java))
-        }
-
-        fragment_fab.setOnClickListener { view ->
-            Log.i("CountiesFragment", "$activity")
-            startActivity(Intent(activity, TestFormActivity::class.java))
-        }
+        test_recycler_view.adapter = CountiesAdapter(counties)
     }
 
 }

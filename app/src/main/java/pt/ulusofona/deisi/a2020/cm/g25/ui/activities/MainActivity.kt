@@ -32,18 +32,22 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
 
     private lateinit var viewModel: MainViewModel
 
+    private lateinit var botNavBAr: BottomNavigationView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         NavigationManager.goToDashBoardFragment(supportFragmentManager)
 
-        val botNavBAr: BottomNavigationView = findViewById(R.id.bottom_navigation_bar)
+        botNavBAr = findViewById(R.id.bottom_navigation_bar)
 
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         toolbar.title = getString(R.string.activity_dashboard_name)
+        botNavBAr.menu.findItem(R.id.nav_dashboard).setChecked(true)
+
         toolbar.inflateMenu(R.menu.top_app_bar)
 
         //supportActionBar?.setTitle(R.string.activity_dashboard_name)
@@ -75,6 +79,12 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
                     toolbar.title = getString(R.string.activity_list_tests_name)
                     it.setChecked(true)
                      true
+                }
+                R.id.nav_counties -> {
+                    NavigationManager.goToCountiesFragment(supportFragmentManager)
+                    toolbar.title = getString(R.string.activity_counties_name)
+                    it.setChecked(true)
+                    true
                 }
                 R.id.nav_extraPage -> {
                     NavigationManager.goToVaccinationFragment(supportFragmentManager)
@@ -146,7 +156,7 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
 
     override fun checkDangerZoneValue(checkDangerZone: String) {
         when (checkDangerZone) {
-            "Baixo" -> toolbar.setNavigationIcon(R.drawable.ic_checked)
+            "Baixo a Moderado" -> toolbar.setNavigationIcon(R.drawable.ic_checked)
             "Moderado" -> toolbar.setNavigationIcon(R.drawable.ic_warning)
             "Elevado" -> toolbar.setNavigationIcon(R.drawable.ic_danger)
             "Muito Elevado" -> toolbar.setNavigationIcon(R.drawable.ic_extreme_danger)

@@ -8,6 +8,7 @@
     <string name="activity_contacts_name">Contactos</string>
     <string name="activity_dashboard_name">Dashboard</string>
     <string name="activity_list_tests_name">Testes</string>
+    <string name="activity_counties_name">Concelhos</string>
     <string name="activity_insert_test_form_name">Adicionar Teste</string>
     <string name="activity_edit_test_form_name">Editar Teste</string>
     <string name="activity_test_detail_name">Detalhes do Teste</string>
@@ -71,5 +72,7 @@
     <string name="contactos">Contactos</string>
     <string name="diarrhoea">Diarréia</string>
     <string name="title_data_updated_at">Dados Provenientes de COVID-19 REST API Portugal, actualizados a</string>
+    <string name="dark_mode_off">Dark Mode DESLIGADO</string>
+    <string name="dark_mode_on">Dark Mode LIGADO</string>
 
 </resources>

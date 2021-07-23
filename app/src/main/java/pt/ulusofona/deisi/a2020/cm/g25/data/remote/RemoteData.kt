@@ -64,6 +64,30 @@ class RemoteData(val storage: AppDao, val retrofit: Retrofit, val application: A
         }
     }
 
+    fun getEntrySymptomsFromDateWeb(splashScreenLogicCallbackInterface: SplashScreenLogicCallbackInterface) {
+        val service = retrofit.create(DataService::class.java)
+
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val date: String = "16-08-2020"
+                val response = service.getEntrySymptomsFromDate(date)
+                splashScreenLogicCallbackInterface.getEntrySymptomsReturn(response, storage)
+            } catch (e: ConnectException) {
+                splashScreenLogicCallbackInterface.returnTimeOutError()
+            }
+        }
+
+    }
+
+    fun getEntrySymptomsFromDateDB(splashScreenLogicReturnInterface: SplashScreenLogicCallbackInterface) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val symptoms = storage.getSymptomsById("1")
+            splashScreenLogicReturnInterface.symptomsReturnDB(symptoms)
+        }
+    }
+
+
+
     fun getCountiesWeb(splashScreenLogicCallbackInterface: SplashScreenLogicCallbackInterface) {
         val service = retrofit.create(DataService::class.java)
 

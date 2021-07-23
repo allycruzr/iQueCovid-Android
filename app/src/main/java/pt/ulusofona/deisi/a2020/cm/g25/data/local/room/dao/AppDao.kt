@@ -38,7 +38,7 @@ interface AppDao {
     /** Dados Relacionados aos Sintomas -> Symptoms **/
 
     @Insert
-    suspend fun insertSymptoms(data: Symptoms)
+    suspend fun insertSymptoms(symptoms: Symptoms)
 
     @Query("SELECT * FROM symptoms")
     suspend fun getAllSymptoms(): List<Symptoms>

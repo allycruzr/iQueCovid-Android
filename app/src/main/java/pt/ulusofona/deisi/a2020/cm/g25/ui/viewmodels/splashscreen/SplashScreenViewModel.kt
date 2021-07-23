@@ -31,6 +31,10 @@ class SplashScreenViewModel(app: Application): AndroidViewModel(app) {
             }
 
             override fun loadGetEntryCompleted(){
+                splashScreenLogic.getEntrySymptoms(splashScreenCallbackInterface)
+            }
+
+            override fun loadGetEntrySymptomsCompleted(){
                 splashScreenLogic.getCounties(splashScreenCallbackInterface)
             }
 

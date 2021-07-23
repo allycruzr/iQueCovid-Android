@@ -2,6 +2,7 @@ package pt.ulusofona.deisi.a2020.cm.g25.ui.adapters
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,16 +22,20 @@ class CountiesAdapter(private val dataSet: ArrayList<County>):
          * (custom ViewHolder).
          */
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val resultImageView: ImageView
-            val dateTextView: TextView
-            val localTextView: TextView
+            val countieNameView: TextView
+            val districtTextView: TextView
+            val lastUpdateTextView: TextView
+            val rateTextView: TextView
+            val rateRiskTextView: TextView
             val context: Context
 
             init {
                 // Define click listener for the ViewHolder's View.
-                resultImageView = view.findViewById(R.id.ic_result)
-                dateTextView = view.findViewById(R.id.text_date)
-                localTextView = view.findViewById(R.id.text_local)
+                countieNameView = view.findViewById(R.id.text_county_name)
+                districtTextView = view.findViewById(R.id.text_district)
+                lastUpdateTextView = view.findViewById(R.id.text_last_update)
+                rateTextView = view.findViewById(R.id.text_rate)
+                rateRiskTextView = view.findViewById(R.id.text_rate_risk)
                 context = view.context
             }
         }
@@ -39,7 +44,7 @@ class CountiesAdapter(private val dataSet: ArrayList<County>):
         override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
             // Create a new view, which defines the UI of the list item
             val view = LayoutInflater.from(viewGroup.context)
-                .inflate(R.layout.item_test, viewGroup, false)
+                .inflate(R.layout.item_county, viewGroup, false)
 
             return ViewHolder(view)
         }
@@ -52,32 +57,29 @@ class CountiesAdapter(private val dataSet: ArrayList<County>):
             val context: Context = viewHolder.context
 
             val county = getItem(position)!!
-//            TODO: continuar aqui
-//            var DATE = county.date
-//            var LOCAL = county.local
-//            var RESULT = county.resultado
-//            var FILE = county.ficheiro
-//
-//            viewHolder.dateTextView.text = county.date
-//            viewHolder.localTextView.text = county.local
-//            if (teste.resultado == "Positivo") {
-//                viewHolder.resultImageView.setImageResource(R.drawable.ic_test_positive)
-//            } else if (teste.resultado == "Negativo") {
-//                viewHolder.resultImageView.setImageResource(R.drawable.ic_test_negative)
-//            } else {
-//                viewHolder.resultImageView.setImageResource(R.drawable.ic_test_unknown)
-//            }
+            var countyName = county.county!!
+            var district = county.district!!
+            var lastUpdate = county.dateOfData!!
+            var rate = county.rate!!
+            var risk = county.risk!!
 
-//            viewHolder.itemView.setOnClickListener {
-//                val intent = Intent(context, TestDetailActivity::class.java)
-//                intent.apply {
-//                    putExtra("DATE", DATE)
-//                    putExtra("LOCAL", LOCAL)
-//                    putExtra("RESULT", RESULT)
-//                    putExtra("FILE", FILE)
-//                }
-//                context.startActivity(intent)
-//            }
+            viewHolder.countieNameView.text = county.county
+            viewHolder.districtTextView.text = county.district
+            viewHolder.lastUpdateTextView.text = county.dateOfData
+            viewHolder.rateTextView.text = county.rate.toString()
+            viewHolder.rateRiskTextView.text = county.risk
+
+            if (county.risk.equals("Baixo a Moderado")) {
+                viewHolder.rateRiskTextView.setTextColor(Color.GREEN)
+            } else if(county.risk.equals("Moderado")) {
+                viewHolder.rateRiskTextView.setTextColor(Color.rgb(246,190,0))
+            } else if(county.risk.equals("Elevado")) {
+                viewHolder.rateRiskTextView.setTextColor(Color.rgb(255,165,0))
+            } else if(county.risk.equals("Muito Elevado")) {
+                viewHolder.rateRiskTextView.setTextColor(Color.rgb(255,103,0))
+            } else if(county.risk.equals("Extremamente Elevado")) {
+                viewHolder.rateRiskTextView.setTextColor(Color.RED)
+            }
         }
 
         private fun getItem(position: Int): County {

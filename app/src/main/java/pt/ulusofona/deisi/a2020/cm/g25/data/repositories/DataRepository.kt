@@ -40,4 +40,12 @@ class DataRepository(val remoteData: RemoteData) {
             remoteData.getEntryFromDateDB(splashScreenLogicCallbackInterface)
         }
     }
+
+    fun getEntrySymptomsFromDate(splashScreenLogicCallbackInterface: SplashScreenLogicCallbackInterface) {
+        if (networkAvailable()) {
+            remoteData.getEntrySymptomsFromDateWeb(splashScreenLogicCallbackInterface)
+        } else {
+            remoteData.getEntrySymptomsFromDateDB(splashScreenLogicCallbackInterface)
+        }
+    }
 }

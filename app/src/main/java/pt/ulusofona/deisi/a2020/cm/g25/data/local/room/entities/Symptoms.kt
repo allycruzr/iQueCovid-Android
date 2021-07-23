@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName
 @Entity(tableName = "symptoms")
 class Symptoms {
     @PrimaryKey
-    var uuid:String =""
+    var uuid:String = ""
 
     @SerializedName("data")
     var date: String? = null
