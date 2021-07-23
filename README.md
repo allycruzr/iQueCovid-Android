@@ -6,8 +6,9 @@
 ### Link Youtube:
 * Video 1 - https://www.youtube.com/watch?v=u9SNZf212kE 
 * Vídeo 2 - https://youtu.be/yuEHFvspq0Y
-### Nota Autoavaliativa:
-* 15 
+### Auto-avaliação:
+* Parte 1 = 17 Valores
+* Parte 2 = 15 Valores
  
 --------
 
