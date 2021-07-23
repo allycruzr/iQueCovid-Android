@@ -4,9 +4,9 @@
 * Allyson Rodrigues (21900126)
 * Rui Moreira (21600035)
 ### Link Youtube:
-* https://www.youtube.com/watch?v=u9SNZf212kE
+* https://youtu.be/yuEHFvspq0Y
 ### Nota:
-* 17 Valores
+* 15 Valores
  
 --------
 
