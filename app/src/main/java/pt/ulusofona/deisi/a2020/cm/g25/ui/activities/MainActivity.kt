@@ -115,10 +115,10 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
     override fun onCurrentChanged(current: Double) {
         if (!msgWasShowed){
             if (current <= 20){
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                val toast = Toast.makeText(this, getText(R.string.toast_battery), Toast.LENGTH_LONG)
-                toast.show()
-                msgWasShowed = true
+                //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                //val toast = Toast.makeText(this, getText(R.string.toast_battery), Toast.LENGTH_LONG)
+                //toast.show()
+                //msgWasShowed = true
             }
         }
     }
