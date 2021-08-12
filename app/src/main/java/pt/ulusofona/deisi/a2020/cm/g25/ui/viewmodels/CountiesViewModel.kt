@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import pt.ulusofona.deisi.a2020.cm.g25.domain.interfaces.CountiesInterface
 import pt.ulusofona.deisi.a2020.cm.g25.domain.logic.CountiesLogic
-import pt.ulusofona.deisi.a2020.cm.g25.domain.logic.MainLogic
 
 
 class CountiesViewModel(application: Application): AndroidViewModel(application) {
@@ -16,7 +15,11 @@ class CountiesViewModel(application: Application): AndroidViewModel(application)
         this.listener = listener
     }
 
-    fun getAllCounties(){
-        listener?.initCounties(countiesLogic.getAllCounties())
+    fun searchCounties(name: String? = null) {
+        if(name.isNullOrEmpty()) {
+            listener?.onCountySearched(countiesLogic.getAllCounties())
+        } else {
+            listener?.onCountySearched(countiesLogic.getCountiesByName(name))
+        }
     }
 }

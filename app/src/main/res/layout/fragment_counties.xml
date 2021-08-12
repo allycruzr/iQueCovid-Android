@@ -4,27 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.activities.MainActivity">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/mSearchName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_search_counties"
+        android:hint="Introduza Para Pesquisar..."
+        android:padding="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/test_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/item_county" />
 
-        <EditText
-            android:id="@+id/mSearchName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_search_counties"
-            android:hint="Introduza Para Pesquisar..."
-            android:padding="10dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/test_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="LinearLayoutManager" />
-
-    </LinearLayout>
 </LinearLayout>
