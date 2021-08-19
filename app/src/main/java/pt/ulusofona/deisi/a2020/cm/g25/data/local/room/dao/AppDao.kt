@@ -33,6 +33,9 @@ interface AppDao {
     @Query("SELECT * FROM County")
     suspend fun getAllCounties():List<County>
 
+    @Query("SELECT * FROM County WHERE county LIKE :name")
+    suspend fun searchCountiesByName(name: String): List<County>
+
     @Query("DELETE FROM County")
     suspend fun deleteAllCounties()
 
@@ -60,4 +63,6 @@ interface AppDao {
 
     @Query("SELECT * FROM testresult WHERE uuid = :uuid")
     suspend fun getTestById(uuid:String): TestResult
+
+
 }
