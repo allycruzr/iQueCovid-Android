@@ -7,7 +7,7 @@ import pt.ulusofona.deisi.a2020.cm.g25.domain.interfaces.CountiesInterface
 import pt.ulusofona.deisi.a2020.cm.g25.domain.logic.CountiesLogic
 
 
-class CountiesViewModel(application: Application): AndroidViewModel(application) {
+class CountiesViewModel(application: Application) : AndroidViewModel(application) {
     private var listener: CountiesInterface? = null
     private var countiesLogic: CountiesLogic? = null
 
@@ -19,11 +19,17 @@ class CountiesViewModel(application: Application): AndroidViewModel(application)
         countiesLogic = CountiesLogic(storage, listener)
     }
 
-    fun searchCounties(name: String? = null) {
-        if(name.isNullOrEmpty()) {
-            countiesLogic?.getAllCounties()
+    fun searchCounties(
+        name: String? = null,
+        risk: String? = null,
+        min: Int? = null,
+        max: Int? = null
+    ) {
+        val hasFilters = listOf<Any?>(name, risk, min, max).any { it != null }
+        if (hasFilters) {
+            countiesLogic?.filterCounties(name, risk, min, max)
         } else {
-            countiesLogic?.getCountiesByName(name)
+            countiesLogic?.getAllCounties()
         }
     }
 }

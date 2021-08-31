@@ -21,6 +21,10 @@ class ImageFullscreenActivity : AppCompatActivity() {
 
     }
 
+    override fun onStart() {
+        super.onStart()
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {                                     // Define o comportamento do botão Retroceder do TitleBar
         when (item.getItemId()) {
             android.R.id.home -> {
@@ -31,7 +35,5 @@ class ImageFullscreenActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onStart() {
-        super.onStart()
-    }
+
 }

@@ -33,8 +33,8 @@ interface AppDao {
     @Query("SELECT * FROM County")
     suspend fun getAllCounties():List<County>
 
-    @Query("SELECT * FROM County WHERE county LIKE :name")
-    suspend fun searchCountiesByName(name: String): List<County>
+    @Query("SELECT * FROM County WHERE county LIKE :name AND rate BETWEEN :min AND :max AND risk LIKE :risk")
+    suspend fun searchCounties(name: String = "%", min: Int = -1, max: Int = Int.MAX_VALUE, risk: String ="%"): List<County>
 
     @Query("DELETE FROM County")
     suspend fun deleteAllCounties()

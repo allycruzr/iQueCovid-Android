@@ -82,4 +82,14 @@
     <string name="general_weakness">General Weakness</string>
     <string name="shortBreath">Short Breath</string>
     <string name="muscle_ache">Muscle Ache</string>
+
+    <string-array name="risk">
+        <item name="no_selection">Selecione o nivel de risco</item>
+        <item name="low">Baixo</item>
+        <item name="low_to_moderate">Baixo a Moderado</item>
+        <item name="moderate">Moderado</item>
+        <item name="high">Elevado</item>
+        <item name="too_high">Muito Elevado</item>
+        <item name="extremely_high">Extremamente Elevado</item>
+    </string-array>
 </resources>
