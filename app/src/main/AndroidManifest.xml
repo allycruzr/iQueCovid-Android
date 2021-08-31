@@ -22,15 +22,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectoCM20_21G25">
-        <activity android:name="pt.ulusofona.deisi.a2020.cm.g25.ui.activities.MainActivity" />
-        <activity android:name="pt.ulusofona.deisi.a2020.cm.g25.ui.activities.imagefullscreen.ImageFullscreenActivity" />
+        <activity android:name="pt.ulusofona.deisi.a2020.cm.g25.view.activities.MainActivity" />
+        <activity android:name="pt.ulusofona.deisi.a2020.cm.g25.view.activities.imagefullscreen.ImageFullscreenActivity" />
         <activity
-            android:name="pt.ulusofona.deisi.a2020.cm.g25.ui.activities.testdetail.TestDetailActivity"
+            android:name="pt.ulusofona.deisi.a2020.cm.g25.view.activities.testdetail.TestDetailActivity"
             android:label="@string/activity_test_detail_name" />
         <activity
-            android:name="pt.ulusofona.deisi.a2020.cm.g25.ui.activities.testform.TestFormActivity"
+            android:name="pt.ulusofona.deisi.a2020.cm.g25.view.activities.testform.TestFormActivity"
             android:label="@string/activity_insert_test_form_name" />
-        <activity android:name="pt.ulusofona.deisi.a2020.cm.g25.ui.activities.splashscreen.SplashScreenActivity">
+        <activity android:name="pt.ulusofona.deisi.a2020.cm.g25.view.activities.splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

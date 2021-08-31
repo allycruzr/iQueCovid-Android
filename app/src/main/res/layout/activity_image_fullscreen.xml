@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.imagefullscreen.ImageFullscreenActivity">
+    tools:context=".view.activities.imagefullscreen.ImageFullscreenActivity">
 
     <ImageView
         android:id="@+id/fullscreen_pic_test"
