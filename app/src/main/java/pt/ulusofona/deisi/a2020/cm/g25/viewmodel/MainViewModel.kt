@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.viewmodels
+package pt.ulusofona.deisi.a2020.cm.g25.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

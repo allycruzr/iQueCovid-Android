@@ -9,13 +9,14 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.fragment_counties.*
 import kotlinx.android.synthetic.main.fragment_test_list.test_recycler_view
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.model.local.room.entities.County
 import pt.ulusofona.deisi.a2020.cm.g25.model.interfaces.CountiesInterface
 import pt.ulusofona.deisi.a2020.cm.g25.view.adapters.CountiesAdapter
-import pt.ulusofona.deisi.a2020.cm.g25.viewmodels.CountiesViewModel
+import pt.ulusofona.deisi.a2020.cm.g25.viewmodel.CountiesViewModel
 
 class CountiesFragment : Fragment(), CountiesInterface {
     private lateinit var viewModel: CountiesViewModel
@@ -77,6 +78,6 @@ class CountiesFragment : Fragment(), CountiesInterface {
     }
 
     override fun onCountySearched(counties: ArrayList<County>) {
-        test_recycler_view.adapter = CountiesAdapter(counties)
+        view?.findViewById<RecyclerView>(R.id.test_recycler_view)?.adapter = CountiesAdapter(counties)
     }
 }

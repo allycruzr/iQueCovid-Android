@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.data_extra.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.model.local.datasource.DataSource
-import pt.ulusofona.deisi.a2020.cm.g25.viewmodels.extra.ExtraViewModel
+import pt.ulusofona.deisi.a2020.cm.g25.viewmodel.extra.ExtraViewModel
 
 class ExtraFragment : Fragment() {
 

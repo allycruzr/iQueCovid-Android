@@ -4,22 +4,34 @@ import android.content.Context
 import android.os.BatteryManager
 import android.os.Handler
 import android.util.Log
+import java.lang.ref.WeakReference
+import android.content.Intent
 
-@Suppress("DEPRECATION")
-class Battery private constructor(private val context: Context) : Runnable {
-    private val TAG = Battery::class.java.simpleName
-    private val TIME_BETWEEN_UPDATES = 20 * 1000L
+import android.content.IntentFilter
+import android.os.Looper
+import android.os.HandlerThread
+
+
+
+
+
+class Battery private constructor(private val context: WeakReference<Context>) : Runnable {
+    private val TIME_BETWEEN_UPDATES = 2 * 1000L
+
 
     companion object {
         private var instance: Battery? = null
-        private val handler = Handler()
+        private var bgThread: HandlerThread = HandlerThread("Battery Thread")
+        private lateinit var handler: Handler
         var listener: OnBatteryCurrentListener? = null
 
         fun start(context: Context, onBatteryPercentageListener: OnBatteryCurrentListener) {
+            if(instance != null) return
+            bgThread.start()
+            handler = Handler(bgThread.looper)
             listener = onBatteryPercentageListener
-            instance = if (instance == null) Battery(context) else instance
+            instance = if (instance == null) Battery(WeakReference(context)) else instance
             instance?.start()
-
         }
     }
 
@@ -29,15 +41,17 @@ class Battery private constructor(private val context: Context) : Runnable {
 
     override fun run() {
         val current = getBatteryCurrentNow()
-        Log.i(TAG,current.toString())
         handler.postDelayed(this, TIME_BETWEEN_UPDATES)
         listener?.onCurrentChanged(current)
     }
 
     private fun getBatteryCurrentNow(): Double {
-        val manager = context.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
-        val value:Int = manager.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY)
-        return if (value !=0 && value != Int.MIN_VALUE) value.toDouble() / 1000000 else 0.0
-    }
+        val batteryIntent = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
+        val batteryStatus = context.get()?.registerReceiver(null, batteryIntent) ?: return -1.0
 
+        val level = batteryStatus.getIntExtra(BatteryManager.EXTRA_LEVEL, -1)
+        val scale = batteryStatus.getIntExtra(BatteryManager.EXTRA_SCALE, -1)
+
+        return level / scale.toDouble()
+    }
 }

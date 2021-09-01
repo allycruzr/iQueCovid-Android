@@ -1,4 +1,4 @@
-package pt.ulusofona.deisi.a2020.cm.g25.viewmodels.splashscreen
+package pt.ulusofona.deisi.a2020.cm.g25.viewmodel.splashscreen
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

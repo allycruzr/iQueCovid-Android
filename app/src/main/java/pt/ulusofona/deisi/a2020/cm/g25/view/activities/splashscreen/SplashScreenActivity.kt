@@ -8,7 +8,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.model.interfaces.SplashScreenDataFetcherInterface
 import pt.ulusofona.deisi.a2020.cm.g25.view.activities.MainActivity
-import pt.ulusofona.deisi.a2020.cm.g25.viewmodels.splashscreen.SplashScreenViewModel
+import pt.ulusofona.deisi.a2020.cm.g25.viewmodel.splashscreen.SplashScreenViewModel
 
 class SplashScreenActivity : AppCompatActivity(), SplashScreenDataFetcherInterface {
 

@@ -7,7 +7,10 @@ import android.location.Address
 import android.location.Geocoder
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProviders
 import com.google.android.gms.location.LocationResult
@@ -21,33 +24,40 @@ import pt.ulusofona.deisi.a2020.cm.g25.model.sensors.location.FusedLocation
 import pt.ulusofona.deisi.a2020.cm.g25.model.sensors.location.OnLocationChangedListener
 import pt.ulusofona.deisi.a2020.cm.g25.model.interfaces.MainInterface
 import pt.ulusofona.deisi.a2020.cm.g25.view.utils.NavigationManager
-import pt.ulusofona.deisi.a2020.cm.g25.viewmodels.MainViewModel
+import pt.ulusofona.deisi.a2020.cm.g25.viewmodel.MainViewModel
 import java.util.*
 
 class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListener, OnLocationChangedListener {
 
     private lateinit var viewModel: MainViewModel
 
-    private lateinit var botNavBAr: BottomNavigationView
+    private lateinit var botNavBar: BottomNavigationView
 
-    private var msgWasShowed = false
+    companion object {
+        private var latestSelectedMenuItemId: Int? = null
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        NavigationManager.goToDashBoardFragment(supportFragmentManager)
 
         Battery.start(this, this)
         FusedLocation.start(this)
 
-        botNavBAr = findViewById(R.id.bottom_navigation_bar)
+        botNavBar = findViewById(R.id.bottom_navigation_bar)
 
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         toolbar.title = getString(R.string.activity_dashboard_name)
-        botNavBAr.menu.findItem(R.id.nav_dashboard).setChecked(true)
+
+        if(latestSelectedMenuItemId == null) {
+            setNavigationStatus(botNavBar.menu.findItem(R.id.nav_dashboard))
+        } else {
+            setNavigationStatus(botNavBar.menu.findItem(latestSelectedMenuItemId!!))
+        }
+
 
         toolbar.inflateMenu(R.menu.top_app_bar)
 
@@ -67,34 +77,8 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
             true
         }
 
-        botNavBAr.setOnNavigationItemSelectedListener {
-            when (it.itemId) {
-                R.id.nav_dashboard -> {
-                    NavigationManager.goToDashBoardFragment(supportFragmentManager)
-                    toolbar.title = getString(R.string.activity_dashboard_name)
-                    it.setChecked(true)
-                }
-                R.id.nav_test_list -> {
-                    NavigationManager.goToTestListFragment(supportFragmentManager)
-                    toolbar.title = getString(R.string.activity_list_tests_name)
-                    it.setChecked(true)
-                }
-                R.id.nav_counties -> {
-                    NavigationManager.goToCountiesFragment(supportFragmentManager)
-                    toolbar.title = getString(R.string.activity_counties_name)
-                    it.setChecked(true)
-                }
-                R.id.nav_extraPage -> {
-                    NavigationManager.goToVaccinationFragment(supportFragmentManager)
-                    toolbar.title = getString(R.string.symptoms)
-                    it.setChecked(true)
-                }
-                R.id.nav_contacts -> {
-                    NavigationManager.goToContactsFragment(supportFragmentManager)
-                    toolbar.title = getString(R.string.activity_contacts_name)
-                    it.setChecked(true)
-                }
-            }
+        botNavBar.setOnNavigationItemSelectedListener {
+            setNavigationStatus(it)
             false
         }
     }
@@ -110,15 +94,50 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
         viewModel.registerListener(this)
     }
 
-    override fun onCurrentChanged(current: Double) {
-        if (!msgWasShowed){
-            if (current <= 20){
-                //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                //val toast = Toast.makeText(this, getText(R.string.toast_battery), Toast.LENGTH_LONG)
-                //toast.show()
-                //msgWasShowed = true
+    fun setNavigationStatus(it: MenuItem){
+        latestSelectedMenuItemId = it.itemId
+
+        when (it.itemId) {
+            R.id.nav_dashboard -> {
+                NavigationManager.goToDashBoardFragment(supportFragmentManager)
+                toolbar.title = getString(R.string.activity_dashboard_name)
+                it.setChecked(true)
+            }
+            R.id.nav_test_list -> {
+                NavigationManager.goToTestListFragment(supportFragmentManager)
+                toolbar.title = getString(R.string.activity_list_tests_name)
+                it.setChecked(true)
+            }
+            R.id.nav_counties -> {
+                NavigationManager.goToCountiesFragment(supportFragmentManager)
+                toolbar.title = getString(R.string.activity_counties_name)
+                it.setChecked(true)
+            }
+            R.id.nav_extraPage -> {
+                NavigationManager.goToVaccinationFragment(supportFragmentManager)
+                toolbar.title = getString(R.string.symptoms)
+                it.setChecked(true)
+            }
+            R.id.nav_contacts -> {
+                NavigationManager.goToContactsFragment(supportFragmentManager)
+                toolbar.title = getString(R.string.activity_contacts_name)
+                it.setChecked(true)
             }
         }
+    }
+
+    override fun onCurrentChanged(current: Double) {
+        val mode = AppCompatDelegate.getDefaultNightMode()
+        val newMode = if(current >= 0.2) AppCompatDelegate.MODE_NIGHT_NO else AppCompatDelegate.MODE_NIGHT_YES
+
+        if(mode != newMode) {
+            AppCompatDelegate.setDefaultNightMode(newMode)
+
+            if(newMode == AppCompatDelegate.MODE_NIGHT_YES) {
+                Toast.makeText(this, getText(R.string.toast_battery), Toast.LENGTH_LONG).show()
+            }
+        }
+
     }
 
     override fun onLocationChangedListener(locationResult: LocationResult) {
