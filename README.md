@@ -3,11 +3,10 @@
 ### Alunos:
 * Allyson Rodrigues (21900126)
 * Rui Moreira (21600035) (Até 24 Agosto)
-* 
 ### Link Youtube:
 * Video 1 - https://www.youtube.com/watch?v=u9SNZf212kE 
 * Vídeo 2 - https://youtu.be/yuEHFvspq0Y
-* Vídeo 3 - 
+* Vídeo 3 - https://youtu.be/HUQTq-MDeLM
 * 
 ### Auto-avaliação:
 * Parte 1 = 17 Valores
