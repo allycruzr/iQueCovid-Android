@@ -1,8 +1,8 @@
 # Projecto Computação Móvel 2020/2021
 ### Grupo 25
 ### Alunos:
-* Allyson Rodrigues (21900126)
-* Rui Moreira (21600035) (Até 24 Agosto)
+* Allyson Rodrigues - 21900126
+* Rui Moreira - 21600035 (até 24 Agosto)
 ### Link Youtube:
 * Video 1 - https://www.youtube.com/watch?v=u9SNZf212kE 
 * Vídeo 2 - https://youtu.be/yuEHFvspq0Y
