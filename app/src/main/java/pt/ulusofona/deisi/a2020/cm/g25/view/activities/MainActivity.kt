@@ -173,7 +173,7 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
 
     override fun checkDangerZoneValue(checkDangerZone: String) {
         when (checkDangerZone) {
-            "Baixo a Moderado" -> toolbar.setNavigationIcon(R.drawable.ic_checked)
+            "Baixo" -> toolbar.setNavigationIcon(R.drawable.ic_checked)
             "Moderado" -> toolbar.setNavigationIcon(R.drawable.ic_warning)
             "Elevado" -> toolbar.setNavigationIcon(R.drawable.ic_danger)
             "Muito Elevado" -> toolbar.setNavigationIcon(R.drawable.ic_extreme_danger)

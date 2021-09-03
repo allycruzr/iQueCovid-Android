@@ -10,9 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.model.local.room.entities.County
 
-class CountiesAdapter(private val dataSet: ArrayList<County>):
+class CountiesAdapter(var dataSet: ArrayList<County>):
     RecyclerView.Adapter<CountiesAdapter.ViewHolder>() {
-
         /**
          * Provide a reference to the type of views that you are using
          * (custom ViewHolder).

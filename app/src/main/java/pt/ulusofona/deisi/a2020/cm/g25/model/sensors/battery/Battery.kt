@@ -10,9 +10,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Looper
 import android.os.HandlerThread
-
-
-
+import androidx.appcompat.app.AppCompatActivity
 
 
 class Battery private constructor(private val context: WeakReference<Context>) : Runnable {
@@ -42,7 +40,10 @@ class Battery private constructor(private val context: WeakReference<Context>) :
     override fun run() {
         val current = getBatteryCurrentNow()
         handler.postDelayed(this, TIME_BETWEEN_UPDATES)
-        listener?.onCurrentChanged(current)
+
+        (context.get() as? AppCompatActivity)?.runOnUiThread {
+            listener?.onCurrentChanged(current)
+        }
     }
 
     private fun getBatteryCurrentNow(): Double {

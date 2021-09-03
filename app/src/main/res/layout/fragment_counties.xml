@@ -6,92 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/mSearchName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_search_counties"
-        android:hint="Introduza Para Pesquisar..."
-        android:padding="15sp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingBottom="8sp"
-        android:text="Filtros"
-        android:textSize="25sp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/risk_selector"
-            android:entries="@array/risk" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <EditText
-                android:id="@+id/minimum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Mínimo"
-                android:inputType="number" />
-
-            <EditText
-                android:id="@+id/maximum"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Máximo"
-                android:inputType="number" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="2">
-
-        <Button
-            android:id="@+id/btn_filter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/indigo_dye"
-            android:text="Filter" />
-
-        <Button
-            android:id="@+id/btn_clean_filters"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="8dp"
-            android:layout_weight="1"
-            android:backgroundTint="@color/indigo_dye"
-            android:text="Clean Filters" />
-
-
-    </LinearLayout>
-
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#BBC0C4" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/test_recycler_view"
@@ -99,6 +13,5 @@
         android:layout_height="match_parent"
         app:layoutManager="LinearLayoutManager"
         tools:listitem="@layout/item_county" />
-
 
 </LinearLayout>
