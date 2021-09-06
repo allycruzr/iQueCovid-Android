@@ -3,7 +3,6 @@ package pt.ulusofona.deisi.a2020.cm.g25.model.sensors.battery
 import android.content.Context
 import android.os.BatteryManager
 import android.os.Handler
-import android.util.Log
 import java.lang.ref.WeakReference
 import android.content.Intent
 
@@ -42,7 +41,7 @@ class Battery private constructor(private val context: WeakReference<Context>) :
         handler.postDelayed(this, TIME_BETWEEN_UPDATES)
 
         (context.get() as? AppCompatActivity)?.runOnUiThread {
-            listener?.onCurrentChanged(current)
+            listener?.onCurrentBatteryChanged(current)
         }
     }
 

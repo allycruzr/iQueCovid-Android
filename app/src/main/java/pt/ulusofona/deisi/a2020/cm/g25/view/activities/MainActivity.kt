@@ -2,6 +2,7 @@ package pt.ulusofona.deisi.a2020.cm.g25.view.activities
 
 import pt.ulusofona.deisi.a2020.cm.g25.view.utils.Constants.Companion.REQUEST_CODE
 import android.content.Context
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
@@ -32,6 +33,8 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
     private lateinit var viewModel: MainViewModel
 
     private lateinit var botNavBar: BottomNavigationView
+
+    lateinit var sharedPreferences: SharedPreferences
 
     companion object {
         private var latestSelectedMenuItemId: Int? = null
@@ -126,7 +129,11 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
         }
     }
 
-    override fun onCurrentChanged(current: Double) {
+    override fun onCurrentBatteryChanged(current: Double) {
+        sharedPreferences = getSharedPreferences("iquecovid", Context.MODE_PRIVATE)
+        val autoDarkMode = sharedPreferences.getBoolean("DARK_MODE", true)
+        if(!autoDarkMode) return
+
         val mode = AppCompatDelegate.getDefaultNightMode()
         val newMode = if(current >= 0.2) AppCompatDelegate.MODE_NIGHT_NO else AppCompatDelegate.MODE_NIGHT_YES
 
@@ -137,7 +144,6 @@ class MainActivity : AppCompatActivity(), MainInterface, OnBatteryCurrentListene
                 Toast.makeText(this, getText(R.string.toast_battery), Toast.LENGTH_LONG).show()
             }
         }
-
     }
 
     override fun onLocationChangedListener(locationResult: LocationResult) {

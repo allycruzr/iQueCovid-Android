@@ -1,5 +1,5 @@
 package pt.ulusofona.deisi.a2020.cm.g25.model.sensors.battery
 
 interface OnBatteryCurrentListener {
-    fun onCurrentChanged(current: Double)
+    fun onCurrentBatteryChanged(current: Double)
 }

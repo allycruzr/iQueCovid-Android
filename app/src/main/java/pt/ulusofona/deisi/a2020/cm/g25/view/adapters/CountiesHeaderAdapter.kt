@@ -17,7 +17,10 @@ import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.viewmodel.CountiesViewModel
 import kotlin.math.min
 
+
 class CountiesHeaderAdapter(val viewModel: CountiesViewModel) : RecyclerView.Adapter<CountiesHeaderAdapter.ViewHolder>() {
+    lateinit var viewHolderFilterCallback: () -> Unit
+
     class ViewHolder(val view: View, val viewModel: CountiesViewModel) : RecyclerView.ViewHolder(view) {
         private val btnCleanFilter = view.findViewById<Button>(R.id.btn_clean_filters)
         private val btnFilter = view.findViewById<Button>(R.id.btn_filter)
@@ -28,16 +31,19 @@ class CountiesHeaderAdapter(val viewModel: CountiesViewModel) : RecyclerView.Ada
 
         private fun confCleanFilter() {
             btnCleanFilter?.setOnClickListener {
-                minimum.text = ""
-                maximum.text = ""
-                riskSelector.setSelection(0)
-                mSearchName.text = ""
+                cleanFilters()
             }
+        }
+
+        fun cleanFilters() {
+            minimum.text = ""
+            maximum.text = ""
+            riskSelector.setSelection(0)
+            mSearchName.text = ""
         }
 
         private fun confSearchName() {
             mSearchName.addTextChangedListener {
-                Log.d("xxxxx", it!!.toString())
                 startSearch()
             }
         }
@@ -74,10 +80,18 @@ class CountiesHeaderAdapter(val viewModel: CountiesViewModel) : RecyclerView.Ada
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.header_filter_counties, parent, false)
 
-        return ViewHolder(view, viewModel)
+        val viewHolder = ViewHolder(view, viewModel)
+        viewHolderFilterCallback = {
+            viewHolder.cleanFilters()
+        }
+        return viewHolder
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind()
+    }
+
+    fun cleanFilters() {
+        viewHolderFilterCallback()
     }
 }

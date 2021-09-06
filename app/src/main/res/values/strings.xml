@@ -77,11 +77,13 @@
     <string name="contactos">Contact</string>
     <string name="diarrhoea">Diarrhoea</string>
     <string name="title_data_updated_at">Data from COVID-19 REST API Portugal, updated at </string>
-    <string name="dark_mode_off">Dark Mode OFF</string>
-    <string name="dark_mode_on">Dark Mode ON</string>
+    <string name="dark_mode_off">Auto Dark Mode OFF</string>
+    <string name="dark_mode_on">Auto Dark Mode ON</string>
     <string name="general_weakness">General Weakness</string>
     <string name="shortBreath">Short Breath</string>
     <string name="muscle_ache">Muscle Ache</string>
+    <string name="shake_off">Shake OFF</string>
+    <string name="shake_on" translatable="false">Shake ON</string>
 
     <string-array name="risk">
         <item name="no_selection">Selecione o nivel de risco</item>
