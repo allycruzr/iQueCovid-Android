@@ -53,7 +53,36 @@
                 android:layout_weight="1"
                 android:hint="Máximo"
                 android:inputType="number" />
+        </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/minArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Mínimo"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/maxArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Máximo"
+                android:inputType="number" />
         </LinearLayout>
 
     </LinearLayout>

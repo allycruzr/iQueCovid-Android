@@ -20,7 +20,6 @@ import pt.ulusofona.deisi.a2020.cm.g25.model.interfaces.CountiesInterface
 import pt.ulusofona.deisi.a2020.cm.g25.view.adapters.CountiesAdapter
 import pt.ulusofona.deisi.a2020.cm.g25.view.adapters.CountiesHeaderAdapter
 import pt.ulusofona.deisi.a2020.cm.g25.viewmodel.CountiesViewModel
-import android.widget.Toast
 
 import kotlin.math.sqrt
 

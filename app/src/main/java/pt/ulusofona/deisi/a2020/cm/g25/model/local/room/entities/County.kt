@@ -33,4 +33,10 @@ class County {
 
     @SerializedName("distrito")
     var district: String = ""
+
+    @SerializedName("area")
+    var area: Float? = null
+
+
+
 }

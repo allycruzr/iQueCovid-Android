@@ -23,11 +23,13 @@ class CountiesViewModel(application: Application) : AndroidViewModel(application
         name: String? = null,
         risk: String? = null,
         min: Int? = null,
-        max: Int? = null
+        max: Int? = null,
+        minArea: Float? = null,
+        maxArea: Float? = null,
     ) {
-        val hasFilters = listOf<Any?>(name, risk, min, max).any { it != null }
+        val hasFilters = listOf<Any?>(name, risk, min, max, minArea, maxArea).any { it != null }
         if (hasFilters) {
-            countiesLogic?.filterCounties(name, risk, min, max)
+            countiesLogic?.filterCounties(name, risk, min, max, minArea,maxArea)
         } else {
             countiesLogic?.getAllCounties()
         }

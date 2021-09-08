@@ -17,13 +17,22 @@ class CountiesLogic(private val storage: AppDao, private val listener: CountiesI
         }
     }
 
-    fun filterCounties(name: String?, risk: String?, min: Int?, max: Int?) {
+    fun filterCounties(
+        name: String?,
+        risk: String?,
+        min: Int?,
+        max: Int?,
+        minArea: Float?,
+        maxArea: Float?
+    ) {
         CoroutineScope(Dispatchers.IO).launch {
             val result = ArrayList(storage.searchCounties(
                 "${name?:""}%",
                 min?:-1,
                 max?:Int.MAX_VALUE,
-                risk?:"%"
+                risk?:"%",
+                minArea?:-1f,
+                maxArea?:Float.MAX_VALUE,
             ))
             launch(Dispatchers.Main) {
                 listener?.onCountySearched(result)

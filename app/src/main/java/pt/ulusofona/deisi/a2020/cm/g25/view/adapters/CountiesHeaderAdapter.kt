@@ -1,21 +1,15 @@
 package pt.ulusofona.deisi.a2020.cm.g25.view.adapters
 
-import android.app.Activity
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.header_filter_counties.*
 import pt.ulusofona.deisi.a2020.cm.g25.R
 import pt.ulusofona.deisi.a2020.cm.g25.viewmodel.CountiesViewModel
-import kotlin.math.min
 
 
 class CountiesHeaderAdapter(val viewModel: CountiesViewModel) : RecyclerView.Adapter<CountiesHeaderAdapter.ViewHolder>() {
@@ -29,6 +23,9 @@ class CountiesHeaderAdapter(val viewModel: CountiesViewModel) : RecyclerView.Ada
         private val riskSelector = view.findViewById<Spinner>(R.id.risk_selector)
         private val mSearchName = view.findViewById<TextView>(R.id.mSearchName)
 
+        private val minArea = view.findViewById<TextView>(R.id.minArea)
+        private val maxArea = view.findViewById<TextView>(R.id.maxArea)
+
         private fun confCleanFilter() {
             btnCleanFilter?.setOnClickListener {
                 cleanFilters()
@@ -38,6 +35,8 @@ class CountiesHeaderAdapter(val viewModel: CountiesViewModel) : RecyclerView.Ada
         fun cleanFilters() {
             minimum.text = ""
             maximum.text = ""
+            minArea.text = ""
+            maxArea.text = ""
             riskSelector.setSelection(0)
             mSearchName.text = ""
         }
@@ -61,7 +60,10 @@ class CountiesHeaderAdapter(val viewModel: CountiesViewModel) : RecyclerView.Ada
                 mSearchName.text.toString(),
                 if (selectedItemPosition == 0) null else risk,
                 minimum.text.toString().toIntOrNull(),
-                maximum.text.toString().toIntOrNull()
+                maximum.text.toString().toIntOrNull(),
+                minArea.text.toString().toFloatOrNull(),
+                maxArea.text.toString().toFloatOrNull()
+
             )
         }
 
