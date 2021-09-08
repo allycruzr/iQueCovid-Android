@@ -96,4 +96,12 @@ class CovidData {
 
     @SerializedName("recuperados_madeira")
     var recoveredMadeira: Int = 0
+    /** Recuperados por Zonas **/
+
+    @SerializedName("confirmados_m")
+    var confirmedMale: Int = 0
+
+    @SerializedName("confirmados_f")
+    var confirmedFemale: Int = 0
+
 }

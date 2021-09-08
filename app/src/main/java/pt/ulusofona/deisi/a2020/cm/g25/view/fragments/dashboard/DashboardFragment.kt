@@ -66,5 +66,10 @@ class DashboardFragment : Fragment() {
         dashboard_madeira_deaths.text = "+ " + dataSource.deathsMadeiraToday().toString()
 
         title_data_updated_at.text = getString(R.string.title_data_updated_at) + " " + dataSource.dateOfData()
+
+        /**Casos MF**/
+
+        casesMale.text = "+ " + dataSource.maleCasesToday().toString()
+        casesFemale.text = "+ " + dataSource.femaleCasesToday().toString()
     }
 }

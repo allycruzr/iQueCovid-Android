@@ -68,6 +68,14 @@ class DataSource {
         return dataLast24hours.deaths!! - dataLast48hours.deaths!!
     }
 
+    fun maleCasesToday(): Int {
+        return dataLast24hours.confirmedMale!! - dataLast48hours.confirmedMale!!
+    }
+
+    fun femaleCasesToday(): Int {
+        return dataLast24hours.confirmedFemale!! - dataLast48hours.confirmedFemale!!
+    }
+
     /** Table **/
     /** Confirmed **/
 
@@ -157,6 +165,16 @@ class DataSource {
 
     fun deathsMadeiraToday(): Int {
         return dataLast24hours.deathsAzores!! - dataLast48hours.deathsAzores!!
+    }
+
+    /** Cases MF **/
+
+    fun casesMale(): Int {
+        return dataLast24hours.recoveredNorth!! - dataLast48hours.recoveredNorth!!
+    }
+
+    fun casesFemale(): Int {
+        return dataLast24hours.recoveredLvt!! - dataLast48hours.recoveredLvt!!
     }
 
     /** End of Table **/

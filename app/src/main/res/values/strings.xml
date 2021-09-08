@@ -84,6 +84,8 @@
     <string name="muscle_ache">Muscle Ache</string>
     <string name="shake_off">Shake OFF</string>
     <string name="shake_on" translatable="false">Shake ON</string>
+    <string name="male_cases">Male Cases</string>
+    <string name="female_cases">Female Cases</string>
 
     <string-array name="risk">
         <item name="no_selection">Selecione o nivel de risco</item>

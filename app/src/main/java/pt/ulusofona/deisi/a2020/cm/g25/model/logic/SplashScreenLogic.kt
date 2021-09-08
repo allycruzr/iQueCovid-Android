@@ -80,6 +80,8 @@ class SplashScreenLogic(val repository: DataRepository) {
                         "recuperados_arsalgarve" -> dataSource.dataLast48hours.recoveredAlgarve =cleanDataFromMap(response[key]?.values!!).toString().toInt()
                         "recuperados_acores" -> dataSource.dataLast48hours.recoveredAzores =cleanDataFromMap(response[key]?.values!!).toString().toInt()
                         "recuperados_madeira" -> dataSource.dataLast48hours.recoveredMadeira =cleanDataFromMap(response[key]?.values!!).toString().toInt()
+                        "confirmados_m" -> dataSource.dataLast48hours.confirmedMale =cleanDataFromMap(response[key]?.values!!).toString().toInt()
+                        "confirmados_f" -> dataSource.dataLast48hours.confirmedFemale =cleanDataFromMap(response[key]?.values!!).toString().toInt()
                     }
                 }
                 CoroutineScope(Dispatchers.IO).launch {
