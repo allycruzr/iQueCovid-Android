@@ -12,7 +12,7 @@ class FusedLocation private constructor(val context: Context) : LocationCallback
     private val TAG = FusedLocation::class.java.simpleName
 
     // intervalo de tempo em que a localização é verificada, 20 segundos
-    private val TIME_BETWEEN_UPDATES = 20 * 1000L
+    private val TIME_BETWEEN_UPDATES = 1 * 1000L
 
     // este atributo é usado para configurar os pedidos de localização
     private var locationRequest: LocationRequest? = null

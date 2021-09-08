@@ -7,6 +7,17 @@
     android:orientation="vertical"
     tools:context=".view.activities.MainActivity">
 
+
+    <TextView
+        android:id="@+id/locationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:text="LOCATION"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="15sp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/test_recycler_view"
         android:layout_width="match_parent"

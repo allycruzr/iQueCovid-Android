@@ -41,4 +41,5 @@ class TestListViewModel(application: Application) : AndroidViewModel(application
     fun getTestsList() {
         testsLogic.getTestsList(testListLogicInterface)
     }
+
 }

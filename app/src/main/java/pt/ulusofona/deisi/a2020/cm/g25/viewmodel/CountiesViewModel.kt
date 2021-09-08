@@ -33,5 +33,6 @@ class CountiesViewModel(application: Application) : AndroidViewModel(application
         } else {
             countiesLogic?.getAllCounties()
         }
+
     }
 }

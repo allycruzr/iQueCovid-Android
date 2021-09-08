@@ -17,7 +17,7 @@ class CountiesAdapter(var dataSet: ArrayList<County>):
          * (custom ViewHolder).
          */
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val countieNameView: TextView
+            val countiesNameView: TextView
             val districtTextView: TextView
             val lastUpdateTextView: TextView
             val rateTextView: TextView
@@ -26,7 +26,7 @@ class CountiesAdapter(var dataSet: ArrayList<County>):
 
             init {
                 // Define click listener for the ViewHolder's View.
-                countieNameView = view.findViewById(R.id.text_county_name)
+                countiesNameView = view.findViewById(R.id.text_county_name)
                 districtTextView = view.findViewById(R.id.text_district)
                 lastUpdateTextView = view.findViewById(R.id.text_last_update)
                 rateTextView = view.findViewById(R.id.text_rate)
@@ -58,7 +58,7 @@ class CountiesAdapter(var dataSet: ArrayList<County>):
             var rate = county.rate!!
             var risk = county.risk!!
 
-            viewHolder.countieNameView.text = county.county
+            viewHolder.countiesNameView.text = county.county
             viewHolder.districtTextView.text = county.district
             viewHolder.lastUpdateTextView.text = county.dateOfData
             viewHolder.rateTextView.text = county.rate.toString()
@@ -75,6 +75,10 @@ class CountiesAdapter(var dataSet: ArrayList<County>):
             } else if(county.risk.equals("Extremamente Elevado")) {
                 viewHolder.rateRiskTextView.setTextColor(Color.RED)
             }
+
+            if(position % 2 == 0){
+                viewHolder.countiesNameView.setBackgroundColor(Color.RED)
+            } else viewHolder.countiesNameView.setBackgroundColor(Color.BLUE)
         }
 
         private fun getItem(position: Int): County {
