@@ -70,7 +70,8 @@ class TestListFragment : Fragment(), TestListInterface, OnLocationChangedListene
         val newLocation = locationResult.lastLocation
         val gcd = Geocoder(context, Locale.getDefault())
         val addresses: List<Address> = gcd.getFromLocation(newLocation.latitude, newLocation.longitude, 1)
+
         //location != newLocation
-            locationText.text = addresses.toString()
+            locationText.text = addresses[0].toString()
     }
 }
